@@ -1,1 +1,0 @@
-const nameOne: string = 'Sofi';
