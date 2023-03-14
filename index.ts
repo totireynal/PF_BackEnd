@@ -1,0 +1,1 @@
+const nameOne: string = 'Sofi';
