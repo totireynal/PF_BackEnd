@@ -13,7 +13,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   File.init(
     {
-      id: DataTypes.INTEGER,
       dateOfAdmission: DataTypes.STRING,
       position: DataTypes.STRING,
       area: DataTypes.STRING,
