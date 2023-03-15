@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Users.hasOne(models.File),
+      Users.hasOne(models.UserPassword)
     }
   }
   Users.init({
@@ -22,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     image: DataTypes.BLOB,
     dni: DataTypes.STRING,
     tel: DataTypes.STRING,
-    role: DataTypes.ENUM('SuperAdmin', 'Admin', 'User'),
+    role: DataTypes.ENUM,
   }, {
     sequelize,
     modelName: 'Users',
