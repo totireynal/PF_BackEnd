@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     image: DataTypes.BLOB,
     dni: DataTypes.STRING,
     tel: DataTypes.STRING,
-    role: DataTypes.ENUM('SuperAdmin', 'Admin', 'User'),
+    role: DataTypes.ENUM,
   }, {
     sequelize,
     modelName: 'Users',
