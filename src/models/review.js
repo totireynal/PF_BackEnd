@@ -13,9 +13,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   Review.init(
     {
-      id: DataTypes.INTEGER,
       scores: DataTypes.INTEGER,
-      comment: DataTypes.STRING(500),
+      comment: DataTypes.TEXT,
     },
     {
       sequelize,
