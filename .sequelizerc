@@ -1,5 +1,9 @@
 let path = require('path')
 
 module.exports = {
+<<<<<<< HEAD
   'config': path.resolve('./config', './config.js'),
+=======
+  'config': path.resolve('config', 'config.js'),
+>>>>>>> bb1ed37405f4ae2dc74d9200352cef780c323d9b
 }
