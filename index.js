@@ -1,7 +1,7 @@
 const server = require('./src/app');
 // const { Sequelize } = require('./src/models/index');
 require('dotenv').config();
-const { PORT } = process.env;
+const PORT = 3001;
 
 
 // ({ alter: true }).then(() => 
