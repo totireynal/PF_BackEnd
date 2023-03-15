@@ -4,14 +4,14 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Reviews', {
       id: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true,
         allowNull: false,
         unique: true,
       },
       scores: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         allowNull: false,
         validate: {
           min: 1,
@@ -19,7 +19,7 @@ module.exports = {
         },
       },
       comment: {
-        type: DataTypes.STRING(500),
+        type: Sequelize.TEXT,
         allowNull: false,
       },
       createdAt: {
