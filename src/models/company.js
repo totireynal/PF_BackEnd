@@ -14,14 +14,48 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Company.init({
-    name: DataTypes.STRING,
-    cuit: DataTypes.STRING,
-    item: DataTypes.STRING,
-    location: DataTypes.STRING,
-    employees: DataTypes.STRING,
-    tel: DataTypes.STRING,
-    email: DataTypes.STRING,
-    authorized: DataTypes.BOOLEAN
+    id: {
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.INTEGER
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true
+    },
+    cuit: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true
+    },
+    industry: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    location: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    numberEmployees: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    tel: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true
+    },
+    authorized: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
   }, {
     sequelize,
     modelName: 'Company',

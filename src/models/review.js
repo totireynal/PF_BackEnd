@@ -13,9 +13,25 @@ module.exports = (sequelize, DataTypes) => {
   }
   Review.init(
     {
-      id: DataTypes.INTEGER,
-      scores: DataTypes.INTEGER,
-      comment: DataTypes.STRING(500),
+      id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+        allowNull: false,
+        unique: true,
+      },
+      scores: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          min: 1,
+          max: 5,
+        },
+      },
+      comment: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+      },
     },
     {
       sequelize,
