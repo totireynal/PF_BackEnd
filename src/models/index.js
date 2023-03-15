@@ -1,8 +1,4 @@
 'use strict';
-<<<<<<< HEAD
-
-=======
->>>>>>> 45a37d6ac7aa883d5023dde080cc85b6126aa15f
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
@@ -16,11 +12,7 @@ let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-<<<<<<< HEAD
   sequelize = new Sequelize(config.url, config);
-=======
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
->>>>>>> 45a37d6ac7aa883d5023dde080cc85b6126aa15f
 }
 
 fs
@@ -47,9 +39,5 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-<<<<<<< HEAD
+
 module.exports = { db };
-=======
-module.exports = { db ,
-                  sequelize} ;
->>>>>>> 45a37d6ac7aa883d5023dde080cc85b6126aa15f
