@@ -4,13 +4,33 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Files', {
       id: {
-        allowNull: false,
+        type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        allowNull: false,
+        unique: true
       },
-      firstName: {
-        type: Sequelize.STRING
+      dateOfAdmission: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      position: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      area: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      cuil: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
+      },
+      cbu: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
       },
       createdAt: {
         allowNull: false,
