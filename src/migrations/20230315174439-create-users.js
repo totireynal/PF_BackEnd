@@ -45,7 +45,7 @@ module.exports = {
         unique: true,
       },
       role: {
-        type: Sequelize.ENUM
+        type: Sequelize.ENUM('SuperAdmin', 'Admin', 'User')
       },
       createdAt: {
         allowNull: false,
