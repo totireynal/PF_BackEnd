@@ -56,9 +56,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Date.now(),
-      },
-      deletedAt: {
-        type: Sequelize.DATE
       }
 
     });
