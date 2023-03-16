@@ -14,33 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Information.init({
-    id: {
-      allowNull: false,
-      autoIncrement: true,
-      primaryKey: true,
-      unique: true,
-      type: DataTypes.INTEGER
-    },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
-    },
-    tel: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
-    },
-    address: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
-    },
+    id: DataTypes.INTEGER,
+    name: DataTypes.STRING,
+    tel: DataTypes.STRING,
+    address: DataTypes.STRING,
+    email: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Information',

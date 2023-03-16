@@ -14,47 +14,16 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Users.init({
-    id: {
-      allowNull: false,
-      autoIncrement: true,
-      primaryKey: true,
-      type: DataTypes.INTEGER
-    },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    lastName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    birthDate: {
-      type: DataTypes.DATEONLY,
-      allowNull: false,
-    },
-    address: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    image: {
-      type: DataTypes.BLOB,
-      allowNull: false,
-    },
-    dni: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    tel: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    role: {
-      type: DataTypes.ENUM('SuperAdmin', 'Admin', 'User'),
-    },
+    id: DataTypes.INTEGER,
+    name: DataTypes.STRING,
+    lastName: DataTypes.STRING,
+    email: DataTypes.STRING,
+    birthDate: DataTypes.DATEONLY,
+    address: DataTypes.STRING,
+    image: DataTypes.BLOB,
+    dni: DataTypes.STRING,
+    tel: DataTypes.STRING,
+    role: DataTypes.ENUM('SuperAdmin', 'Admin', 'User'),
   }, {
     sequelize,
     modelName: 'Users',

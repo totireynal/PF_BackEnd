@@ -13,35 +13,12 @@ module.exports = (sequelize, DataTypes) => {
   }
   File.init(
     {
-      id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-        allowNull: false,
-        unique: true
-      },
-      dateOfAdmission: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      position: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      area: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      cuil: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true
-      },
-      cbu: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true
-      },
+      id: DataTypes.INTEGER,
+      dateOfAdmission: DataTypes.STRING,
+      position: DataTypes.STRING,
+      area: DataTypes.STRING,
+      cuil: DataTypes.STRING,
+      cbu: DataTypes.STRING,
     },
     {
       sequelize,
