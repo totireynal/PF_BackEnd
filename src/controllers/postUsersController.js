@@ -16,7 +16,7 @@ const postUsersController = async (name, lastName, email, birthDate, address, im
 
     await newUser.setCompany(CompanyId)  
     
-
+    return `The user ${name} ${lastName} has been created correctly.`
 }
 
 
