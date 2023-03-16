@@ -11,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Company.hasOne(models.Review),
-      Company.hasMany(models.Users)
+      Company.hasMany(models.Users),
+      Company.belongsTo(models.Information)
     }
   }
   Company.init({

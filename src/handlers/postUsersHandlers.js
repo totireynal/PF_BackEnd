@@ -1,12 +1,18 @@
-const Users = require('../models').Users;
+
+const postUsersController = require('../controllers/postUsersController');
+
+
 
 const postUsersHandler = async (req, res) => {
-    Users.create(req.body)
-    .then((data)=>res.json({datos:data}))
-    .catch((error)=>res.json({error: error.message}))
-    //hacer la asociocion
-    //hacer el controller
-    //verificar info de req.body
+
+    const { name, lastName, email, birthDate, address, image, dni, tel, role, CompanyId} = req.body;
+
+    try {
+        const newUser = await postUsersController(name, lastName, email, birthDate, address, image, dni, tel, role, CompanyId)
+        res.status(200).json(newUser);
+    } catch (error) {
+        res.status(400).json({error: error.message})
+    }
 }
 
 
