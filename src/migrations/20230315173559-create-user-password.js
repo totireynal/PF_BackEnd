@@ -19,14 +19,23 @@ module.exports = {
         allowNull: false,
         unique: true,
       },
+
+      password: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        // revisar encriptacion
+      },
+
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue: Date.now(),
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
       },
+      defaultValue: Date.now(),
     });
   },
   async down(queryInterface, Sequelize) {

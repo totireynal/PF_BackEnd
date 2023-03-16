@@ -20,6 +20,7 @@ module.exports = {
       email: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true,
       },
       birthDate: {
         type: Sequelize.DATEONLY,
@@ -36,21 +37,25 @@ module.exports = {
       dni: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true,
       },
       tel: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true,
       },
       role: {
-        type: Sequelize.ENUM
+        type: Sequelize.ENUM('SuperAdmin', 'Admin', 'User')
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Date.now(),
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Date.now(),
       }
     });
   },

@@ -8,12 +8,11 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Review.belongsTo(models.Company)
     }
   }
   Review.init(
     {
-      id: DataTypes.INTEGER,
       scores: DataTypes.INTEGER,
       comment: DataTypes.TEXT,
     },

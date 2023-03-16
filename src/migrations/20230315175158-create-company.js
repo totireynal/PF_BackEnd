@@ -43,15 +43,18 @@ module.exports = {
       },
       authorized: {
         type: Sequelize.BOOLEAN,
-        defaultValue: false
+        defaultValue: false,
+        unique: true
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Date.now(),
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Date.now(),
       }
     });
   },

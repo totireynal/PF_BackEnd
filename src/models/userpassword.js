@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      UserPassword.belongsTo(models.Users)
     }
   }
   UserPassword.init(
@@ -22,5 +22,12 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "UserPassword",
     }
   );
+  // UserPassword.init({
+  //   userName: DataTypes.STRING,
+  //   password: DataTypes.STRING,
+  // }, {
+  //   sequelize,
+  //   modelName: 'UserPassword',
+  // });
   return UserPassword;
 };
