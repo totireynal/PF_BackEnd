@@ -6,7 +6,6 @@ const getUsersHandler = async(req, res) => {
 
     try {
         const resultsUsers = name ? await getUserNameController(name) : await getUsersController();
-        console.log(resultsUsers);
         return res.status(201).json(resultsUsers);
     } catch (error) {
         return res.status(404).json({ error: error.message })
