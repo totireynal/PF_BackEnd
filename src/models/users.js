@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Users.init({
     id: DataTypes.INTEGER,
+      // primaryKey: true
     name: DataTypes.STRING,
     lastName: DataTypes.STRING,
     email: DataTypes.STRING,
@@ -24,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     image: DataTypes.BLOB,
     dni: DataTypes.STRING,
     tel: DataTypes.STRING,
-    role: DataTypes.ENUM,
+    role: DataTypes.ENUM('SuperAdmin', 'Admin', 'User'),
   }, {
     sequelize,
     modelName: 'Users',

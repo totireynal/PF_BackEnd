@@ -48,7 +48,7 @@ module.exports = {
   name: 'Francisco',
   lastName: 'Toti',
   email: 'ejemplo5@gmail.com',
-  birthDate: '12/26/1991',
+  birthDate: '12/06/1991',
   address: 'Avenida Falsa 127',
   image: 'url4',
   dni:'36545555',

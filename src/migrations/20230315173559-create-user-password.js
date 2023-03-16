@@ -34,8 +34,8 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue: Date.now(),
       },
-      defaultValue: Date.now(),
     });
   },
   async down(queryInterface, Sequelize) {
