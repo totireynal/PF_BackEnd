@@ -15,8 +15,7 @@ module.exports = {
     dni:'36545332',
     tel:'990987267',
     role:'User',
-    createdAt:'2023-01-19 03:14:07',
-    updatedAt:'2023-01-19 03:14:07'
+    CompanyId: 1
 },
 {
   name: 'Estiven',
@@ -28,8 +27,7 @@ module.exports = {
   dni:'36543338',
   tel:'990987277',
   role:'User',
-  createdAt:'2023-01-19 03:14:07',
-  updatedAt:'2023-01-19 03:14:07'
+  CompanyId: 1
 },
 {
   name: 'Didier',
@@ -41,8 +39,7 @@ module.exports = {
   dni:'36544444',
   tel:'990987288',
   role:'User',
-  createdAt:'2023-01-19 03:14:07',
-  updatedAt:'2023-01-19 03:14:07'
+  CompanyId: 1
 },
 {
   name: 'Francisco',
@@ -54,8 +51,7 @@ module.exports = {
   dni:'36545555',
   tel:'990987299',
   role:'User',
-  createdAt:'2023-01-19 03:14:07',
-  updatedAt:'2023-01-19 03:14:07'
+  CompanyId: 1
 },
 {
   name: 'Carlos',
@@ -67,8 +63,7 @@ module.exports = {
   dni:'36546666',
   tel:'990987200',
   role:'User',
-  createdAt:'2023-01-19 03:14:07',
-  updatedAt:'2023-01-19 03:14:07'
+  CompanyId: 1
 },
 {
   name: 'Pablo',
@@ -80,8 +75,7 @@ module.exports = {
   dni:'36547777',
   tel:'990987111',
   role:'User',
-  createdAt:'2023-01-19 03:14:07',
-  updatedAt:'2023-01-19 03:14:07'
+  CompanyId: 1
 },
 {
   name: 'Josefina',
@@ -93,8 +87,7 @@ module.exports = {
   dni:'36548888',
   tel:'990987222',
   role:'User',
-  createdAt:'2023-01-19 03:14:07',
-  updatedAt:'2023-01-19 03:14:07'
+  CompanyId: 1
 },
 {
   name: 'Virginia',
@@ -106,8 +99,7 @@ module.exports = {
   dni:'36549999',
   tel:'990987333',
   role:'User',
-  createdAt:'2023-01-19 03:14:07',
-  updatedAt:'2023-01-19 03:14:07'
+  CompanyId: 1
 },
 {
   name: 'Juliana',
@@ -119,8 +111,7 @@ module.exports = {
   dni:'36500000',
   tel:'990987444',
   role:'Admin',
-  createdAt:'2023-01-19 03:14:07',
-  updatedAt:'2023-01-19 03:14:07'
+  CompanyId: 1
 },
 
   ])

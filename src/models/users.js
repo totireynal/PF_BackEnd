@@ -11,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Users.hasOne(models.File),
-      Users.hasOne(models.UserPassword)
+      Users.hasOne(models.UserPassword),
+      Users.belongsTo(models.Company)
     }
   }
   Users.init({
@@ -27,6 +28,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Users',
+    paranoid: true,
+    deletedAt: 'softDelete'
   });
   return Users;
 };
