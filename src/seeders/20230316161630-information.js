@@ -4,19 +4,12 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
 
-    await queryInterface.bulkInsert('Companies', [
+    await queryInterface.bulkInsert('Information', [
       {
-        name: 'CocaCola',
-        cuit: '123456789',
-        industry: 'Alimentacion',
-        location: 'Buenos Aires',
-        numberEmployees: 10,
-        tel: '990987123',
-        email: 'empresa@gmail.com',
-        authorized: true,
-        InformationId: 1
-      
-
+        name: 'StaffSphere',
+        tel: '990880115',
+        address: 'Avenida Siempreviva 345',
+        email: 'info@staffsphere.com',
       }
     ])
     /**
