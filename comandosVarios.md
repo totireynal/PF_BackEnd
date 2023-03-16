@@ -1,4 +1,4 @@
-EXPRESS:
+aEXPRESS:
 //npm i -g express-generator //
 //express --view-hbs nombreproyecto//
 : crea todas las carpetas, crea el server todo (supuestamente, no lo probe)
