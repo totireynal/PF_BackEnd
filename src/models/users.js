@@ -24,12 +24,13 @@ module.exports = (sequelize, DataTypes) => {
     image: DataTypes.BLOB,
     dni: DataTypes.STRING,
     tel: DataTypes.STRING,
-    role: DataTypes.ENUM,
+    role: DataTypes.ENUM('SuperAdmin', 'Admin', 'User'),
+    deletedAt: DataTypes.DATE,
   }, {
     sequelize,
-    modelName: 'Users',
     paranoid: true,
-    deletedAt: 'softDelete'
+    modelName: 'Users',
+    deletedAt: 'deletedAt',
   });
   return Users;
 };

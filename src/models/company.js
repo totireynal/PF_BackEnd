@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Company',
     paranoid: true,
-    deletedAt: 'softDelete'
+    deletedAt: 'deletedAt',
   });
   return Company;
 };

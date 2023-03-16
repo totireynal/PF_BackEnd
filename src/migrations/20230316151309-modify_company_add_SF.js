@@ -5,7 +5,7 @@ module.exports = {
    up (queryInterface, Sequelize) {
     return queryInterface.addColumn(
       'Companies', // name of Target model
-      'deteledAt', // name of the key we're adding
+      'deletedAt', // name of the key we're adding
       {
         type: Sequelize.DATE,
         allowNull:true,
@@ -22,7 +22,7 @@ module.exports = {
    down (queryInterface, Sequelize) {
     return queryInterface.removeColumn(
       'Companies', // name of Target model
-      'deteledAt' // name of the key we're adding
+      'deletedAt' // name of the key we're adding
     );
     /**
      * Add reverting commands here.
