@@ -7,27 +7,28 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
+        unique: true,
         type: Sequelize.INTEGER
       },
       name: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique:true
+        unique: true
       },
       tel: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique:true
+        unique: true
       },
       address: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique:true
+        unique: true
       },
       email: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique:true
+        unique: true
       },
       createdAt: {
         allowNull: false,
