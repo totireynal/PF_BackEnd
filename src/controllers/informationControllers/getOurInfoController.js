@@ -1,4 +1,4 @@
-const Information = require('../models').Information;
+const Information = require('../../models').Information;
 
 const getOurInfoController = async () => {
 

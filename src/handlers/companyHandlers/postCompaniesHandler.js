@@ -1,4 +1,4 @@
-const postCompaniesController = require('../controllers/postCompaniesController');
+const postCompaniesController = require('../../controllers/companyControllers/postCompaniesController');
 
 const postCompaniesHandler = async (req, res) => {
     const { name, cuit, industry, location, numberEmployees, tel, email} = req.body

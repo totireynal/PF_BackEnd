@@ -1,4 +1,4 @@
-const softDeleteUsers = require('../controllers/deleteUsersController');
+const softDeleteUsers = require('../../controllers/usersControllers/deleteUsersController');
 
 const softDeleteHandler = async (req, res) => {
     const { id } = req.params;
