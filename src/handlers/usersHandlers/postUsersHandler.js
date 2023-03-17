@@ -1,5 +1,5 @@
 
-const postUsersController = require('../controllers/postUsersController');
+const postUsersController = require('../../controllers/usersControllers/postUsersController');
 
 
 

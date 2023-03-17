@@ -1,4 +1,4 @@
-const Users = require('../models').Users;
+const Users = require('../../models').Users;
 
 const putUsersController = async (id, name, lastName, email, birthDate, address, image, dni, tel, role) => {
 

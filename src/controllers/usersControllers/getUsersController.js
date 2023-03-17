@@ -1,6 +1,6 @@
 const Users = require('../../models').Users;
 const Company = require('../../models').Company;
-const cleanInfoDb = require('./cleanInfoDb/cleanInfoDb');
+const cleanInfoDb = require('../../utils/getUsersCleanDb');
 
 const getUsersController = async() => {
         const dataBaseUsers = await Users.findAll({
