@@ -12,12 +12,12 @@ module.exports = {
       name: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true,
+        unique: true
       },
       cuit: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true,
+        unique: true
       },
       industry: {
         type: Sequelize.STRING,
@@ -28,22 +28,23 @@ module.exports = {
         allowNull: false,
       },
       numberEmployees: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       tel: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true,
+        unique: true
       },
       email: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true,
+        unique: true
       },
       authorized: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
+        unique: true
       },
       createdAt: {
         allowNull: false,

@@ -1,13 +1,22 @@
 const usersRouter = require('express').Router();
-const postUsersHandler = require('../handlers/postUsersHandler');
 const validatePostUsers = require('../middlewares/validatePostUsers');
-const postFilesHandler = require('../handlers/postFilesHandler');
-const validatePostFiles= require('../middlewares/validatePostFiles');
-const getAllUsers = require('../handlers/getAllUsers');
+const putUserHandler = require('../handlers/usersHandlers/putUsersHandler');
+const validatePutUsers = require('../middlewares/validatePutUsers');
+const postUsersHandler = require('../handlers/usersHandlers/postUsersHandler');
+const getUsersHandler = require('../handlers/usersHandlers/getUsersHandler');
+const softDeleteUsers = require('../middlewares/validateSoftDeleteUsers');
+const softDeleteHandler = require('../handlers/usersHandlers/deleteUsersHandlers');
+const validatePostUsersByCuilAndCbu = require('../middlewares/validatePostUsersbyCuilAndCbu');
+const getUserAndFileIdHandler = require('../handlers/usersHandlers/getUserAndFileIdHandler');
 
 
-usersRouter.post('/', validatePostUsers, postUsersHandler);
-usersRouter.post('/files', validatePostFiles, postFilesHandler);
-usersRouter.get('/', getAllUsers)
+
+
+usersRouter.get('/', getUsersHandler);
+usersRouter.post('/', validatePostUsers, validatePostUsersByCuilAndCbu, postUsersHandler);
+usersRouter.put('/:id',validatePutUsers, putUserHandler);
+usersRouter.delete('/:id', softDeleteUsers, softDeleteHandler);
+usersRouter.get('/:id', getUserAndFileIdHandler);
+
 
 module.exports = usersRouter;

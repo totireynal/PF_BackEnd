@@ -28,6 +28,25 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
+      paranoid: true,
+      modelName: "Users",
+      deletedAt: "deletedAt",
+    }
+  );
+  Users.init(
+    {
+      name: DataTypes.STRING,
+      lastName: DataTypes.STRING,
+      email: DataTypes.STRING,
+      birthDate: DataTypes.DATEONLY,
+      address: DataTypes.STRING,
+      image: DataTypes.BLOB,
+      dni: DataTypes.STRING,
+      tel: DataTypes.STRING,
+      role: DataTypes.ENUM("SuperAdmin", "Admin", "User"),
+    },
+    {
+      sequelize,
       modelName: "Users",
     }
   );

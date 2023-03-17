@@ -18,15 +18,17 @@ module.exports = (sequelize, DataTypes) => {
   Company.init({
     name: DataTypes.STRING,
     cuit: DataTypes.STRING,
-    item: DataTypes.STRING,
+    industry: DataTypes.STRING,
     location: DataTypes.STRING,
-    employees: DataTypes.STRING,
+    numberEmployees: DataTypes.INTEGER,
     tel: DataTypes.STRING,
     email: DataTypes.STRING,
-    authorized: DataTypes.BOOLEAN
+    authorized: DataTypes.BOOLEAN,
   }, {
     sequelize,
     modelName: 'Company',
+    paranoid: true,
+    deletedAt: 'deletedAt',
   });
   return Company;
 };
