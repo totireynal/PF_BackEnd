@@ -1,18 +1,12 @@
 const usersRouter = require('express').Router();
 const validatePostUsers = require('../middlewares/validatePostUsers');
 const validatePostFiles= require('../middlewares/validatePostFiles');
-const putUserHandler = require('../handlers/usersHandlers/putUsersHandler');
 const validatePutUsers = require('../middlewares/validatePutUsers');
-<<<<<<< HEAD
-const postFilesHandler = require('../handlers/postFilesHandler');
-const postUsersHandler = require('../handlers/postUsersHandler');
-const getUsersHandler = require('../handlers/getRoutesHandlers/getUsersHandler');
-const getUserAndFileIdHandler = require('../handlers/getRoutesHandlers/getUserAndFileIdHandler');
-=======
+const getUserAndFileIdHandler = require('../handlers/usersHandlers/getUserAndFileIdHandler');
+const getUsersHandler = require('../handlers/usersHandlers/getUsersHandler');
 const postFilesHandler = require('../handlers/filesHandlers/postFilesHandler');
 const postUsersHandler = require('../handlers/usersHandlers/postUsersHandler');
-const getUsersHandler = require('../handlers/usersHandlers/getUsersHandler');
->>>>>>> 87521e9bffc7ffbba58bd0d8be758b575fe3c71f
+const putUserHandler = require('../handlers/usersHandlers/putUsersHandler');
 const softDeleteUsers = require('../middlewares/validateSoftDeleteUsers');
 const softDeleteHandler = require('../handlers/usersHandlers/deleteUsersHandlers');
 

@@ -1,4 +1,4 @@
-const cleanInfoDb = (array) => {
+const getUserCleanDb = (array) => {
     const cleanDb = array.map((info) => {
         return {
             id: info.id,
@@ -18,4 +18,4 @@ const cleanInfoDb = (array) => {
     return cleanDb;
 };
 
-module.exports = cleanInfoDb;
+module.exports = getUserCleanDb;
