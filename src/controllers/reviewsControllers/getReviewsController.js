@@ -1,5 +1,5 @@
-const Review = require('../models').Review;
-const Company = require('../models').Company;
+const Review = require('../../models').Review;
+const Company = require('../../models').Company;
 
 
 const getReviewsController = async () => {
