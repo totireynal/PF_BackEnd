@@ -1,6 +1,6 @@
 const Users = require("../../models").Users;
 const Company = require("../../models").Company;
-const getUserCleanDb = require('../../utils/getUsersCleanDb');
+const getUserCleanDb = require("../../utils/getUsersCleanDb");
 
 const getUserIdController = async (id) => {
   try {
@@ -11,10 +11,10 @@ const getUserIdController = async (id) => {
         trough: { attributes: [] },
       },
     });
-    const infoTotal = await getUserCleanDb([userIdDb])
+    const infoTotal = await getUserCleanDb([userIdDb]);
     return infoTotal;
   } catch (error) {
-    throw new Error(`The User with id: '${id}' not exist!`)
+    throw new Error(`The User with id: '${id}' not exist!`);
   }
 };
 
