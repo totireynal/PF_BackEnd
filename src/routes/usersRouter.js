@@ -8,6 +8,6 @@ const getAllUsers = require('../handlers/getAllUsers');
 
 usersRouter.post('/', validatePostUsers, postUsersHandler);
 usersRouter.post('/files', validatePostFiles, postFilesHandler);
-usersRouter.get('/', getAllUsers)
+usersRouter.get('/', getAllUsers);
 
 module.exports = usersRouter;
