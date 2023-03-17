@@ -18,9 +18,9 @@ module.exports = (sequelize, DataTypes) => {
   Company.init({
     name: DataTypes.STRING,
     cuit: DataTypes.STRING,
-    item: DataTypes.STRING,
+    industry: DataTypes.STRING,
     location: DataTypes.STRING,
-    employees: DataTypes.STRING,
+    numberEmployees: DataTypes.STRING,
     tel: DataTypes.STRING,
     email: DataTypes.STRING,
     authorized: DataTypes.BOOLEAN
