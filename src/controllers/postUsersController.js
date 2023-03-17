@@ -20,9 +20,6 @@ const postUsersController = async (name, lastName, email, birthDate, address, im
 }
 
 
-
- //hacer la asociocion
-    //hacer el controller
   
 
 

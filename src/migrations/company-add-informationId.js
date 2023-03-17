@@ -5,6 +5,7 @@ module.exports = {
             'InformationId', // name of the key we're adding
             {
               type: Sequelize.INTEGER,
+              defaultValue: 1,
               references: {
                 model: 'Information', // name of Source model
                 key: 'id',
