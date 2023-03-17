@@ -1,4 +1,4 @@
-const getOurInfoController = require('../../controllers/getRoutesController/getOurInfoController');
+const getOurInfoController = require('../../controllers/informationControllers/getOurInfoController');
 
 
 const getOurInfoHandler = async (req, res) => {

@@ -1,4 +1,4 @@
-const File = require('../models').File;
+const File = require('../../models').File;
 
 
 const postFilesController = async (dateOfAdmission, position, area, cuil, cbu, UserId) => {

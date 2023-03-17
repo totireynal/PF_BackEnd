@@ -1,5 +1,5 @@
-const getFileIdController = require('../../controllers/getRoutesController/getFileIdController');
-const getUserIdController = require('../../controllers/getRoutesController/getUserIdController');
+const getFileIdController = require('../../controllers/usersControllers/getFileIdController');
+const getUserIdController = require('../../controllers/usersControllers/getUserIdController');
 
 const getUserAndFileIdHandler = async(req, res) => {
     const { id } = req.params;

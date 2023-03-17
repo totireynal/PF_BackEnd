@@ -1,5 +1,4 @@
-const postUsersController = require('../controllers/postUsersController');
-
+const postUsersController = require('../../controllers/usersControllers/postUsersController');
 
 
 const postUsersHandler = async (req, res) => {

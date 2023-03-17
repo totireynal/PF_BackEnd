@@ -1,4 +1,4 @@
-const postFilesController = require('../controllers/postFilesController');
+const postFilesController = require('../../controllers/filesControllers/postFilesController');
 
 const postFilesHandler = async (req, res) => {
 
