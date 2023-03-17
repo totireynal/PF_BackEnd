@@ -1,0 +1,20 @@
+const Users = require("../../models").Users;
+const Company = require("../../models").Company;
+
+const getUserIdController = async (id) => {
+  try {
+    const userIdDb = await Users.findByPk(id, {
+      include: {
+        model: Company,
+        attributes: ["name"],
+        trough: { attributes: [] },
+      },
+    });
+    console.log(userIdDb);
+    return userIdDb;
+  } catch (error) {
+    throw new Error(`The User with id: '${id}' not exist!`)
+  }
+};
+
+module.exports = getUserIdController;

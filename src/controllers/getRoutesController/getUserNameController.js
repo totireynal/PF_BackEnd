@@ -19,7 +19,8 @@ const getUserNameController = async(name) => {
     });
     const cleanInfo = cleanInfoDb(dataBaseNameRaw);
 
-    return !cleanInfo ? new Error(`The user with the name: '${name}' does not exist. Try another please`) : cleanInfo
+    if(!cleanInfo.length) throw new Error(`The user with the name: '${name}' does not exist. Try another please`);
+    return cleanInfo;
 };
 
 module.exports = getUserNameController;
