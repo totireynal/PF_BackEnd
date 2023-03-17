@@ -8,9 +8,6 @@ const postUsersHandler = require('../handlers/usersHandlers/postUsersHandler');
 const softDeleteUsers = require('../middlewares/validateSoftDeleteUsers');
 const softDeleteHandler = require('../handlers/usersHandlers/deleteUsersHandlers');
 const validatePostUsersByCuilAndCbu = require('../middlewares/validatePostUsersbyCuilAndCbu');
-const getUserAndFileIdHandler = require('../handlers/usersHandlers/getUserAndFileIdHandler');
-
-
 
 
 usersRouter.get('/', getUsersHandler);
