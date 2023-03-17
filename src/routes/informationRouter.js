@@ -1,5 +1,5 @@
 const informationRouter = require('express').Router();
-const getOurInfoHandler = require('../handlers/getOurInfoHandler');
+const getOurInfoHandler = require('../../src/handlers/informationHandlers/getOurInfoHandler');
 
 
 
