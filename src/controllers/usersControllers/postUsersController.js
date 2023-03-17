@@ -1,7 +1,8 @@
 const Users = require('../../models').Users;
+const File = require('../../models').File;
 
 
-const postUsersController = async (name, lastName, email, birthDate, address, image, dni, tel, role, CompanyId) => {
+const postUsersController = async (name, lastName, email, birthDate, address, image, dni, tel, role, CompanyId, dateOfAdmission, position, area, cuil, cbu) => {
     let newUser = await Users.create({
         name,
         lastName,
@@ -14,9 +15,20 @@ const postUsersController = async (name, lastName, email, birthDate, address, im
         role
     })
 
-    await newUser.setCompany(CompanyId)  
+    await newUser.setCompany(CompanyId) 
+    const idNewUser = newUser.id;
     
-    return `The user ${name} ${lastName} has been created correctly.`
+    await File.create({
+        dateOfAdmission,
+        position,
+        area,
+        cuil,
+        cbu,
+        UserId : idNewUser
+    })
+
+    return `The employee ${name} ${lastName} with id: ${idNewUser} has been created correctly.`
+    
 }
 
 
