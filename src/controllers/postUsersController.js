@@ -1,29 +1,35 @@
-const Users = require('../models').Users;
+const Users = require("../models").Users;
 
+const postUsersController = async (
+  name,
+  lastName,
+  email,
+  birthDate,
+  address,
+  image,
+  dni,
+  tel,
+  role,
+  CompanyId
+) => {
+  let newUser = await Users.create({
+    name,
+    lastName,
+    email,
+    birthDate,
+    address,
+    image,
+    dni,
+    tel,
+    role,
+  });
 
-const postUsersController = async (name, lastName, email, birthDate, address, image, dni, tel, role, CompanyId) => {
-    let newUser = await Users.create({
-        name,
-        lastName,
-        email,
-        birthDate,
-        address,
-        image,
-        dni,
-        tel,
-        role
-    })
+  // await newUser.setCompany(CompanyId)
 
-    await newUser.setCompany(CompanyId)  
-    
-    return `The user ${name} ${lastName} has been created correctly.`
-}
+  return `The user ${name} ${lastName} has been created correctly.`;
+};
 
-
-
- //hacer la asociocion
-    //hacer el controller
-  
-
+//hacer la asociocion
+//hacer el controller
 
 module.exports = postUsersController;

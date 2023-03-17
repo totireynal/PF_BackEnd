@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Users extends Model {
     /**
@@ -14,22 +12,24 @@ module.exports = (sequelize, DataTypes) => {
       models.Company.hasMany(Users);
       Users.hasOne(models.UserPassword);
       models.UserPassword.belongsTo(Users);
-      
     }
   }
-  Users.init({
-    name: DataTypes.STRING,
-    lastName: DataTypes.STRING,
-    email: DataTypes.STRING,
-    birthDate: DataTypes.DATEONLY,
-    address: DataTypes.STRING,
-    image: DataTypes.BLOB,
-    dni: DataTypes.STRING,
-    tel: DataTypes.STRING,
-    role: DataTypes.ENUM,
-  }, {
-    sequelize,
-    modelName: 'Users',
-  });
+  Users.init(
+    {
+      name: DataTypes.STRING,
+      lastName: DataTypes.STRING,
+      email: DataTypes.STRING,
+      birthDate: DataTypes.DATEONLY,
+      address: DataTypes.STRING,
+      image: DataTypes.BLOB,
+      dni: DataTypes.STRING,
+      tel: DataTypes.STRING,
+      role: DataTypes.ENUM("SuperAdmin", "Admin", "User"),
+    },
+    {
+      sequelize,
+      modelName: "Users",
+    }
+  );
   return Users;
 };
