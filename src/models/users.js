@@ -29,7 +29,9 @@ module.exports = (sequelize, DataTypes) => {
     role: DataTypes.ENUM('SuperAdmin', 'Admin', 'User'),
   }, {
     sequelize,
+    paranoid: true,
     modelName: 'Users',
+    deletedAt: 'deletedAt',
   });
   return Users;
 };

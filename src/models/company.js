@@ -20,13 +20,15 @@ module.exports = (sequelize, DataTypes) => {
     cuit: DataTypes.STRING,
     industry: DataTypes.STRING,
     location: DataTypes.STRING,
-    numberEmployees: DataTypes.STRING,
+    numberEmployees: DataTypes.INTEGER,
     tel: DataTypes.STRING,
     email: DataTypes.STRING,
-    authorized: DataTypes.BOOLEAN
+    authorized: DataTypes.BOOLEAN,
   }, {
     sequelize,
     modelName: 'Company',
+    paranoid: true,
+    deletedAt: 'deletedAt',
   });
   return Company;
 };
