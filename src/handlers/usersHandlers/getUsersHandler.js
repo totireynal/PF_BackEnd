@@ -1,5 +1,5 @@
-const getUsersController = require('../../controllers/getRoutesController/getUsersController');
-const getUserNameController = require('../../controllers/getRoutesController/getUserNameController');
+const getUsersController = require('../../controllers/usersControllers/getUsersController');
+const getUserNameController = require('../../controllers/usersControllers/getUserNameController');
 
 const getUsersHandler = async(req, res) => {
     const { name } = req.query;

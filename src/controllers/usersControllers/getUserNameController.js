@@ -1,7 +1,7 @@
 const { Op } = require('sequelize');
 const Users = require('../../models').Users;
 const Company = require('../../models').Company;
-const cleanInfoDb = require('./cleanInfoDb/cleanInfoDb');
+const cleanInfoDb = require('../../utils/getUsersCleanDb');
 
 const getUserNameController = async(name) => {
     const dataBaseNameRaw = await Users.findAll({
