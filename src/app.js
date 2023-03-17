@@ -7,6 +7,7 @@ const informationRouter = require('./routes/informationRouter');
 const companiesRouter = require('./routes/companiesRouter');
 
 
+
 const server = express();
 
 server.use(express.json());
