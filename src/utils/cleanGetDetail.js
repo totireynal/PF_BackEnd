@@ -1,7 +1,7 @@
 const cleanGetDetail = (user) => {
     const clean = {
       
-            UserId: user.UserId,
+            id: user.UserId,
             name: user.User.name,
             lastName: user.User.lastName,
             email: user.User.email,
