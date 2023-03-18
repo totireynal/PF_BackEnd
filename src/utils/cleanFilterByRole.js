@@ -1,11 +1,11 @@
 const cleanDatabaseFilterByRole = (arr) => {
     const clean = arr.map(user => {
         return {
-            UserId: user.UserId,
+            id: user.UserId,
             name: user.User.name,
             lastName: user.User.lastName,
             image: user.User.image,
-            role: user.User.role,
+            role: user.role,
             Fileid: user.id,
             position: user.position,
             area: user.area,

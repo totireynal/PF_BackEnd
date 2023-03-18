@@ -1,7 +1,7 @@
 const cleanDatabaseFiltered = (arr) => {
     const clean = arr.map(user => {
         return {
-            UserId: user.UserId,
+            id: user.UserId,
             name: user.User.name,
             lastName: user.User.lastName,
             image: user.User.image,
