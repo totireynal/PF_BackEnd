@@ -30,7 +30,7 @@ const postUsersController = async (
     role,
   });
 
-  // await newUser.setCompany(CompanyId);
+  // await newUser.setCompany(CompanyId)
   const idNewUser = newUser.id;
 
   await File.create({
