@@ -13,7 +13,7 @@ const filterByAreaController = async(area) => {
         },
         include: {
             model: Users,
-            attributes: ['name', 'lastName', 'image']
+            attributes: ['name', 'lastName', 'image', 'role']
         }
     });
     if(dataBaseFilteredRaw.length === 0) throw new Error (`The area: ${area} doesn't exist. Please try with another one.`)
