@@ -15,7 +15,7 @@ const postUsersController = async (name, lastName, email, birthDate, address, im
         role
     })
 
-    await newUser.setCompany(CompanyId) 
+    // await newUser.setCompany(CompanyId) 
     const idNewUser = newUser.id;
     
     await File.create({

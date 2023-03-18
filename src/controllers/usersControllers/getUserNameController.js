@@ -9,13 +9,16 @@ const getUserNameController = async(name) => {
             name: {
                 [Op.iLike] : `%${name}%`
             }
+            
         },
         include: {
 
             model: Company,
             attributes: ['name'],
-            trough: { attributes: [] }
+            trough: { attributes: [] }     
+          
         }
+       
     });
     const cleanInfo = cleanInfoDb(dataBaseNameRaw);
 
