@@ -1,23 +1,24 @@
-const File = require("../../models").File;
-const Users = require("../../models").Users;
-const getFileIdCleanDb = require("../../utils/getFileIdCleanDb");
+const cleanGetDetail = require('../../utils/cleanGetDetail');
 
-const getFileIdController = async (id) => {
-  const fileIdDb = await File.findOne({
-    where: {
-      UserId: id,
-    },
-    include: {
-      model: Users,
-      attributes: {
-        exclude: ['createdAt', 'updatedAt', 'deletedAt']
-      }
-    },
-  });
+const File = require('../../models').File;
+const Users = require('../../models').Users;
 
-  if (!fileIdDb) throw new Error(`The file with id: '${id}' not exist`);
+const getFileIdController = async(id) => {
+  
+        const fileIdDb = await File.findOne({
+            where: {
+                UserId: id
+            },
+            include: {
+                model: Users,
+               
+            }
+        });
 
-  return getFileIdCleanDb([fileIdDb]);
+        if(!fileIdDb) throw new Error(`The user with id: '${id}' not exist` )
+
+        return cleanGetDetail(fileIdDb);
+
 };
 
 module.exports = getFileIdController;

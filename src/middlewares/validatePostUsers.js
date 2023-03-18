@@ -9,7 +9,7 @@ const validatePostUsers = (req, res, next) => {
     if (!dni) return res.status(400).json({error: 'Missing dni'});
     if (!tel) return res.status(400).json({error: 'Missing tel'});
     if (!role) return res.status(400).json({error: 'Missing role'});
-    if (!CompanyId) return res.status(400).json({error: 'Missing CompanyId'});
+    // if (!CompanyId) return res.status(400).json({error: 'Missing CompanyId'});
     if (!dateOfAdmission) return res.status(400).json({error: 'Missing dateOfAdmission'});
     if (!position) return res.status(400).json({error: 'Missing position'});
     if (!area) return res.status(400).json({error: 'Missing area'});
