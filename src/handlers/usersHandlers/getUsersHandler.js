@@ -34,3 +34,4 @@ const getUsersHandler = async(req, res) => {
 };
 
 module.exports = getUsersHandler;
+
