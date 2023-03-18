@@ -1,4 +1,3 @@
-const { sequelize } = require('../../models');
 const Users = require('../../models').Users;
 const File = require('../../models').File;
 
@@ -29,6 +28,4 @@ const putUsersController = async (id, name, lastName, email, birthDate, address,
 
 };
 
-
 module.exports = putUsersController;
-
