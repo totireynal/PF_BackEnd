@@ -1,4 +1,5 @@
 const { Op } = require('sequelize');
+const cleanDatabaseFiltered = require('../../utils/cleanFilterByPostitionAndArea');
 const File = require('../../models').File;
 const Users = require('../../models').Users;
 
@@ -19,7 +20,7 @@ const getUserPositionFilter = async (position) => {
      });
      if(filePosition.length === 0) throw Error ('the specified position does not exist');
     
-     return filePosition;
+     return cleanDatabaseFiltered(filePosition);
 };
 
 module.exports = getUserPositionFilter;
