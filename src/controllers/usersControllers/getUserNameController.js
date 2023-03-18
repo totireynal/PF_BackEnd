@@ -1,25 +1,26 @@
 const { Op } = require('sequelize');
 const Users = require('../../models').Users;
-const Company = require('../../models').Company;
+const File = require('../../models').File;
 const cleanInfoDb = require('../../utils/getUsersCleanDb');
 
 const getUserNameController = async(name) => {
-    const dataBaseNameRaw = await Users.findAll({
-        where: {
-            name: {
-                [Op.iLike] : `%${name}%`
-            }
-        },
+    const dataBaseNameRaw = await File.findAll({
         include: {
-
-            model: Company,
-            attributes: ['name'],
-            trough: { attributes: [] }
+            model: Users,
+            attributes: ['name','lastName', 'image', 'role'],
+            where: {
+                name: {
+                    [Op.iLike] : `%${name}%`
+                }
+            },  
         }
+       
     });
     const cleanInfo = cleanInfoDb(dataBaseNameRaw);
 
-    return !cleanInfo ? new Error(`The user with the name: '${name}' does not exist. Try another please`) : cleanInfo
+    if(cleanInfo.length === 0) throw new Error(`The user with the name: '${name}' does not exist. Try with another please.`);
+
+    return cleanInfo;
 };
 
 module.exports = getUserNameController;

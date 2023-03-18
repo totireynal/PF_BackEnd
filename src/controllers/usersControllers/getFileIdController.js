@@ -1,3 +1,5 @@
+const cleanGetDetail = require('../../utils/cleanGetDetail');
+
 const File = require('../../models').File;
 const Users = require('../../models').Users;
 
@@ -13,9 +15,9 @@ const getFileIdController = async(id) => {
             }
         });
 
-        if(!fileIdDb) throw new Error(`The file with id: '${id}' not exist` )
+        if(!fileIdDb) throw new Error(`The user with id: '${id}' not exist` )
 
-        return fileIdDb;
+        return cleanGetDetail(fileIdDb);
 
 };
 

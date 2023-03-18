@@ -1,20 +1,21 @@
 const Users = require('../../models').Users;
-const Company = require('../../models').Company;
+const File = require('../../models').File;
 const cleanInfoDb = require('../../utils/getUsersCleanDb');
 
 const getUsersController = async() => {
-        const dataBaseUsers = await Users.findAll({
+        const dataBaseUsers = await File.findAll({
             include: {
-                model: Company,
-                attributes: ['name'],
-                trough: { attributes: [] }
+                model: Users,
+                attributes: ['name', 'lastName', 'image', 'role']
             }
         });
+        
         const infoClean = cleanInfoDb(dataBaseUsers);
     
-        return infoClean
-        ? infoClean
-        : new Error({ error: `The database has failed, please try again later!` })
+        if(infoClean.length === 0) throw new Error({ error: `The database has failed, please try again later!` })
+        
+        return infoClean;
+    
 };
 
 module.exports = getUsersController;
