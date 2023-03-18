@@ -7,7 +7,7 @@ const getUserNameController = async(name) => {
     const dataBaseNameRaw = await File.findAll({
         include: {
             model: Users,
-            attributes: ['name','lastName', 'image'],
+            attributes: ['name','lastName', 'image', 'role'],
             where: {
                 name: {
                     [Op.iLike] : `%${name}%`

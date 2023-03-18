@@ -6,7 +6,7 @@ const getUsersController = async() => {
         const dataBaseUsers = await File.findAll({
             include: {
                 model: Users,
-                attributes: ['name', 'lastName', 'image']
+                attributes: ['name', 'lastName', 'image', 'role']
             }
         });
         
