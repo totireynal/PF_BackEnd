@@ -2,9 +2,11 @@ const getUsersController = require('../../controllers/usersControllers/getUsersC
 const getUserNameController = require('../../controllers/usersControllers/getUserNameController');
 const filterByRoleController = require('../../controllers/usersControllers/filterByRoleController');
 const getUserPositionFilter = require('../../controllers/usersControllers/getUserPositionFilter');
+const filterByAreaController = require('../../controllers/usersControllers/filterByAreaController');
 
 const getUsersHandler = async(req, res) => {
-    const { name, role , position} = req.query;
+    const { name, role ,area, position} = req.query;
+
     
 
     try {
@@ -19,7 +21,10 @@ const getUsersHandler = async(req, res) => {
         else if (position) {
            const resultsUsers = await getUserPositionFilter(position);
            return res.status(201).json(resultsUsers);  
-        }else {
+        } else if (area) {
+            const resultsUsers = await filterByAreaController(area);
+            return res.status(201).json(resultsUsers);
+        } else {
             const resultsUsers = await getUsersController();
             return res.status(201).json(resultsUsers);
 
