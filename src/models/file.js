@@ -23,6 +23,8 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: "File",
+      paranoid: true,
+      deletedAt: 'deletedAt',
   
     }
   );
