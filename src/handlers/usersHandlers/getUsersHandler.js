@@ -3,9 +3,10 @@ const getUserNameController = require('../../controllers/usersControllers/getUse
 const filterByRoleController = require('../../controllers/usersControllers/filterByRoleController');
 const getUserPositionFilter = require('../../controllers/usersControllers/getUserPositionFilter');
 const filterByAreaController = require('../../controllers/usersControllers/filterByAreaController');
+const sortUsersController = require('../../controllers/usersControllers/sortUserController');
 
 const getUsersHandler = async(req, res) => {
-    const { name, role ,area, position} = req.query;
+    const { name, role ,area, position , sort} = req.query;
 
     
 
@@ -14,14 +15,20 @@ const getUsersHandler = async(req, res) => {
         if (name) {
             const resultsUsers = await getUserNameController(name);
             return res.status(201).json(resultsUsers);
-        } else if (role) {
+        } 
+        else if (role) {
             const resultsUsers = await filterByRoleController(role);
+            return res.status(201).json(resultsUsers); 
+        }
+         else if (sort) {
+            const resultsUsers = await sortUsersController(sort);
             return res.status(201).json(resultsUsers); 
         } 
         else if (position) {
            const resultsUsers = await getUserPositionFilter(position);
            return res.status(201).json(resultsUsers);  
-        } else if (area) {
+        } 
+        else if (area) {
             const resultsUsers = await filterByAreaController(area);
             return res.status(201).json(resultsUsers);
         } else {

@@ -7,7 +7,6 @@ const getUsersController = async() => {
             include: {
                 model: Users,
                 attributes: ['name', 'lastName', 'image', 'role'],
-                order: [['name', 'DESC']]
             }
         });
         
@@ -16,6 +15,7 @@ const getUsersController = async() => {
         if(infoClean.length === 0) throw new Error({ error: `The database has failed, please try again later!` })
         
         return infoClean;
+   
     
 };
 
