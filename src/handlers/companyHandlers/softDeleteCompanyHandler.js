@@ -1,6 +1,4 @@
-// const softDeleteCompany = require('../../controllers/companyControllers/deleteCompanyController');
-
-const softDeleteCompany  = require("../../controllers/companyControllers/deleteCompanyController");
+const softDeleteCompany  = require("../../controllers/companyControllers/deleteController/deleteCompanyController");
 
 
 const softDeleteCompanyHandler = async (req, res) =>{

@@ -1,4 +1,4 @@
-const postReviewsController = require('../../controllers/reviewsControllers/postReviewsController');
+const postReviewsController = require('../../controllers/reviewsControllers/postControllers/postReviewsController');
 
 
 const postReviewsHandler = async (req, res) => {

@@ -1,7 +1,7 @@
-const cleanGetDetail = require('../../utils/cleanGetDetail');
+const cleanGetDetail = require('../../../utils/cleanGetDetail');
 
-const File = require('../../models').File;
-const Users = require('../../models').Users;
+const File = require('../../../models').File;
+const Users = require('../../../models').Users;
 
 const getFileIdController = async(id) => {
   

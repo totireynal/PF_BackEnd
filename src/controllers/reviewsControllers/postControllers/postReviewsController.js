@@ -1,4 +1,4 @@
-const Review = require('../../models').Review;
+const Review = require('../../../models').Review;
 
 const postReviewsController = async (scores, comment, CompanyId) => {
     let newReview = await Review.create({
