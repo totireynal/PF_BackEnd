@@ -1,5 +1,5 @@
-const Users = require('../../models').Users;
-const File = require('../../models').File;
+const Users = require('../../../models').Users;
+const File = require('../../../models').File;
 
 const putUsersController = async (id, name, lastName, email, birthDate, address, image, dni, tel, role, dateOfAdmission, position, area, cuil, cbu) => {
       

@@ -1,4 +1,4 @@
-const Company = require ('../../models').Company;
+const Company = require ('../../../models').Company;
 
 const putCompanyController = async ( id, name, cuit, industry, location, email, numberEmployees, tel, authorized ) => {
  

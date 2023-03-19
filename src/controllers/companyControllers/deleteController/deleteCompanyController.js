@@ -1,4 +1,4 @@
-const Company = require('../../models').Company;
+const Company = require('../../../models').Company;
  
 const softDeleteCompany = async (id) => {
      await Company.destroy({
