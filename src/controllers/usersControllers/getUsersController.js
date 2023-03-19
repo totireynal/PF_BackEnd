@@ -6,7 +6,7 @@ const getUsersController = async() => {
         const dataBaseUsers = await File.findAll({
             include: {
                 model: Users,
-                attributes: ['name', 'lastName', 'image', 'role']
+                attributes: ['name', 'lastName', 'image', 'role'],
             }
         });
         
@@ -15,6 +15,7 @@ const getUsersController = async() => {
         if(infoClean.length === 0) throw new Error({ error: `The database has failed, please try again later!` })
         
         return infoClean;
+   
     
 };
 
