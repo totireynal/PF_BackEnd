@@ -1,6 +1,6 @@
-const Users = require("../../models").Users;
-const Company = require("../../models").Company;
-const getUserCleanDb = require("../../utils/getUsersCleanDb");
+const Users = require("../../../models").Users;
+const Company = require("../../../models").Company;
+const getUserCleanDb = require("../../../utils/getUsersCleanDb");
 
 const getUserIdController = async (id) => {
   try {
