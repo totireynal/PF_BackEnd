@@ -1,6 +1,7 @@
-const Users = require('../../models').Users;
-const File = require('../../models').File;
-const cleanDatabase = require('../../utils/cleanFilterByRole')
+const Users = require('../../../models').Users;
+const File = require('../../../models').File;
+const { Op } = require('sequelize')
+const cleanDatabase = require('../../../utils/cleanFilterByRole')
 
 const filterByRoleController = async (role) => {
 

@@ -1,7 +1,7 @@
-const Users = require("../../models").Users;
-const File = require("../../models").File;
+const Users = require("../../../models").Users;
+const File = require("../../../models").File;
 const { Op } = require("sequelize");
-const cleanDatabaseFiltered = require("../../utils/cleanFilterByPostitionAndArea");
+const cleanDatabaseFiltered = require("../../../utils/cleanFilterByPostitionAndArea");
 
 const filterByAreaController = async (area) => {
   const dataBaseFilteredRaw = await File.findAll({
@@ -21,5 +21,3 @@ const filterByAreaController = async (area) => {
     );
   return cleanDatabaseFiltered(dataBaseFilteredRaw);
 };
-
-module.exports = filterByAreaController;

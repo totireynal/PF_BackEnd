@@ -1,7 +1,7 @@
 const { Op } = require("sequelize");
-const cleanDatabaseFiltered = require("../../utils/cleanFilterByPostitionAndArea");
-const File = require("../../models").File;
-const Users = require("../../models").Users;
+const cleanDatabaseFiltered = require("../../../utils/cleanFilterByPostitionAndArea");
+const File = require("../../../models").File;
+const Users = require("../../../models").Users;
 
 const getUserPositionFilter = async (position) => {
   const filePosition = await File.findAll({

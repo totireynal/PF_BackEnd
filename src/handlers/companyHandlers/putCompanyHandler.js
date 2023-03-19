@@ -1,4 +1,4 @@
-const putCompanyController = require('../../controllers/companyControllers/putCompanyController');
+const putCompanyController = require('../../controllers/companyControllers/putController/putCompanyController');
 
 const putCompanyHandler = async (req, res) => {
      const { name, cuit, industry, location, email, numberEmployees, tel, authorized } = req.body;

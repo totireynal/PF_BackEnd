@@ -5,7 +5,7 @@ const cleanDatabaseFilterByRole = (arr) => {
             name: user.User.name,
             lastName: user.User.lastName,
             image: user.User.image,
-            role: user.User.role,
+            role: user.role,
             Fileid: user.id,
             position: user.position,
             area: user.area,
