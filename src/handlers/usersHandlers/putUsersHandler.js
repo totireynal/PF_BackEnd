@@ -1,4 +1,4 @@
-const putUsersController = require('../../controllers/usersControllers/putUsersController');
+const putUsersController = require("../../controllers/usersControllers/putControllers/putUsersController");
 
 
 const putUserHandler = async (req, res) => {
@@ -7,7 +7,7 @@ const putUserHandler = async (req, res) => {
     const { id } = req.params;
    
     try {
-        const updatedUser = await putUsersController(id, name, lastName, email, birthDate, address, image, dni, tel, role, dateOfAdmission, position, area, cuil, cbu);
+        const updatedUser = await putUsersController (id, name, lastName, email, birthDate, address, image, dni, tel, role, dateOfAdmission, position, area, cuil, cbu);
         res.status(200).json(updatedUser);
 
     } catch (error) {

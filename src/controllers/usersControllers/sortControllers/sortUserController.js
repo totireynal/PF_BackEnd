@@ -1,6 +1,6 @@
-const Users = require('../../models').Users;
-const File = require('../../models').File;
-const cleanInfoDb = require('../../utils/getUsersCleanDb');
+const Users = require('../../../models').Users;
+const File = require('../../../models').File;
+const cleanInfoDb = require('../../../utils/getUsersCleanDb');
 
 const sortUsersController = async(sort) => {
        if(sort === 'AtZ') {

@@ -1,4 +1,4 @@
-const getPositionsController = require('../../controllers/positionsControllers/getPositionsController');
+const getPositionsController = require('../../controllers/positionsControllers/getController/getPositionsController');
 const getPositionsHandler = async (req, res) => {
 
     try {

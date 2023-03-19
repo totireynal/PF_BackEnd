@@ -1,9 +1,9 @@
-const getUsersController = require('../../controllers/usersControllers/getUsersController');
-const getUserNameController = require('../../controllers/usersControllers/getUserNameController');
-const filterByRoleController = require('../../controllers/usersControllers/filterByRoleController');
-const getUserPositionFilter = require('../../controllers/usersControllers/getUserPositionFilter');
-const filterByAreaController = require('../../controllers/usersControllers/filterByAreaController');
-const sortUsersController = require('../../controllers/usersControllers/sortUserController');
+const getUsersController = require('../../controllers/usersControllers/getControllers/getUsersController');
+const getUserNameController = require('../../controllers/usersControllers/getControllers/getUserNameController');
+const filterByRoleController = require('../../controllers/usersControllers/filterControllers/filterByRoleController');
+const getUserPositionFilter = require('../../controllers/usersControllers/getControllers/getUserPositionFilter');
+const filterByAreaController = require('../../controllers/usersControllers/filterControllers/filterByAreaController');
+const sortUsersController = require('../../controllers/usersControllers/sortControllers/sortUserController');
 
 const getUsersHandler = async(req, res) => {
     const { name, role ,area, position , sort} = req.query;

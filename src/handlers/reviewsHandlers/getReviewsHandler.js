@@ -1,4 +1,4 @@
-const getReviewsController = require('../../controllers/reviewsControllers/getReviewsController');
+const getReviewsController = require('../../controllers/reviewsControllers/getControllers/getReviewsController');
 
 const getReviewsHandler = async (req, res) => {
     try{

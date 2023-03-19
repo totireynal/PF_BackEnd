@@ -1,4 +1,4 @@
-const getAreasController = require("../../controllers/areasControllers/getAreasController");
+const getAreasController = require("../../controllers/areasControllers/getController/getAreasController");
 
 const getAreasHandler = async (req, res) => {
 
