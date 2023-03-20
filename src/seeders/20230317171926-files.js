@@ -75,6 +75,94 @@ module.exports = {
         cuil: '27-28033514-9',
         cbu: '1702046600000087805',
         UserId: '9'
+      },
+          {
+        dateOfAdmission: '01/02/2023',
+        position: 'People Specialist',
+        area: 'HHRR',
+        cuil: '27-28033515-0',
+        cbu: '1702046600000087806',
+        UserId: '10'
+      },
+        {
+        dateOfAdmission: '03/11/2022',
+        position: 'Product Owner',
+        area: 'Operations',
+        cuil: '27-28033515-1',
+        cbu: '1702046600000087111',
+        UserId: '11'
+      },
+        {
+        dateOfAdmission: '12/01/2022',
+        position: 'Project Manager',
+        area: 'Operations',
+        cuil: '27-28033515-2',
+        cbu: '1702046600000087906',
+        UserId: '12'
+      },
+        {
+        dateOfAdmission: '03/09/2022',
+        position: 'Accountant',
+        area: 'Finance',
+        cuil: '27-28033515-3',
+        cbu: '1702046600000087901',
+        UserId: '13'
+      },
+        {
+        dateOfAdmission: '02/05/2022',
+        position: 'Lawyer',
+        area: 'Legal',
+        cuil: '27-28033515-4',
+        cbu: '1702046600000087807',
+        UserId: '14'
+      },
+        {
+        dateOfAdmission: '01/09/2022',
+        position: 'Lawyer',
+        area: 'Legal',
+        cuil: '27-28033515-5',
+        cbu: '1702046600000087989',
+        UserId: '15'
+      },
+        {
+        dateOfAdmission: '09/07/2022',
+        position: 'Project Manager',
+        area: 'Operations',
+        cuil: '27-28033515-6',
+        cbu: '1702046600000087809',
+        UserId: '16'
+      },
+        {
+        dateOfAdmission: '12/12/2022',
+        position: 'Dev Ops',
+        area: 'Engineering',
+        cuil: '27-28033515-7',
+        cbu: '1702046600000087810',
+        UserId: '17'
+      },
+      {
+        dateOfAdmission: '02/02/2022',
+        position: 'Scrum Master',
+        area: 'Engineering',
+        cuil: '27-28033515-8',
+        cbu: '1702046600000087811',
+        UserId: '18'
+      },
+      {
+        dateOfAdmission: '08/10/2022',
+        position: 'COO',
+        area: 'Operations',
+        cuil: '27-28033515-9',
+        cbu: '1702046600000087812',
+        UserId: '19'
+      },
+      {
+        dateOfAdmission: '10/12/2022',
+        position: 'Dev Ops',
+        area: 'Engineering',
+        cuil: '27-28033516-0',
+        cbu: '1702046600000087813',
+        UserId: '20'
       }
     ])
   },
