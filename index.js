@@ -1,5 +1,7 @@
+const server = require('./src/app');
+require('dotenv').config();
+const PORT = 3001
 
-const name = 'El Pepe';
-console.log('sofi');
-console.log('carlos');
-
+server.listen(PORT, () => {
+console.log(`Server connected on ${PORT}` )
+});
