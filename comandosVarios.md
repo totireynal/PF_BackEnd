@@ -13,7 +13,7 @@ SEQUELIZE-CLI:
 //npx sequelize-cli init//
 :crea un proyecto arriba del ya creado (sobreescribe carpetas)
 - modificar config.json /podemos declarar la db y con 
-//npx sequelize-cli db:create// --> la crea
+//npx sequelize-cli db:create company// --> la crea
 //npx sequelize-cli model:generate --name Nombremodelo --attributes firstName:string//
 :crea modelo y migracion
 //npx sequelize-cli db:migrate// esas migraciones se van a convertir en las tablas y modelo en la db
