@@ -8,7 +8,7 @@ const filterByAreaController = async(area) => {
     const dataBaseFilteredRaw = await File.findAll({
         where: {
             area: {
-                [Op.iLike] : `%${area}%`
+                [Op.iLike] : area
             }
         },
         include: {
