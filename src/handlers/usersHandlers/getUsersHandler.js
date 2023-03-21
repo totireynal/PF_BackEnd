@@ -12,16 +12,16 @@ const getUsersHandler = async (req, res) => {
     if (name) {
       const resultsUsers = await getUserNameController(name);
       return res.status(201).json(resultsUsers);
-    } else if (role) {
+    } if (role) {
       const resultsUsers = await filterByRoleController(role);
       return res.status(201).json(resultsUsers);
-    } else if (sort) {
+    } if (sort) {
       const resultsUsers = await sortUsersController(sort);
       return res.status(201).json(resultsUsers);
-    } else if (position) {
+    } if (position) {
       const resultsUsers = await getUserPositionFilter(position);
       return res.status(201).json(resultsUsers);
-    } else if (area) {
+    } if (area) {
       const resultsUsers = await filterByAreaController(area);
       return res.status(201).json(resultsUsers);
     } else {

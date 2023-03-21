@@ -10,7 +10,7 @@ const filterByRoleController = async (role) => {
             model: Users,
             attributes:['name', 'lastName', 'image', 'role'],
             where:{
-                role: role
+                [Op.iLike]: `%${role}%`
             }
         }
 
