@@ -4,7 +4,7 @@ const filterByRoleController = require('../../controllers/usersControllers/filte
 const getUserPositionFilter = require('../../controllers/usersControllers/getControllers/getUserPositionFilter');
 const filterByAreaController = require('../../controllers/usersControllers/filterControllers/filterByAreaController');
 const sortUsersController = require('../../controllers/usersControllers/sortControllers/sortUserController');
-
+const getUsersUnsorted = require('../../controllers/usersControllers/getControllers/getUsersUnsorted.js');
 const getUsersHandler = async(req, res) => {
     const { name, role ,area, position , sort} = req.query;
 
@@ -12,30 +12,37 @@ const getUsersHandler = async(req, res) => {
 
     try {
         
-        if (name) {
-            const resultsUsers = await getUserNameController(name);
-            return res.status(201).json(resultsUsers);
-        } 
-        else if (role) {
-            const resultsUsers = await filterByRoleController(role);
-            return res.status(201).json(resultsUsers); 
-        }
-         else if (sort) {
-            const resultsUsers = await sortUsersController(sort);
-            return res.status(201).json(resultsUsers); 
-        } 
-        else if (position) {
-           const resultsUsers = await getUserPositionFilter(position);
-           return res.status(201).json(resultsUsers);  
-        } 
-        else if (area) {
-            const resultsUsers = await filterByAreaController(area);
-            return res.status(201).json(resultsUsers);
-        } else {
-            const resultsUsers = await getUsersController();
-            return res.status(201).json(resultsUsers);
+        // if (name) {
+        //     const resultsUsers = await getUserNameController(name);
+        //     return res.status(201).json(resultsUsers);
+        // } 
+        // else if (role) {
+        //     const resultsUsers = await filterByRoleController(role);
+        //     return res.status(201).json(resultsUsers); 
+        // }
+        //  else if (sort) {
+        //     const resultsUsers = await sortUsersController(sort);
+        //     return res.status(201).json(resultsUsers); 
+        // } 
+        // else if (position) {
+        //    const resultsUsers = await getUserPositionFilter(position);
+        //    return res.status(201).json(resultsUsers);  
+        // } 
+        // else if (area) {
+        //     const resultsUsers = await filterByAreaController(area);
+        //     return res.status(201).json(resultsUsers);
+        // } else {
 
-        }
+            if (name || role || area || position || sort) {
+                const resultsUsers = await getUsersController(name, role, area, position, sort);
+                return res.status(201).json(resultsUsers);
+                
+            } else {
+                const resultUsers = await getUsersUnsorted();
+                return res.status(400).json(resultUsers)
+            }
+
+        // }
     
     
       
