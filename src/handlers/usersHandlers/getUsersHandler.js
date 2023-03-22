@@ -6,6 +6,7 @@ const filterByAreaController = require('../../controllers/usersControllers/filte
 const sortUsersController = require('../../controllers/usersControllers/sortControllers/sortUserController');
 const getUsersUnsorted = require('../../controllers/usersControllers/getControllers/getUsersUnsorted.js');
 const getUsersHandler = async(req, res) => {
+
     const { name, role ,area, position , sort} = req.query;
 
     
