@@ -7,8 +7,8 @@ const cleanInfoDb = (array) => {
             image: info.User.image,
             role: info.User.role,
             Fileid: info.id,
-            position: info.position,
-            area: info.area
+            position: info.PositionId,
+            area: info.AreaId,
         }
     });
     return cleanDb;

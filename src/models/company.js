@@ -12,6 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Company.hasOne(models.Review);
       models.Review.belongsTo(Company);
+      Company.hasMany(models.Users);
+      models.Users.belongsTo(Company);
       
     }
   }
@@ -20,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     cuit: DataTypes.STRING,
     industry: DataTypes.STRING,
     location: DataTypes.STRING,
-    numberEmployees: DataTypes.INTEGER,
+    numberEmployees: DataTypes.STRING,
     tel: DataTypes.STRING,
     email: DataTypes.STRING,
     authorized: DataTypes.BOOLEAN,

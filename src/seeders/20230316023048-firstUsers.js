@@ -1,23 +1,27 @@
 'use strict';
 
 /** @type {import('sequelize-cli').Migration} */
+// const { v4: uuidv4 } = require('uuid');
 module.exports = {
   async up (queryInterface, Sequelize) {
 
     await queryInterface.bulkInsert('Users', [
   {
+    // id: uuidv4(),
     name: 'Juan',
     lastName: 'Avila',
-    email: 'ejemplo2@gmail.com',
+    email: 'ejemplo@gmail.com',
     birthDate: '05/07/1998',
     address: 'Avenida Falsa 124',
     image: 'url1',
     dni:'36545332',
     tel:'990987267',
     role:'User',
-    CompanyId: 1
+    CompanyId : 1,
+ 
 },
 {
+  // id: uuidv4(),
   name: 'Estiven',
   lastName: 'Moica',
   email: 'ejemplo3@gmail.com',
@@ -27,9 +31,12 @@ module.exports = {
   dni:'36543338',
   tel:'990987277',
   role:'User',
-  CompanyId: 1
+  CompanyId : 1,
+ 
 },
 {
+  
+  // id: uuidv4(),
   name: 'Didier',
   lastName: 'Brange',
   email: 'ejemplo4@gmail.com',
@@ -39,9 +46,11 @@ module.exports = {
   dni:'36544444',
   tel:'990987288',
   role:'User',
-  CompanyId: 1
+  CompanyId : 1,
+  
 },
 {
+  // id: uuidv4(),
   name: 'Francisco',
   lastName: 'Toti',
   email: 'ejemplo5@gmail.com',
@@ -51,9 +60,11 @@ module.exports = {
   dni:'36545555',
   tel:'990987299',
   role:'User',
-  CompanyId: 1
+  CompanyId : 1,
+ 
 },
 {
+  // id: uuidv4(),
   name: 'Carlos',
   lastName: 'Martinez',
   email: 'ejemplo6@gmail.com',
@@ -63,9 +74,11 @@ module.exports = {
   dni:'36546666',
   tel:'990987200',
   role:'User',
-  CompanyId: 1
+  CompanyId : 1,
+ 
 },
 {
+  // id: uuidv4(),
   name: 'Pablo',
   lastName: 'Cogno',
   email: 'ejemplo7@gmail.com',
@@ -75,9 +88,11 @@ module.exports = {
   dni:'36547777',
   tel:'990987111',
   role:'User',
-  CompanyId: 1
+  CompanyId : 1,
+  
 },
 {
+  // id: uuidv4(),
   name: 'Josefina',
   lastName: 'Morande',
   email: 'ejemplo8@gmail.com',
@@ -87,9 +102,11 @@ module.exports = {
   dni:'36548888',
   tel:'990987222',
   role:'User',
-  CompanyId: 1
+  CompanyId : 1,
+
 },
 {
+  // id: uuidv4(),
   name: 'Virginia',
   lastName: 'Gonzalez',
   email: 'ejemplo9@gmail.com',
@@ -99,9 +116,11 @@ module.exports = {
   dni:'36549999',
   tel:'990987333',
   role:'User',
-  CompanyId: 1
+  CompanyId : 1,
+
 },
 {
+  // id: uuidv4(),
   name: 'Juliana',
   lastName: 'Mora',
   email: 'ejemplo10@gmail.com',
@@ -111,7 +130,8 @@ module.exports = {
   dni:'36500000',
   tel:'990987444',
   role:'Admin',
-  CompanyId: 1
+  CompanyId : 1,
+
 },
 
   ])
