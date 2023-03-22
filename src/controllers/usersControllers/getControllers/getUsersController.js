@@ -27,9 +27,6 @@ const getUsersController = async(name, role, area, position, sort) => {
 
 
         if(name) {
-            usersFilterContitios = original;
-           
-            
             usersFilterContitios['name'] = {
                 [Op.iLike]: `%${name}%`,
             };
