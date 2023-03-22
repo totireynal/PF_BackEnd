@@ -22,11 +22,15 @@ const getUsersController = async(name, role, area, position, sort) => {
 
         //---------------------
 
+        console.log(name)
+        let original = {};
+        let usersFilterContitios = {};
 
-        
-        const usersFilterContitios = {};
 
         if(name) {
+            usersFilterContitios = original;
+           
+            
             usersFilterContitios['name'] = {
                 [Op.iLike]: `%${name}%`,
             };
@@ -37,7 +41,7 @@ const getUsersController = async(name, role, area, position, sort) => {
                 [Op.eq] : role,
             }
         }
-        const filesFilterConditions = {};
+        let filesFilterConditions = {};
 
         if(position) {
             filesFilterConditions['position'] = {
@@ -77,9 +81,10 @@ const getUsersController = async(name, role, area, position, sort) => {
             const cleanResults = cleanInfoDb(results)
 
             return cleanResults;
-        
 
+        // ---------------------------------------------------------------------------------------
 
+       
    
     
 };
