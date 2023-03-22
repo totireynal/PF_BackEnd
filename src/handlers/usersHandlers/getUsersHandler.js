@@ -40,7 +40,7 @@ const getUsersHandler = async(req, res) => {
                 
             } else {
                 const resultUsers = await getUsersUnsorted();
-                return res.status(400).json(resultUsers)
+                return res.status(200).json(resultUsers)
             }
 
         // }
