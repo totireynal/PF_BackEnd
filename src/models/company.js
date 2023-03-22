@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     tel: DataTypes.STRING,
     email: DataTypes.STRING,
     authorized: DataTypes.BOOLEAN,
+    paymentDay: DataTypes.DATE,
   }, {
     sequelize,
     modelName: 'Company',

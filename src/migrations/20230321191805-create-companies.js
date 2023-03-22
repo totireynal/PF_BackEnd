@@ -48,6 +48,9 @@ module.exports = {
         defaultValue: false,
         unique: true
       },
+      paymentDay: {
+        type: Sequelize.DATE,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

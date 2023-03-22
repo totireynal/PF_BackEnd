@@ -43,7 +43,6 @@ module.exports = {
         // type: Sequelize.UUID,
         // defaultValue: Sequelize.UUIDV4,
         type : Sequelize.INTEGER,
-        autoIncrement: true,
         allowNull: true,
         references: {
           model:'Users',
@@ -56,7 +55,6 @@ module.exports = {
       // type: Sequelize.UUID,
       // defaultValue: Sequelize.UUIDV4,
       type : Sequelize.INTEGER,
-      autoIncrement: true,
       allowNull: true,
       references: {
         model:'Areas',
@@ -69,7 +67,6 @@ module.exports = {
     // type: Sequelize.UUID,
     // defaultValue: Sequelize.UUIDV4,
     type : Sequelize.INTEGER,
-    autoIncrement: true,
     allowNull: true,
     references: {
       model:'Positions',
