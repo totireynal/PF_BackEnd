@@ -17,7 +17,7 @@ const putCompanyController = async ( id, name, cuit, industry, location, email, 
         id
       }
     });
-    return 'Company could not be updated successfully'
+    return 'Company could not be  successfully updated '
 }
 
 module.exports = putCompanyController
