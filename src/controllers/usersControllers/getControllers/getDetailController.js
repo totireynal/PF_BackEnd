@@ -8,7 +8,8 @@ const Position = require("../../../models").Position;
 const getDetailController = async (id) => {
   const fileIdDb = await File.findOne({
     where: {
-      UserId: id,
+      // UserId: id,
+      id,
     },
     include: [
       {
