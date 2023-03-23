@@ -1,5 +1,5 @@
-"use strict";
-const { Model } = require("sequelize");
+'use strict';
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class File extends Model {
     /**
@@ -10,19 +10,23 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       File.belongsTo(models.Users)
       models.Users.hasOne(File)
+      File.belongsTo(models.Position)
+      models.Position.hasMany(File);
+      File.belongsTo(models.Area)
+      models.Area.hasMany(File);
+      
     }
   }
   File.init(
     {
+     
       dateOfAdmission: DataTypes.STRING,
-      position: DataTypes.STRING,
-      area: DataTypes.STRING,
       cuil: DataTypes.STRING,
       cbu: DataTypes.STRING,
     },
     {
       sequelize,
-      modelName: "File",
+      modelName: 'File',
       paranoid: true,
       deletedAt: 'deletedAt',
   

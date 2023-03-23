@@ -32,5 +32,20 @@ git push
  y volvemos a commitear y pushear y vemos que ya no sube
 
 
+nueva BD:
+en sequelize (proyectofinal/backend)
+npm i uuid
+en la base de datos(sql shell)
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+despues en terminal:
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed:all
+
+
+jason web token codificacion y decodificacion 
+id /id de user /id de ocompani / role
+jwt tiene refresh? por ahora no
+buenas practicas, todas las req madna el token y tiene que leer si el token esta valido o no(10 min)
  
  
