@@ -1,57 +1,39 @@
 const { Op } = require('sequelize');
 const Users = require('../../../models').Users;
 const File = require('../../../models').File;
+const Area = require('../../../models').Area;
+const Position = require('../../../models').Position;
 const cleanInfoDb = require('../../../utils/getUsersCleanDb');
 
 const getUsersController = async(name, role, area, position, sort) => {
 
-
-        // const dataBaseUsers = await File.findAll({
-        //     include: {
-        //         model: Users,
-        //         attributes: ['name', 'lastName', 'image', 'role'],
-        //     }
-        // });
-        
-        // const infoClean = cleanInfoDb(dataBaseUsers);
-    
-        // if(infoClean.length === 0) throw new Error({ error: `The database has failed, please try again later!` })
-        
-        // return infoClean;
-
-
-        //---------------------
-
-        console.log(name)
-        let original = {};
-        let usersFilterContitios = {};
+        let usersFilterConditions = {};
 
 
         if(name) {
-            usersFilterContitios = original;
-           
-            
-            usersFilterContitios['name'] = {
+            usersFilterConditions['name'] = {
                 [Op.iLike]: `%${name}%`,
             };
         }
 
         if (role) {
-            usersFilterContitios['role'] = {
+            usersFilterConditions['role'] = {
                 [Op.eq] : role,
             }
         }
-        let filesFilterConditions = {};
+        let positionFilterConditions = {};
 
         if(position) {
-            filesFilterConditions['position'] = {
+            positionFilterConditions['position'] = {
                 [Op.eq]: position,
             };
             
         }
 
-        if(area)  {
-            filesFilterConditions['area'] = {
+        let areaFilterConditions = {};
+
+         if(area)  {
+            areaFilterConditions['area'] = {
                 [Op.eq] : area,
             }
         }
@@ -65,12 +47,20 @@ const getUsersController = async(name, role, area, position, sort) => {
 
         
             const results = await File.findAll({
-                where: filesFilterConditions,
-                include: {
+                include:[ {
                     model: Users,
                     attributes: ['name','lastName', 'role', 'image'],
-                    where: usersFilterContitios,
-                },
+                    where: usersFilterConditions,
+                },{
+                    model: Position ,
+                    attributes: ['position'],
+                    where: positionFilterConditions,
+                },{
+                    model: Area, 
+                    attributes :['area'],
+                    where : areaFilterConditions
+                }
+            ],
                 order: [sortConditionsUsers]
                 
                 
@@ -82,10 +72,7 @@ const getUsersController = async(name, role, area, position, sort) => {
 
             return cleanResults;
 
-        // ---------------------------------------------------------------------------------------
-
        
-   
     
 };
 

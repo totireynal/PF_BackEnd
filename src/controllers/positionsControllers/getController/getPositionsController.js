@@ -6,7 +6,7 @@ const getPositionsController = async (name, role, area, position) => {
 
     let positions = filter.map(elem => elem.position);
     
-    return [...new Set(positions)];
+    return  [...new Set(positions)];
 
 }
 
