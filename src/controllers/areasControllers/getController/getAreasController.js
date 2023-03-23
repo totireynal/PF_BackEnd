@@ -1,10 +1,14 @@
-const File = require('../../../models').File;
+const getUsersController = require('../../usersControllers/getControllers/getUsersController');
 
-const getAreasController = async () => {
+// const File = require('../../../models').File;
 
-    const results = await File.findAll();
 
-    let areas = results.map(elem => elem.area);
+const getAreasController = async (name, role, area, position, sort) => {
+
+    const filter = await getUsersController(name, role, area, position, sort)
+
+
+    let areas = filter.map(elem => elem.area);
 
     return [...new Set(areas)];
 
