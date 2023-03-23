@@ -1,13 +1,15 @@
 "use strict";
 
 /** @type {import('sequelize-cli').Migration} */
+// const { v4: uuidv4 } = require('uuid');
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("Users", [
       {
+        // id: uuidv4(),
         name: "Juan",
         lastName: "Avila",
-        email: "ejemplo2@gmail.com",
+        email: "ejemplo@gmail.com",
         birthDate: "05/07/1998",
         address: "Avenida Falsa 124",
         image: "url1",
@@ -17,6 +19,7 @@ module.exports = {
         CompanyId: 1,
       },
       {
+        // id: uuidv4(),
         name: "Estiven",
         lastName: "Moica",
         email: "ejemplo3@gmail.com",
@@ -29,6 +32,7 @@ module.exports = {
         CompanyId: 1,
       },
       {
+        // id: uuidv4(),
         name: "Didier",
         lastName: "Brange",
         email: "ejemplo4@gmail.com",
@@ -41,6 +45,7 @@ module.exports = {
         CompanyId: 1,
       },
       {
+        // id: uuidv4(),
         name: "Francisco",
         lastName: "Toti",
         email: "ejemplo5@gmail.com",
@@ -53,6 +58,7 @@ module.exports = {
         CompanyId: 1,
       },
       {
+        // id: uuidv4(),
         name: "Carlos",
         lastName: "Martinez",
         email: "ejemplo6@gmail.com",
@@ -65,6 +71,7 @@ module.exports = {
         CompanyId: 1,
       },
       {
+        // id: uuidv4(),
         name: "Pablo",
         lastName: "Cogno",
         email: "ejemplo7@gmail.com",
@@ -77,6 +84,7 @@ module.exports = {
         CompanyId: 1,
       },
       {
+        // id: uuidv4(),
         name: "Josefina",
         lastName: "Morande",
         email: "ejemplo8@gmail.com",
@@ -89,6 +97,7 @@ module.exports = {
         CompanyId: 1,
       },
       {
+        // id: uuidv4(),
         name: "Virginia",
         lastName: "Gonzalez",
         email: "ejemplo9@gmail.com",
@@ -101,6 +110,7 @@ module.exports = {
         CompanyId: 1,
       },
       {
+        // id: uuidv4(),
         name: "Juliana",
         lastName: "Mora",
         email: "ejemplo10@gmail.com",

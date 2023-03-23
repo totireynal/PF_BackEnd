@@ -1,6 +1,6 @@
 const Company = require ('../../../models').Company;
 
-const putCompanyController = async ( id, name, cuit, industry, location, email, numberEmployees, tel, authorized ) => {
+const putCompanyController = async ( id, name, cuit, industry, location, email, numberEmployees, tel, authorized, paymentDay) => {
  
     const findCompanyById = await Company.findOne({
      where: {
@@ -11,7 +11,7 @@ const putCompanyController = async ( id, name, cuit, industry, location, email, 
     if (!findCompanyById) throw new Error('Company not found');
 
     await Company.Update({
-     name, cuit, industry, location, email,numberEmployees, tel, authorized},
+     name, cuit, industry, location, email,numberEmployees, tel, authorized, paymentDay},
      {
       where: {
         id

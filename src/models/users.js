@@ -7,12 +7,7 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-      Users.belongsTo(models.Company);
-      models.Company.hasMany(Users);
-      Users.hasOne(models.UserPassword);
-      models.UserPassword.belongsTo(Users);
-    }
+    static associate(models) {}
   }
   Users.init(
     {
@@ -21,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       email: DataTypes.STRING,
       birthDate: DataTypes.DATEONLY,
       address: DataTypes.STRING,
-      image: DataTypes.BLOB,
+      image: DataTypes.STRING,
       dni: DataTypes.STRING,
       tel: DataTypes.STRING,
       role: DataTypes.ENUM("SuperAdmin", "Admin", "User"),
@@ -31,23 +26,6 @@ module.exports = (sequelize, DataTypes) => {
       paranoid: true,
       modelName: "Users",
       deletedAt: "deletedAt",
-    }
-  );
-  Users.init(
-    {
-      name: DataTypes.STRING,
-      lastName: DataTypes.STRING,
-      email: DataTypes.STRING,
-      birthDate: DataTypes.DATEONLY,
-      address: DataTypes.STRING,
-      image: DataTypes.BLOB,
-      dni: DataTypes.STRING,
-      tel: DataTypes.STRING,
-      role: DataTypes.ENUM("SuperAdmin", "Admin", "User"),
-    },
-    {
-      sequelize,
-      modelName: "Users",
     }
   );
   return Users;

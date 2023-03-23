@@ -7,7 +7,7 @@ const getUsersHandler = require("../handlers/usersHandlers/getUsersHandler");
 const softDeleteUsers = require("../middlewares/userMiddlewares/validateSoftDeleteUsers");
 const softDeleteHandler = require("../handlers/usersHandlers/deleteUsersHandlers");
 const validatePostUsersByCuilAndCbu = require("../middlewares/userMiddlewares/validatePostUsersbyCuilAndCbu");
-const getUserAndFileIdHandler = require("../handlers/usersHandlers/getUserAndFileIdHandler");
+const getDetailHandler = require("../handlers/usersHandlers/getDetailHandler");
 
 usersRouter.get("/", getUsersHandler);
 usersRouter.post(
@@ -18,6 +18,6 @@ usersRouter.post(
 );
 usersRouter.put("/:id", validatePutUsers, putUserHandler);
 usersRouter.delete("/:id", softDeleteUsers, softDeleteHandler);
-usersRouter.get("/:id", getUserAndFileIdHandler);
+usersRouter.get("/:id", getDetailHandler);
 
 module.exports = usersRouter;
