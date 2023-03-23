@@ -11,13 +11,13 @@ const getUsersUnsorted = async() => {
         const dataBaseUsers = await File.findAll({
             include:[ {
                 model: Users,
-                attributes: ['id','name', 'lastName', 'image', 'role'],
+                attributes: ['name', 'lastName', 'image', 'role' , 'email'],
             }, {
                 model: Area,
-                attributes: ['id','area'] ,          
+                attributes: ['area'] ,          
              }, {
                 model: Position,
-                attributes : ['id','position'],
+                attributes : ['position'],
              }]
         });
         

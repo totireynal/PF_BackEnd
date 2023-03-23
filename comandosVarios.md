@@ -42,5 +42,10 @@ despues en terminal:
 npx sequelize-cli db:migrate
 npx sequelize-cli db:seed:all
 
+
+jason web token codificacion y decodificacion 
+id /id de user /id de ocompani / role
+jwt tiene refresh? por ahora no
+buenas practicas, todas las req madna el token y tiene que leer si el token esta valido o no(10 min)
  
  

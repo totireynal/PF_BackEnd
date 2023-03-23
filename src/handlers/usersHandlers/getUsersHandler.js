@@ -4,7 +4,7 @@ const getUsersController = require('../../controllers/usersControllers/getContro
 const getUsersUnsorted = require('../../controllers/usersControllers/getControllers/getUsersUnsorted.js');
 const getUsersHandler = async(req, res) => {
 
-    const { name, role ,area, position , sort} = req.query;
+    const { name, role ,area, position , email, sort} = req.query;
 
     
 
@@ -31,8 +31,8 @@ const getUsersHandler = async(req, res) => {
         //     return res.status(201).json(resultsUsers);
         // } else {
 
-            if (name || role || area || position || sort) {
-                const resultsUsers = await getUsersController(name, role, area, position, sort);
+            if (name || role || area || position || email || sort) {
+                const resultsUsers = await getUsersController(name, role, area, position, email, sort);
                 return res.status(201).json(resultsUsers);
                 
             } else {
