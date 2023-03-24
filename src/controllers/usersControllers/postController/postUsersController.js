@@ -18,7 +18,7 @@ const postUsersController = async (name, lastName, email, birthDate, address, im
     // await newUser.setCompany(CompanyId) 
     const idNewUser = newUser.id;
     
-    await File.create({
+    const e = await File.create({
         dateOfAdmission,
         position,
         area,
@@ -27,7 +27,7 @@ const postUsersController = async (name, lastName, email, birthDate, address, im
         UserId : idNewUser
     })
 
-    return {message: `The employee ${name} ${lastName} with id: ${idNewUser} has been created correctly.`}
+    return {message: e}
     
 }
 
