@@ -1,6 +1,9 @@
 const Area = require('../../../models').Area;
 
-
+const getArea = async () => {
+      const area = await Area.findAll();
+      return area;
+}
 
 const postArea = async (area) =>{
 
@@ -52,4 +55,5 @@ module.exports = {
      deleteArea,
      putArea,
      postArea,
+     getArea,
 }
