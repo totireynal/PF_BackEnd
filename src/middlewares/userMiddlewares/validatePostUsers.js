@@ -9,10 +9,10 @@ const validatePostUsers = (req, res, next) => {
     dni,
     tel,
     role,
-    CompanyId,
     dateOfAdmission,
-    position,
-    area,
+    AreaId,
+    PositionId,
+    CompanyId,
     cuil,
     cbu,
   } = req.body;
@@ -22,14 +22,14 @@ const validatePostUsers = (req, res, next) => {
   if (!birthDate) return res.status(400).json({ error: "Missing birthDate" });
   if (!address) return res.status(400).json({ error: "Missing address" });
   if (!image) return res.status(400).json({ error: "Missing image" });
+  if (!AreaId) return res.status(400).json({ error: "Missing Area" });
+  if (!PositionId) return res.status(400).json({ error: "Missing Position" });
+  if (!CompanyId) return res.status(400).json({ error: "Missing Company" });
   if (!dni) return res.status(400).json({ error: "Missing dni" });
   if (!tel) return res.status(400).json({ error: "Missing tel" });
   if (!role) return res.status(400).json({ error: "Missing role" });
-  // if (!CompanyId) return res.status(400).json({error: 'Missing CompanyId'});
   if (!dateOfAdmission)
     return res.status(400).json({ error: "Missing dateOfAdmission" });
-  if (!position) return res.status(400).json({ error: "Missing position" });
-  if (!area) return res.status(400).json({ error: "Missing area" });
   if (!cuil) return res.status(400).json({ error: "Missing cuil" });
   if (!cbu) return res.status(400).json({ error: "Missing cbu" });
 

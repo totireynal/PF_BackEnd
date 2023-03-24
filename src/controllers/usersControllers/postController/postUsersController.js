@@ -1,5 +1,7 @@
 const Users = require("../../../models").Users;
 const File = require("../../../models").File;
+const Area = require("../../../models").Area;
+const Position = require("../../../models").Position;
 
 const postUsersController = async (
   name,
@@ -7,14 +9,14 @@ const postUsersController = async (
   email,
   birthDate,
   address,
+  CompanyId,
   image,
   dni,
   tel,
   role,
-  CompanyId,
+  PositionId,
+  AreaId,
   dateOfAdmission,
-  position,
-  area,
   cuil,
   cbu
 ) => {
@@ -28,6 +30,7 @@ const postUsersController = async (
     dni,
     tel,
     role,
+    CompanyId,
   });
 
   // await newUser.setCompany(CompanyId)
@@ -35,10 +38,10 @@ const postUsersController = async (
 
   await File.create({
     dateOfAdmission,
-    position,
-    area,
     cuil,
     cbu,
+    PositionId,
+    AreaId,
     UserId: idNewUser,
   });
 
