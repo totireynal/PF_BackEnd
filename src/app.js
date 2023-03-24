@@ -32,5 +32,7 @@ server.use('/positions', positionsRouter);
 server.use('/areas', areasRouter);
 server.use('/roles', rolesRouter);
 server.use('/notifications', sendGridRouter);
+server.use('/users', usersRouter);
+server.use('/reviews', reviewsRouter);
 
 module.exports = server;
