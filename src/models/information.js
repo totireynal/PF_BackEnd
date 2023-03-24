@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Information.init({
+   
     name: DataTypes.STRING,
     tel: DataTypes.STRING,
     address: DataTypes.STRING,
@@ -23,6 +24,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Information',
+    paranoid: true,
+    deletedAt: 'deletedAt',
   });
   return Information;
 };

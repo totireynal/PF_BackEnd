@@ -1,169 +1,200 @@
 'use strict';
 
 /** @type {import('sequelize-cli').Migration} */
+// const { v4: uuidv4 } = require('uuid');
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Files', [
       {
+        
+
         dateOfAdmission: '10/02/2022',
-        position: 'Dev Ops',
-        area: 'Engineering',
-        cuil: '27-28033514-1',
-        cbu: '1702046600000087867',
-        UserId: '1'
+        cuil: '54-233514-1',
+        cbu: '170204634545000087867',
+        UserId:1,
+        AreaId:3,
+        PositionId:3,
+      },{
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '422-28033514-1',
+        cbu: '745404663454300087867',
+        UserId:2,
+        AreaId:2,
+        PositionId:4,
       },
       {
-        dateOfAdmission: '05/09/2022',
-        position: 'Dev Ops',
-        area: 'Engineering',
-        cuil: '27-28033514-2',
-        cbu: '1702046600000087868',
-        UserId: '2'
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '54-2803314-1',
+        cbu: '155220466034500087867',
+        UserId:3,
+        AreaId:2,
+        PositionId:4,
       },
       {
-        dateOfAdmission: '12/11/2022',
-        position: 'Dev Ops',
-        area: 'Engineering',
-        cuil: '27-28033514-3',
-        cbu: '1702046600000087869',
-        UserId: '3'
-      },
-        {
-        dateOfAdmission: '09/02/2023',
-        position: 'CTO',
-        area: 'Engineering',
-        cuil: '27-28033514-4',
-        cbu: '1702046600000087800',
-        UserId: '4'
-      },
-        {
-        dateOfAdmission: '08/11/2021',
-        position: 'Head of People',
-        area: 'HHRR',
-        cuil: '27-28033514-5',
-        cbu: '1702046600000087801',
-        UserId: '5'
-      },
-        {
-        dateOfAdmission: '01/04/2022',
-        position: 'People Specialist',
-        area: 'HHRR',
-        cuil: '27-28033514-6',
-        cbu: '1702046600000087802',
-        UserId: '6'
-      },
-        {
-        dateOfAdmission: '02/10/2021',
-        position: 'Project Manager',
-        area: 'Operations',
-        cuil: '27-28033514-7',
-        cbu: '1702046600000087803',
-        UserId: '7'
-      },
-        {
-        dateOfAdmission: '05/11/2021',
-        position: 'Product Owner',
-        area: 'Marketing',
-        cuil: '27-28033514-8',
-        cbu: '1702046600000087804',
-        UserId: '8'
-      },
-        {
-        dateOfAdmission: '17/10/2022',
-        position: 'Scrum Master',
-        area: 'Engineering',
-        cuil: '27-28033514-9',
-        cbu: '1702046600000087805',
-        UserId: '9'
-      },
-          {
-        dateOfAdmission: '01/02/2023',
-        position: 'People Specialist',
-        area: 'HHRR',
-        cuil: '27-28033515-0',
-        cbu: '1702046600000087806',
-        UserId: '10'
-      },
-        {
-        dateOfAdmission: '03/11/2022',
-        position: 'Product Owner',
-        area: 'Operations',
-        cuil: '27-28033515-1',
-        cbu: '1702046600000087111',
-        UserId: '11'
-      },
-        {
-        dateOfAdmission: '12/01/2022',
-        position: 'Project Manager',
-        area: 'Operations',
-        cuil: '27-28033515-2',
-        cbu: '1702046600000087906',
-        UserId: '12'
-      },
-        {
-        dateOfAdmission: '03/09/2022',
-        position: 'Accountant',
-        area: 'Finance',
-        cuil: '27-28033515-3',
-        cbu: '1702046600000087901',
-        UserId: '13'
-      },
-        {
-        dateOfAdmission: '02/05/2022',
-        position: 'Lawyer',
-        area: 'Legal',
-        cuil: '27-28033515-4',
-        cbu: '1702046600000087807',
-        UserId: '14'
-      },
-        {
-        dateOfAdmission: '01/09/2022',
-        position: 'Lawyer',
-        area: 'Legal',
-        cuil: '27-28033515-5',
-        cbu: '1702046600000087989',
-        UserId: '15'
-      },
-        {
-        dateOfAdmission: '09/07/2022',
-        position: 'Project Manager',
-        area: 'Operations',
-        cuil: '27-28033515-6',
-        cbu: '1702046600000087809',
-        UserId: '16'
-      },
-        {
-        dateOfAdmission: '12/12/2022',
-        position: 'Dev Ops',
-        area: 'Engineering',
-        cuil: '27-28033515-7',
-        cbu: '1702046600000087810',
-        UserId: '17'
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '32-28033514-1',
+        cbu: '1225404665700087867',
+        UserId:4,
+        AreaId:1,
+        PositionId:1,
       },
       {
-        dateOfAdmission: '02/02/2022',
-        position: 'Scrum Master',
-        area: 'Engineering',
-        cuil: '27-28033515-8',
-        cbu: '1702046600000087811',
-        UserId: '18'
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '27-2803514-1',
+        cbu: '15422046600567087867',
+        UserId:5,
+        AreaId:3,
+        PositionId:3,
       },
       {
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-28033514-1',
+        cbu: '5742046603406087867',
+        UserId:6,
+        AreaId:2,
+        PositionId:2,
+      },
+      {
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-28023425-1',
+        cbu: '5742046602340087867',
+        UserId:7,
+        AreaId:2,
+        PositionId:7,
+      },{
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-28023433451',
+        cbu: '5742046603430087867',
+        UserId:8,
+        AreaId:2,
+        PositionId:2,
+      },{
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-345432-1',
+        cbu: '574204660005647867',
+        UserId:9,
+        AreaId:2,
+        PositionId:7,
+      },
+      {
+        
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-28453454-1',
+        cbu: '57420468987000087867',
+        UserId:10,
+        AreaId:3,
+        PositionId:3,
+      },
+      {
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-280345345-1',
+        cbu: '57420466054430087867',
+        UserId:11,
+        AreaId:1,
+        PositionId:1,
+      },{
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-345345-1',
+        cbu: '57420466443543087867',
+        UserId:12,
+        AreaId:2,
+        PositionId:4,
+      },{
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-2823424-1',
+        cbu: '57420462343200087867',
+        UserId:13,
+        AreaId:1,
+        PositionId:6,
+      },{
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-283242344-1',
+        cbu: '574204663240087867',
+        UserId:14,
+        AreaId:1,
+        PositionId:6,
+      },{
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-28033234234-1',
+        cbu: '5742046601233087867',
+        UserId:15,
+        AreaId:1,
+        PositionId:7,
+      },{
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-280234234-1',
+        cbu: '57420466123123087867',
+        UserId:16,
+        AreaId:1,
+        PositionId:1,
+      },{
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-2802342344-1',
+        cbu: '5742046600123127867',
+        UserId:17,
+        AreaId:4,
+        PositionId:5,
+      },{
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-28234234-1',
+        cbu: '57420466001231230087867',
+        UserId:18,
+        AreaId:4,
+        PositionId:5,
+      },{
+        
+
+        dateOfAdmission: '10/02/2022',
+        cuil: '12-2803234234-1',
+        cbu: '5742041231230087867',
+        UserId:19,
+        AreaId:2,
+        PositionId:2,
+      },
+      {
+        
+
         dateOfAdmission: '08/10/2022',
-        position: 'COO',
-        area: 'Operations',
-        cuil: '27-28033515-9',
-        cbu: '1702046600000087812',
-        UserId: '19'
+        cuil: '11-2803234234-1',
+        cbu: '5741041231230087867',
+        UserId:20,
+        AreaId:2,
+        PositionId:2,
       },
-      {
-        dateOfAdmission: '10/12/2022',
-        position: 'Dev Ops',
-        area: 'Engineering',
-        cuil: '27-28033516-0',
-        cbu: '1702046600000087813',
-        UserId: '20'
-      }
+        
+      
     ])
   },
 

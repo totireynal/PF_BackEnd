@@ -7,16 +7,18 @@ const getUsersHandler = require('../handlers/usersHandlers/getUsersHandler');
 const softDeleteUsers = require('../middlewares/userMiddlewares/validateSoftDeleteUsers');
 const softDeleteHandler = require('../handlers/usersHandlers/deleteUsersHandlers');
 const validatePostUsersByCuilAndCbu = require('../middlewares/userMiddlewares/validatePostUsersbyCuilAndCbu');
-const getUserAndFileIdHandler = require('../handlers/usersHandlers/getUserAndFileIdHandler');
+const getDetailHandler = require('../handlers/usersHandlers/getDetailHandler');
+const authenticationToken = require('../middlewares/authMiddlewares/authenticationToken');
+const verifyJWT = require('../middlewares/authMiddlewares/verifyJWT');
+const checkAuthorization = require('../middlewares/authMiddlewares/checkAutorization');
 
 
-
-
+// usersRouter.use(verifyJWT)
 usersRouter.get('/', getUsersHandler);
 usersRouter.post('/', validatePostUsers, validatePostUsersByCuilAndCbu, postUsersHandler);
 usersRouter.put('/:id',validatePutUsers, putUserHandler);
 usersRouter.delete('/:id', softDeleteUsers, softDeleteHandler);
-usersRouter.get('/:id', getUserAndFileIdHandler);
+usersRouter.get('/:id', getDetailHandler);
 
 
 

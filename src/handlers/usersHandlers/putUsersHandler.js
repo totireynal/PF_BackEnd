@@ -3,11 +3,11 @@ const putUsersController = require("../../controllers/usersControllers/putContro
 
 const putUserHandler = async (req, res) => {
 
-    const { name, lastName, email, birthDate, address, image, dni, tel, role, dateOfAdmission, position, area, cuil, cbu} = req.body;
+    const { name, lastName, email, birthDate, address, image, dni, tel, role, dateOfAdmission, PositionId, AreaId, cuil, cbu} = req.body;
     const { id } = req.params;
    
     try {
-        const updatedUser = await putUsersController (id, name, lastName, email, birthDate, address, image, dni, tel, role, dateOfAdmission, position, area, cuil, cbu);
+        const updatedUser = await putUsersController (id, name, lastName, email, birthDate, address, image, dni, tel, role, dateOfAdmission, PositionId, AreaId, cuil, cbu);
         res.status(200).json(updatedUser);
 
     } catch (error) {
@@ -15,5 +15,6 @@ const putUserHandler = async (req, res) => {
     }
 
 }
+
 
 module.exports = putUserHandler;

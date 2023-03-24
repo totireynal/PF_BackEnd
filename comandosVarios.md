@@ -13,7 +13,7 @@ SEQUELIZE-CLI:
 //npx sequelize-cli init//
 :crea un proyecto arriba del ya creado (sobreescribe carpetas)
 - modificar config.json /podemos declarar la db y con 
-//npx sequelize-cli db:create// --> la crea
+//npx sequelize-cli db:create company// --> la crea
 //npx sequelize-cli model:generate --name Nombremodelo --attributes firstName:string//
 :crea modelo y migracion
 //npx sequelize-cli db:migrate// esas migraciones se van a convertir en las tablas y modelo en la db
@@ -32,5 +32,20 @@ git push
  y volvemos a commitear y pushear y vemos que ya no sube
 
 
+nueva BD:
+en sequelize (proyectofinal/backend)
+npm i uuid
+en la base de datos(sql shell)
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+despues en terminal:
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed:all
+
+
+jason web token codificacion y decodificacion 
+id /id de user /id de ocompani / role
+jwt tiene refresh? por ahora no
+buenas practicas, todas las req madna el token y tiene que leer si el token esta valido o no(10 min)
  
  
