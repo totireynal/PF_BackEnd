@@ -40,7 +40,7 @@ module.exports = {
         dateOfAdmission: '10/02/2022',
         cuil: '32-28033514-1',
         cbu: '1225404665700087867',
-        UserId:7,
+        UserId:2,
         AreaId:1,
         PositionId:4,
       },
@@ -107,7 +107,7 @@ module.exports = {
         dateOfAdmission: '10/02/2022',
         cuil: '12-280345345-1',
         cbu: '57420466054430087867',
-        UserId:7,
+        UserId:3,
         AreaId:1,
         PositionId:2,
       },{
@@ -180,18 +180,10 @@ module.exports = {
         cuil: '12-2803234234-1',
         cbu: '5742041231230087867',
         UserId:7,
-        AreaId:3,
+        AreaId:1,
         PositionId:2,
       },
-        {
-
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-2803234324-1',
-        cbu: '57420466002131087867',
-        UserId:6,
-        AreaId:2,
-        PositionId:3,
-      },
+        
       
     ])
   },
