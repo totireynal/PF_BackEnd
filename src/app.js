@@ -9,6 +9,7 @@ const reviewsRouter = require('./routes/reviewsRouter');
 const positionsRouter = require('./routes/positionsRouter');
 const areasRouter = require('./routes/areasRouter');
 const rolesRouter = require('./routes/rolesRouter');
+const sendGridRouter = require('./routes/sendGridRouter');
 
 
 
@@ -25,6 +26,7 @@ server.use('/companies', companiesRouter);
 server.use('/reviews', reviewsRouter);
 server.use('/positions', positionsRouter);
 server.use('/areas', areasRouter);
-server.use('/roles', rolesRouter)
+server.use('/roles', rolesRouter);
+server.use('/notifications', sendGridRouter);
 
 module.exports = server;

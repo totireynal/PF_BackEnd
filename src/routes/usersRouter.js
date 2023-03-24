@@ -1,5 +1,4 @@
 const usersRouter = require('express').Router();
-const validatePostUsersByCuilAndCbu = require('../middlewares/userMiddlewares/validatePostUsersbyCuilAndCbu');
 const validatePostUsers = require('../middlewares/userMiddlewares/validatePostUsers');
 const validatePutUsers = require('../middlewares/userMiddlewares/validatePutUsers');
 const softDeleteUsers = require('../middlewares/userMiddlewares/validateSoftDeleteUsers');
