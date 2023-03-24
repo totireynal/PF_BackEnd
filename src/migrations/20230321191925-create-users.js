@@ -43,7 +43,7 @@ module.exports = {
       },
       tel: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
         unique: true,
       },
       role: {
