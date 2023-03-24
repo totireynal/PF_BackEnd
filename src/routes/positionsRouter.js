@@ -1,9 +1,19 @@
 const getPositionsHandler = require('../handlers/positionsHandlers/getPositionsHandler');
-const { deletePosition, putPosition, postPosition } = require('../controllers/positionsControllers/positionCrudController/positionCrudController')
+const { deletePosition, putPosition, postPosition, getPosition } = require('../controllers/positionsControllers/positionCrudController/positionCrudController')
 
 const positionsRouter = require('express').Router();
 
 positionsRouter.get('/', getPositionsHandler)
+
+positionsRouter.get('/raw' , async (req, res) =>{
+
+     try {
+          const positions = await getPosition();
+          res.status(200).json(positions);
+     } catch (error) {
+          res.status(400).json(error);
+     }
+})
 
 positionsRouter.put('/:id', async (req, res) => {
      const { position } = req.body;

@@ -26,7 +26,7 @@ const getUsersUnsorted = async() => {
         if(infoClean.length === 0) throw new Error({ error: `The database has failed, please try again later!` })
         
         return infoClean;
-       
+        // return dataBaseUsers;
 
 }
 
