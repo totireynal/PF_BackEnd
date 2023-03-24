@@ -1,11 +1,20 @@
 const areasRouter = require('express').Router();
 const getAreasHandler = require('../handlers/areasHandlers/getAreasHandler');
-const { deleteArea, putArea,  postArea,} = require ('../controllers/areasControllers/areaCrudControllers/areaCrudController')
-
+const areasRouter = require('express').Router();
+const { getArea, deleteArea, putArea,  postArea,} = require ('../controllers/areasControllers/areaCrudControllers/areaCrudController')
 
 
 areasRouter.get('/', getAreasHandler)
 
+areasRouter.get('/ars' , async (req, res) =>{
+   
+     try {
+          const result = await getArea();
+          res.status(200).json(result);
+     } catch (error) {
+          res.status(400).json(error);
+     }
+})
 
 areasRouter.post('/',  async (req , res) =>{
  const { area } = req.body;
