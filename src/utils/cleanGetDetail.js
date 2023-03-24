@@ -2,6 +2,7 @@ const cleanGetDetail = (user) => {
     const clean = {
       
             id: user.UserId,
+            FileId: user.id,
             name: user.User.name,
             lastName: user.User.lastName,
             email: user.User.email,
@@ -11,10 +12,9 @@ const cleanGetDetail = (user) => {
             dni: user.User.dni,
             tel: user.User.tel,
             role: user.User.role,
-            FileId: user.id,
             dateOfAdmission: user.dateOfAdmission,
-            position: user.position,
-            area: user.area,
+            position: user.Position.position,
+            area: user.Area.area,
             cuil: user.cuil,
             cbu: user.cbu
         

@@ -1,7 +1,7 @@
 const Users = require('../../../models').Users;
 const File = require('../../../models').File;
 
-const putUsersController = async (id, name, lastName, email, birthDate, address, image, dni, tel, role, dateOfAdmission, position, area, cuil, cbu) => {
+const putUsersController = async (id, name, lastName, email, birthDate, address, image, dni, tel, role, dateOfAdmission,PositionId , AreaId, cuil, cbu) => {
       
       const findUserById = await Users.findOne({
            where: 
@@ -18,7 +18,7 @@ const putUsersController = async (id, name, lastName, email, birthDate, address,
 
 
       await File.update({
-        dateOfAdmission, position, area, cuil, cbu},
+        dateOfAdmission, PositionId ,AreaId, cuil, cbu},
         {where: {UserId: id}
       });
 
