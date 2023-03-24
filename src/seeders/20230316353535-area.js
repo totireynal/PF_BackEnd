@@ -17,10 +17,13 @@ module.exports = {
     area: 'Engineering',
    },
    {
-    area: 'Dev Ops',
+    area: 'Operations',
    },
    {
     area: 'Legals'
+   },
+   {
+    area: 'HHRR'
    }
   ])
   },

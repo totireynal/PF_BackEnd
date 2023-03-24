@@ -24,7 +24,17 @@ module.exports = {
     },
     {
       position: 'Salesman',
-    }
+    },
+    {
+      position: 'People Specialist',
+    },
+    {
+      position: 'Engineer',
+    },
+    {
+      position: 'Scrum Master',
+    },
+   
    ])
   },
 
