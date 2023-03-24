@@ -8,10 +8,12 @@ const softDeleteUsers = require('../middlewares/userMiddlewares/validateSoftDele
 const softDeleteHandler = require('../handlers/usersHandlers/deleteUsersHandlers');
 const validatePostUsersByCuilAndCbu = require('../middlewares/userMiddlewares/validatePostUsersbyCuilAndCbu');
 const getDetailHandler = require('../handlers/usersHandlers/getDetailHandler');
+const authenticationToken = require('../middlewares/authMiddlewares/authenticationToken');
+const verifyJWT = require('../middlewares/authMiddlewares/verifyJWT');
+const checkAuthorization = require('../middlewares/authMiddlewares/checkAutorization');
 
 
-
-
+// usersRouter.use(verifyJWT)
 usersRouter.get('/', getUsersHandler);
 usersRouter.post('/', validatePostUsers, validatePostUsersByCuilAndCbu, postUsersHandler);
 usersRouter.put('/:id',validatePutUsers, putUserHandler);
