@@ -1,6 +1,5 @@
 const areasRouter = require('express').Router();
 const getAreasHandler = require('../handlers/areasHandlers/getAreasHandler');
-const areasRouter = require('express').Router();
 const { getArea, deleteArea, putArea,  postArea,} = require ('../controllers/areasControllers/areaCrudControllers/areaCrudController')
 
 
