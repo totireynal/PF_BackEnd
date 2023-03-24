@@ -3,7 +3,7 @@ const areasRouter = require('express').Router();
 const { getArea, deleteArea, putArea,  postArea,} = require ('../controllers/areasControllers/areaCrudControllers/areaCrudController')
 
 
-areasRouter.get('/', getAreasHandler)
+areasRouter.get('/',  getAreasHandler)
 
 areasRouter.get('/ars' , async (req, res) =>{
    
