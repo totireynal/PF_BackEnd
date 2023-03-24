@@ -10,7 +10,7 @@ const reviewsRouter = require('./routes/reviewsRouter');
 const positionsRouter = require('./routes/positionsRouter');
 const areasRouter = require('./routes/areasRouter');
 const rolesRouter = require('./routes/rolesRouter');
-
+const sendGridRouter = require('./routes/sendGridRouter');
 
 
 
@@ -27,6 +27,7 @@ server.use('/info', informationRouter);
 server.use('/reviews', reviewsRouter);
 server.use('/companies', companiesRouter);
 server.use('/roles', rolesRouter)
+server.use('/notifications', sendGridRouter);
 
 
 server.use('/positions', positionsRouter);
