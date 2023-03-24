@@ -14,7 +14,7 @@ const checkAuthorization = require('../middlewares/authMiddlewares/checkAutoriza
 
 
 // usersRouter.use(verifyJWT)
-usersRouter.get('/',verifyJWT, authenticationToken, checkAuthorization, getUsersHandler);
+usersRouter.get('/', getUsersHandler);
 usersRouter.post('/', validatePostUsers, validatePostUsersByCuilAndCbu, postUsersHandler);
 usersRouter.put('/:id',validatePutUsers, putUserHandler);
 usersRouter.delete('/:id', softDeleteUsers, softDeleteHandler);
