@@ -5,6 +5,7 @@ const cleanInfoDb = (array) => {
             Fileid: info.id,
             name: info.User.name,
             lastName: info.User.lastName,
+            email: info.User.email,
             image: info.User.image,
             role: info.User.role,
             position: info.Position.position,
