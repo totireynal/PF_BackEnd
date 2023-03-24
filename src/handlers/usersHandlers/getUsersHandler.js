@@ -3,37 +3,15 @@ const getUsersController = require("../../controllers/usersControllers/getContro
 // const sortUsersController = require('../../controllers/usersControllers/sortControllers/sortUserController');
 const getUsersUnsorted = require("../../controllers/usersControllers/getControllers/getUsersUnsorted.js");
 const getUsersHandler = async (req, res) => {
-  const { name, role, area, position, email, sort } = req.query;
+  const { name, role, area, position, sort } = req.query;
 
   try {
-    // if (name) {
-    //     const resultsUsers = await getUserNameController(name);
-    //     return res.status(201).json(resultsUsers);
-    // }
-    // else if (role) {
-    //     const resultsUsers = await filterByRoleController(role);
-    //     return res.status(201).json(resultsUsers);
-    // }
-    //  else if (sort) {
-    //     const resultsUsers = await sortUsersController(sort);
-    //     return res.status(201).json(resultsUsers);
-    // }
-    // else if (position) {
-    //    const resultsUsers = await getUserPositionFilter(position);
-    //    return res.status(201).json(resultsUsers);
-    // }
-    // else if (area) {
-    //     const resultsUsers = await filterByAreaController(area);
-    //     return res.status(201).json(resultsUsers);
-    // } else {
-
-    if (name || role || area || position || email || sort) {
+    if (name || role || area || position || sort) {
       const resultsUsers = await getUsersController(
         name,
         role,
         area,
         position,
-        email,
         sort
       );
       return res.status(201).json(resultsUsers);
@@ -41,8 +19,6 @@ const getUsersHandler = async (req, res) => {
       const resultUsers = await getUsersUnsorted();
       return res.status(200).json(resultUsers);
     }
-
-    // }
   } catch (error) {
     return res.status(404).json({ error: error.message });
   }

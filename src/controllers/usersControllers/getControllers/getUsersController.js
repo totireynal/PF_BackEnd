@@ -42,11 +42,12 @@ const getUsersController = async (name, role, area, position, sort) => {
     if (sort === "ZtA") sortConditionsUsers.push("DESC");
   }
 
+  console.log(sortConditionsUsers);
   const results = await File.findAll({
     include: [
       {
         model: Users,
-        attributes: ["name", "lastName", "role", "image"],
+        attributes: ["name", "lastName", "role", "image", "email"],
         where: usersFilterConditions,
       },
       {
