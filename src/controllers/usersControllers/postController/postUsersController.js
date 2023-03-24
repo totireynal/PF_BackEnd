@@ -1,8 +1,10 @@
 const Users = require('../../../models').Users;
 const File = require('../../../models').File;
+const Area = require('../../../models').Area;
+const Position = require('../../../models').Position;
 
 
-const postUsersController = async (name, lastName, email, birthDate, address, image, dni, tel, role, CompanyId, dateOfAdmission, position, area, cuil, cbu) => {
+const postUsersController = async (name, lastName, email, birthDate, address, CompanyId, image, dni, tel, role,  PositionId, AreaId, dateOfAdmission, cuil, cbu) => {
     let newUser = await Users.create({
         name,
         lastName,
@@ -12,7 +14,8 @@ const postUsersController = async (name, lastName, email, birthDate, address, im
         image,
         dni,
         tel,
-        role
+        role,
+        CompanyId,
     })
 
     // await newUser.setCompany(CompanyId) 
@@ -20,10 +23,10 @@ const postUsersController = async (name, lastName, email, birthDate, address, im
     
     await File.create({
         dateOfAdmission,
-        position,
-        area,
         cuil,
         cbu,
+        PositionId ,
+        AreaId,
         UserId : idNewUser
     })
 

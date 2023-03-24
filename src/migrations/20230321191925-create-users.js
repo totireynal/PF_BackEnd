@@ -43,7 +43,7 @@ module.exports = {
       },
       tel: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
         unique: true,
       },
       role: {
@@ -67,6 +67,7 @@ module.exports = {
         // type: Sequelize.UUID,
         // defaultValue: Sequelize.UUIDV4,
         type: Sequelize.INTEGER,
+        defaultValue:1,
         allowNull: true,
         references:{
           model: 'Companies',

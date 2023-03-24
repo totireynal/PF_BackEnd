@@ -1,5 +1,9 @@
 const Position = require ('../../../models').Position;
 
+const getPosition = async () =>{
+     const getPositions = await Position.findAll()
+     return getPositions;
+}
 
 const postPosition = async (position) =>{
 
@@ -40,4 +44,5 @@ module.exports = {
      postPosition,
      putPosition,
      deletePosition,
+     getPosition,
 }
