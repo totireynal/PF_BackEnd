@@ -26,10 +26,13 @@ module.exports = {
       position: 'Salesman',
     },
     {
-      position: 'Opertator',
+      position: 'People Specialist',
     },
     {
       position: 'Engineer',
+    },
+    {
+      position: 'Scrum Master',
     },
    
    ])

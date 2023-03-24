@@ -5,25 +5,26 @@ const getUsersUnsorted = require("../../controllers/usersControllers/getControll
 const getUsersHandler = async (req, res) => {
   const { name, role, area, position, sort } = req.query;
 
-  try {
-    if (name || role || area || position  || sort) {
-      const resultsUsers = await getUsersController(
-        name,
-        role,
-        area,
-        position,
+
+    
+
+    try {
         
-        sort
-      );
-      return res.status(201).json(resultsUsers);
-    } else {
-      const resultUsers = await getUsersUnsorted();
-      return res.status(200).json(resultUsers);
+            if (name || role || area || position || sort) {
+                const resultsUsers = await getUsersController(name, role, area, position, sort);
+                return res.status(201).json(resultsUsers);
+                
+            } else {
+                const resultUsers = await getUsersUnsorted();
+                return res.status(200).json(resultUsers)
+            }
+
+
+      
+    } catch (error) {
+        return res.status(404).json({ error: error.message })
     }
   
-  } catch (error) {
-    return res.status(404).json({ error: error.message });
-  }
 };
 
 module.exports = getUsersHandler;

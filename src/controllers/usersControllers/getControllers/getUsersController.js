@@ -6,6 +6,7 @@ const Position = require('../../../models').Position;
 const cleanInfoDb = require('../../../utils/getUsersCleanDb');
 
 const getUsersController = async (name, role, area, position, sort) => {
+const getUsersController = async( name, role ,area, position, sort) => {
 
         let usersFilterConditions = {};
 
@@ -39,17 +40,17 @@ const getUsersController = async (name, role, area, position, sort) => {
         }
 
         const sortConditionsUsers = [Users, 'name']
-
+        
         if (sort) {
             if(sort === 'AtZ') sortConditionsUsers.push('ASC');
             if(sort === 'ZtA') sortConditionsUsers.push('DESC');
         }
 
-        
+        console.log(sortConditionsUsers)
             const results = await File.findAll({
                 include:[ {
                     model: Users,
-                    attributes: ['name','lastName', 'role', 'image'],
+                    attributes: ['name','lastName', 'role', 'image', 'email'],
                     where: usersFilterConditions,
                 },{
                     model: Position ,
