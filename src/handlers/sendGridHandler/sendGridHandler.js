@@ -24,3 +24,5 @@ const sendGridHandler = async (req, res) => {
 };
 
 module.exports = sendGridHandler;
+
+module.exports = sendGridHandler;
