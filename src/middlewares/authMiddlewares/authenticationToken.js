@@ -11,14 +11,11 @@ const authenticationToken = async (req, res, next) => {
         })
        
         console.log(response.data)
-        if (response.data.email_verified) 
-          
-            next();
-        
-
+        if(response.data.email_verified) next()
+      
         
     } catch (error) {
-        res.status(401).json({error : error.message})
+        console.log({error : error.message})
        
     }
 }
