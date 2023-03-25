@@ -24,7 +24,6 @@ server.use(cookieParser());
 server.use(morgan('dev'));
 
 server.use('/info', informationRouter);
-server.use('/reviews', reviewsRouter);
 server.use('/companies', companiesRouter);
 server.use('/roles', rolesRouter)
 server.use('/notifications', sendGridRouter);
@@ -32,5 +31,9 @@ server.use('/notifications', sendGridRouter);
 
 server.use('/positions', positionsRouter);
 server.use('/areas', areasRouter);
+server.use('/roles', rolesRouter);
+server.use('/notifications', sendGridRouter);
 server.use('/users', usersRouter);
+server.use('/reviews', reviewsRouter);
+
 module.exports = server;

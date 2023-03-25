@@ -1,8 +1,8 @@
 const Review = require('../../../models').Review;
 
-const postReviewsController = async (scores, comment, CompanyId) => {
+const postReviewsController = async (score, comment, CompanyId) => {
     let newReview = await Review.create({
-        scores,
+        score,
         comment
     })
 
