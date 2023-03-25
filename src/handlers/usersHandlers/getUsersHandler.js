@@ -1,10 +1,10 @@
-const getUsersController = require('../../controllers/usersControllers/getControllers/getUsersController');
+const getUsersController = require("../../controllers/usersControllers/getControllers/getUsersController");
 // const filterByAreaController = require('../../controllers/usersControllers/filterControllers/filterByAreaController');
 // const sortUsersController = require('../../controllers/usersControllers/sortControllers/sortUserController');
-const getUsersUnsorted = require('../../controllers/usersControllers/getControllers/getUsersUnsorted.js');
-const getUsersHandler = async(req, res) => {
+const getUsersUnsorted = require("../../controllers/usersControllers/getControllers/getUsersUnsorted.js");
+const getUsersHandler = async (req, res) => {
+  const { name, role, area, position, sort } = req.query;
 
-    const { name, role ,area, position, sort} = req.query;
 
     
 
@@ -24,8 +24,7 @@ const getUsersHandler = async(req, res) => {
     } catch (error) {
         return res.status(404).json({ error: error.message })
     }
-
+  
 };
 
 module.exports = getUsersHandler;
-

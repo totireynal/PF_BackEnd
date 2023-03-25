@@ -1,7 +1,7 @@
+const positionsRouter = require('express').Router();
 const getPositionsHandler = require('../handlers/positionsHandlers/getPositionsHandler');
 const { deletePosition, putPosition, postPosition, getPosition } = require('../controllers/positionsControllers/positionCrudController/positionCrudController')
 
-const positionsRouter = require('express').Router();
 
 positionsRouter.get('/', getPositionsHandler)
 

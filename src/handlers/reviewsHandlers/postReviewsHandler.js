@@ -3,10 +3,10 @@ const postReviewsController = require('../../controllers/reviewsControllers/post
 
 const postReviewsHandler = async (req, res) => {
 
-    const { scores, comment, CompanyId } = req.body;
+    const { score, comment, CompanyId } = req.body;
 
     try {
-        const newReview = await postReviewsController(scores, comment, CompanyId)
+        const newReview = await postReviewsController(score, comment, CompanyId)
         res.status(200).json(newReview);
     } catch (error) {
         res.status(400).json({error: error.message})
