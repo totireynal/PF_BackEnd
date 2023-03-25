@@ -30,7 +30,7 @@ const postUsersController = async (name, lastName, email, birthDate, address, Co
         UserId : idNewUser
     })
 
-    return {message: `The employee ${name} ${lastName} with id: ${idNewUser} has been created correctly.`}
+    return (`The employee ${name} ${lastName} with id: ${idNewUser} has been created correctly.`)
     
 }
 

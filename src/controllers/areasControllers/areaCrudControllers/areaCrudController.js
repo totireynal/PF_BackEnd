@@ -24,7 +24,7 @@ const putArea = async (id , area) => {
      }
           );
 
-     if(!putArea) throw new Error ({error : 'Area not found or inexistent'});
+     if(!putArea) throw new Error ('Area not found or inexistent');
      else{
           await Area.update({area},
                {
@@ -45,7 +45,7 @@ const deleteArea = async (id) => {
          }
      })
 
-     if(!id) throw new Error ({error : 'Area not found or inexistent'});
+     if(!id) throw new Error ('Area not found or inexistent');
 
      return ('Area deleted')
 };
