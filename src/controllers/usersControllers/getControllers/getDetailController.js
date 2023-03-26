@@ -16,11 +16,11 @@ const getDetailController = async(id) => {
                
             },{
                 model: Position,
-                attributes: ['position']
+                attributes: ['id','position']
             },
             {
                 model: Area,
-                attributes: ['area']
+                attributes: ['id','area']
             }
         ]
         });

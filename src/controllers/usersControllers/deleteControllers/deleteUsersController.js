@@ -27,7 +27,7 @@ const softDeleteUsers = async (id) => {
     //      }]
         
     // })
-    return "soft deleted";
+    return "The user has been deleted";
 }
 
 module.exports = softDeleteUsers;

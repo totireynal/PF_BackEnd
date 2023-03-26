@@ -1,7 +1,6 @@
 const postUsersController = require('../../controllers/usersControllers/postController/postUsersController');
 
 
-
 const postUsersHandler = async (req, res) => {
 
     const { name, lastName, email, birthDate, address, image, dni, tel , role,CompanyId, PositionId, AreaId,  dateOfAdmission, cuil, cbu} = req.body;
