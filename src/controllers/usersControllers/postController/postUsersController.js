@@ -1,7 +1,6 @@
 const Users = require('../../../models').Users;
 const File = require('../../../models').File;
-const Area = require('../../../models').Area;
-const Position = require('../../../models').Position;
+
 
 
 const postUsersController = async (name, lastName, email, birthDate, address, CompanyId, image, dni, tel, role,  PositionId, AreaId, dateOfAdmission, cuil, cbu) => {
