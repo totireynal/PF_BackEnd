@@ -16,8 +16,6 @@ const sendGridRouter = require('./routes/sendGridRouter');
 
 
 
-
-
 const server = express();
 
 server.use(express.json());
