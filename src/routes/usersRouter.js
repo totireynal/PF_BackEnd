@@ -11,6 +11,8 @@ const getDetailHandler = require('../handlers/usersHandlers/getDetailHandler');
 const authenticationToken = require('../middlewares/authMiddlewares/authenticationToken');
 const verifyJWT = require('../middlewares/authMiddlewares/verifyJWT');
 const checkAuthorization = require('../middlewares/authMiddlewares/checkAutorization');
+
+
 // usersRouter.use(verifyJWT)
 usersRouter.get('/', getUsersHandler);
 // usersRouter.post('/', validatePostUsers, postUsersHandler);

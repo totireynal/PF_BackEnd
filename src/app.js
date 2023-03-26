@@ -26,8 +26,6 @@ server.use(morgan('dev'));
 server.use('/info', informationRouter);
 server.use('/companies', companiesRouter);
 server.use('/roles', rolesRouter)
-
-
 server.use('/positions', positionsRouter);
 server.use('/areas', areasRouter);
 server.use('/roles', rolesRouter);
