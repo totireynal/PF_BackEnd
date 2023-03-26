@@ -10,7 +10,7 @@ const postCompaniesController = async (name, cuit, industry, location, numberEmp
         numberEmployees,
         tel,
         email,
-        InformationId
+        InformationId,
         
     })
 
