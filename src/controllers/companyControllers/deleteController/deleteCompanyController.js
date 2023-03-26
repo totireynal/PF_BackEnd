@@ -6,7 +6,7 @@ const softDeleteCompany = async (id) => {
               id
           }
      });
-     return 'company soft deleted successfully';
+     return 'Company soft deleted successfully.';
 }
 
 module.exports = softDeleteCompany;

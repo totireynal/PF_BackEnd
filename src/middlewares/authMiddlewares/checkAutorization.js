@@ -1,33 +1,58 @@
 const axios = require('axios');
 const Users = require('../../models').Users;
+const jwt = require('jsonwebtoken');
 
-const checkAuthorization = async (req, res, next) => {
 
-    try {
-        const response = await axios('https://dev-zb5ab7mg5ollsy01.us.auth0.com/userinfo', {
-            headers: {
-                authorization: `Bearer ${req.auth.token}`
+const checkAuthorization = async (req, res) => {
+
+    const response = await axios('https://dev-zb5ab7mg5ollsy01.us.auth0.com/userinfo', {
+        headers: {
+            authorization: `Bearer ${req.auth.token}`
             }
         })
 
-        const check = await Users.findOne({
-            where: {
-                email: response.data.email
-            }
-        })
-        
-        if (Object.keys(check).length === 0) {
-            res.status(403).json({error: 'User not authorized'})
+    let email = response.data.email;
+    const check = await Users.findOne({
+        where: {
+            email: email
         }
-     
-        console.log(`${response.data.email} authorized`)
-        next();
+    })
         
-    } catch (error) {
-        res.status(401).json({error : error.message})
-        console.log(error.message)
+   
+    if (check===null) {
+        res.status(403).send('Not authorized')
+    } else {
+        
+        let id = check.dataValues.id;
+        let name = check.dataValues.name;
+        let lastName = check.dataValues.lastName
+        let CompanyId = check.dataValues.CompanyId;
+        let role = check.dataValues.role;
+    
+        const payload = {
+            id: id,
+            name: name,
+            lastName: lastName,
+            CompanyId: CompanyId,
+            role: role
+        }
+    
+        const newToken = jwt.sign(payload, '123456')
+    
+    
+        res.status(200).json({token : newToken})
     }
+
+
+
+
+        
+
 }
 
 
-module.exports = checkAuthorization;
+
+
+
+module.exports = checkAuthorization
+
