@@ -18,7 +18,7 @@ const putPosition = async (id, position) =>{
      id
     })
 
-    if(!putPosition) throw new Error ({error : "Position not found"})
+    if(!putPosition) throw new Error ("Position not found")
 
      await Position.update({position},{
           where: {
@@ -35,7 +35,7 @@ const deletePosition = async ( id ) => {
                id
            }
      })
-     if(!id) throw new Error ({error : 'Position not found or inexistent'});
+     if(!id) throw new Error ('Position not found or inexistent');
 
      return ('Position deleted')
 }

@@ -13,8 +13,10 @@ const cleanGetDetail = (user) => {
             tel: user.User.tel,
             role: user.User.role,
             dateOfAdmission: user.dateOfAdmission,
+            positionId: user.Position.id,
             position: user.Position.position,
             area: user.Area.area,
+            areaId: user.Area.id,
             cuil: user.cuil,
             cbu: user.cbu
         
