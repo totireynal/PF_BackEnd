@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
+const verifyJWT = require('../../PF_BackEnd/src/middlewares/authMiddlewares/verifyJWT')
 
 const usersRouter = require('./routes/usersRouter');
 const informationRouter = require('./routes/informationRouter');
@@ -10,6 +11,7 @@ const reviewsRouter = require('./routes/reviewsRouter');
 const positionsRouter = require('./routes/positionsRouter');
 const areasRouter = require('./routes/areasRouter');
 const rolesRouter = require('./routes/rolesRouter');
+const protectedRouter = require('./routes/protectedRouter');
 const sendGridRouter = require('./routes/sendGridRouter');
 
 
@@ -32,5 +34,6 @@ server.use('/roles', rolesRouter);
 server.use('/notifications', sendGridRouter);
 server.use('/users', usersRouter);
 server.use('/reviews', reviewsRouter);
-
+server.use(verifyJWT)
+server.use('/protected', protectedRouter);
 module.exports = server;

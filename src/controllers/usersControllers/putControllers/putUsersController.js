@@ -23,7 +23,7 @@ const putUsersController = async (id, name, lastName, email, birthDate, address,
       });
 
 
-      return `The user with id: ${id} has been updated correctly.`
+      return `The user ${name} ${lastName} has been updated correctly.`
 
 
 };
