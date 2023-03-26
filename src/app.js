@@ -38,8 +38,7 @@ server.use('/notifications', sendGridRouter);
 server.use('/users', usersRouter);
 server.use('/reviews', reviewsRouter);
 
-//////////////////////////////////////////
-
+//////////////////////////////////////
 const { resolve } = require("path");
 const env = require("dotenv").config({ path: "./.env" });
 
