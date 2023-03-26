@@ -36,4 +36,50 @@ server.use('/notifications', sendGridRouter);
 server.use('/users', usersRouter);
 server.use('/reviews', reviewsRouter);
 
+//////////////////////////////////////////
+
+const { resolve } = require("path");
+const env = require("dotenv").config({ path: "./.env" });
+
+console.log('STATIC_DIR:', process.env.STATIC_DIR);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
+  apiVersion: "2022-08-01",
+});
+
+server.use(express.static(process.env.STATIC_DIR));
+
+server.get("/", (req, res) => {
+    const path = resolve(process.env.STATIC_DIR + "/index.html");
+    res.sendFile(path);
+  });
+
+  server.get("/config", (req, res) => {
+    res.send({
+      publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+    });
+  });
+
+  server.post("/create-payment-intent", async (req, res) => {
+    console.log("por aca si pasa")
+    try {
+      const paymentIntent = await stripe.paymentIntents.create({
+        currency: "USD",
+        amount: 200000,
+        automatic_payment_methods: { enabled: true },
+      });
+  
+      // Send publishable key and PaymentIntent details to client
+      res.send({
+        clientSecret: paymentIntent.client_secret,
+      });
+    } catch (e) {
+      return res.status(400).send({
+        error: {
+          message: e.message,
+        },
+      });
+    }
+  });
+
+
 module.exports = server;
