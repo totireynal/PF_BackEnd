@@ -45,15 +45,7 @@ const postUsersController = async (
     UserId: idNewUser,
   });
 
-<<<<<<< HEAD
-  return {
-    message: `The employee ${name} ${lastName} with id: ${idNewUser} has been created correctly.`,
-  };
+  return `The employee ${name} ${lastName} with id: ${idNewUser} has been created correctly.`;
 };
-=======
-    return (`The employee ${name} ${lastName} with id: ${idNewUser} has been created correctly.`)
-    
-}
->>>>>>> 291b0132c4fc4dc7578b7dcccd9ebae9c65b3603
 
 module.exports = postUsersController;

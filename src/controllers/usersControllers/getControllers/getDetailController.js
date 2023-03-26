@@ -5,12 +5,10 @@ const Users = require("../../../models").Users;
 const Area = require("../../../models").Area;
 const Position = require("../../../models").Position;
 
-<<<<<<< HEAD
 const getDetailController = async (id) => {
   const fileIdDb = await File.findOne({
     where: {
-      // UserId: id,
-      id,
+      UserId: id,
     },
     include: [
       {
@@ -18,35 +16,14 @@ const getDetailController = async (id) => {
       },
       {
         model: Position,
-        attributes: ["position"],
+        attributes: ["id", "position"],
       },
       {
         model: Area,
-        attributes: ["area"],
+        attributes: ["id", "area"],
       },
     ],
   });
-=======
-const getDetailController = async(id) => {
-  
-        const fileIdDb = await File.findOne({
-            where: {
-                UserId: id
-            },
-            include:[ {
-                model: Users,
-               
-            },{
-                model: Position,
-                attributes: ['id','position']
-            },
-            {
-                model: Area,
-                attributes: ['id','area']
-            }
-        ]
-        });
->>>>>>> 291b0132c4fc4dc7578b7dcccd9ebae9c65b3603
 
   if (!fileIdDb) throw new Error(`The user with id: '${id}' not exist`);
 
