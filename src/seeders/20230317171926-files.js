@@ -8,8 +8,8 @@ module.exports = {
       {
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '54-233514-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '542335141',
         cbu: '170204634545000087867',
         UserId:1,
         AreaId:3,
@@ -17,8 +17,8 @@ module.exports = {
       },{
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '422-28033514-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '422280335141',
         cbu: '745404663454300087867',
         UserId:2,
         AreaId:2,
@@ -27,8 +27,8 @@ module.exports = {
       {
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '54-2803314-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '5428033141',
         cbu: '155220466034500087867',
         UserId:3,
         AreaId:2,
@@ -37,8 +37,8 @@ module.exports = {
       {
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '32-28033514-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '32280335141',
         cbu: '1225404665700087867',
         UserId:4,
         AreaId:1,
@@ -47,8 +47,8 @@ module.exports = {
       {
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '27-2803514-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '2728035141',
         cbu: '15422046600567087867',
         UserId:5,
         AreaId:3,
@@ -57,8 +57,8 @@ module.exports = {
       {
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-28033514-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '1280335141',
         cbu: '5742046603406087867',
         UserId:6,
         AreaId:2,
@@ -67,8 +67,8 @@ module.exports = {
       {
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-28023425-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '12280234251',
         cbu: '5742046602340087867',
         UserId:7,
         AreaId:2,
@@ -76,8 +76,8 @@ module.exports = {
       },{
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-28023433451',
+        dateOfAdmission: '10-02-2022',
+        cuil: '1228023433451',
         cbu: '5742046603430087867',
         UserId:8,
         AreaId:2,
@@ -85,8 +85,8 @@ module.exports = {
       },{
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-345432-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '123454321',
         cbu: '574204660005647867',
         UserId:9,
         AreaId:2,
@@ -94,8 +94,8 @@ module.exports = {
       },
       {
         
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-28453454-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '1284534541',
         cbu: '57420468987000087867',
         UserId:10,
         AreaId:3,
@@ -104,8 +104,8 @@ module.exports = {
       {
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-280345345-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '122803453451',
         cbu: '57420466054430087867',
         UserId:11,
         AreaId:1,
@@ -113,8 +113,8 @@ module.exports = {
       },{
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-345345-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '123453451',
         cbu: '57420466443543087867',
         UserId:12,
         AreaId:2,
@@ -122,8 +122,8 @@ module.exports = {
       },{
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-2823424-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '1228234241',
         cbu: '57420462343200087867',
         UserId:13,
         AreaId:1,
@@ -131,8 +131,8 @@ module.exports = {
       },{
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-283242344-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '122832423441',
         cbu: '574204663240087867',
         UserId:14,
         AreaId:1,
@@ -140,8 +140,8 @@ module.exports = {
       },{
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-28033234234-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '12280332342341',
         cbu: '5742046601233087867',
         UserId:15,
         AreaId:1,
@@ -149,8 +149,8 @@ module.exports = {
       },{
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-280234234-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '122802342341',
         cbu: '57420466123123087867',
         UserId:16,
         AreaId:1,
@@ -158,8 +158,8 @@ module.exports = {
       },{
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-2802342344-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '1228023423441',
         cbu: '5742046600123127867',
         UserId:17,
         AreaId:4,
@@ -167,8 +167,8 @@ module.exports = {
       },{
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-28234234-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '12282342341',
         cbu: '57420466001231230087867',
         UserId:18,
         AreaId:4,
@@ -176,8 +176,8 @@ module.exports = {
       },{
         
 
-        dateOfAdmission: '10/02/2022',
-        cuil: '12-2803234234-1',
+        dateOfAdmission: '10-02-2022',
+        cuil: '1228032342341',
         cbu: '5742041231230087867',
         UserId:19,
         AreaId:2,
@@ -186,8 +186,8 @@ module.exports = {
       {
         
 
-        dateOfAdmission: '08/10/2022',
-        cuil: '11-2803234234-1',
+        dateOfAdmission: '08-10-2022',
+        cuil: '1128032342341',
         cbu: '5741041231230087867',
         UserId:20,
         AreaId:2,
