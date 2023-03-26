@@ -45,11 +45,12 @@ module.exports = {
       },
       authorized: {
         type: Sequelize.BOOLEAN,
-        defaultValue: true,
         allowNull: false,
+        defaultValue: true,
+
       },
       paymentDay: {
-        allowNull : false,
+        allowNull: false,
         type: Sequelize.DATEONLY,
         defaultValue: Date.now(),
       },
