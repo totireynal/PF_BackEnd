@@ -45,11 +45,13 @@ module.exports = {
       },
       authorized: {
         type: Sequelize.BOOLEAN,
-        defaultValue: false,
-        unique: true
+        defaultValue: true,
+        allowNull: false,
       },
       paymentDay: {
-        type: Sequelize.DATE,
+        allowNull : false,
+        type: Sequelize.DATEONLY,
+        defaultValue: Date.now(),
       },
       createdAt: {
         allowNull: false,
@@ -65,13 +67,13 @@ module.exports = {
         allowNull: true,
         type: Sequelize.DATE
       },
-      informationId:{
+      InformationId:{
         type: Sequelize.INTEGER,
+        allowNull: true,
         references: {
           model: 'Information',
           key: 'id',
         },
-        allowNull: true,
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
       }

@@ -20,7 +20,7 @@ module.exports = {
         email: 'empresa@gmail.com',
         authorized: true,
         paymentDay:'11/02/94',
-        informationId: 1,
+        InformationId: 1,
       
 
       }
