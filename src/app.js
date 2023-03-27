@@ -14,10 +14,6 @@ const rolesRouter = require('./routes/rolesRouter');
 const protectedRouter = require('./routes/protectedRouter');
 const sendGridRouter = require('./routes/sendGridRouter');
 
-
-
-
-
 const server = express();
 
 server.use(express.json());
@@ -37,6 +33,7 @@ server.use('/roles', rolesRouter);
 server.use('/notifications', sendGridRouter);
 server.use('/users', usersRouter);
 server.use('/reviews', reviewsRouter);
+
 server.use('/protected',verifyJWT, protectedRouter);
 //////////////////////////////////////
 const { resolve } = require("path");
@@ -80,6 +77,7 @@ server.get("/", (req, res) => {
         },
       });
     }
-  });
 
+    
+  });
 module.exports = server;
