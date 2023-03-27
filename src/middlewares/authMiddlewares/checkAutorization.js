@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 
 const checkAuthorization = async (req, res) => {
 
-    const response = await axios('https://dev-zb5ab7mg5ollsy01.us.auth0.com/userinfo', {
+    const response = await axios('https://dev-a5lp6h1utxb70h27.us.auth0.com/userinfo', {
         headers: {
             authorization: `Bearer ${req.auth.token}`
             }
