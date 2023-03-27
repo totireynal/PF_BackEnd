@@ -38,6 +38,11 @@ server.use('/reviews', reviewsRouter);
 
 //////////////////////////////////////////
 
+
+server.use('/protected',verifyJWT, protectedRouter);
+
+///////////
+
 const { resolve } = require("path");
 const env = require("dotenv").config({ path: "./.env" });
 
@@ -80,4 +85,6 @@ server.get("/", (req, res) => {
       });
     }
   });
+
+
 module.exports = server;
