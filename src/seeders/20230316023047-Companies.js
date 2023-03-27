@@ -19,7 +19,7 @@ module.exports = {
         tel: '990987123',
         email: 'empresa@gmail.com',
         authorized: true,
-        paymentDay:'11/02/94',
+        paymentDay:'11-02-94',
         InformationId: 1,
       
 
