@@ -37,10 +37,10 @@ server.use('/roles', rolesRouter);
 server.use('/notifications', sendGridRouter);
 server.use('/users', usersRouter);
 server.use('/reviews', reviewsRouter);
-
+server.use('/protected',verifyJWT, protectedRouter);
 //////////////////////////////////////
 const { resolve } = require("path");
-const env = require("dotenv").config({ path: "./.env" });
+const env = require("dotenv").config({ path: '../.env' });
 
 console.log('STATIC_DIR:', process.env.STATIC_DIR);
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
@@ -81,4 +81,5 @@ server.get("/", (req, res) => {
       });
     }
   });
+
 module.exports = server;
