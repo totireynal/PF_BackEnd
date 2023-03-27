@@ -9,7 +9,7 @@ const getCompanyCuitController = async (cuit) => {
         }
     })
 
-    if (results) throw new Error ('The company already exists in our system, please register another one.')
+    if (results) (`${cuit}`)
 
     return 'Company able to be registered.';
 }
