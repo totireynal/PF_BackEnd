@@ -9,8 +9,8 @@ module.exports = {
         // id: uuidv4(),
         name: "Juan",
         lastName: "Avila",
-        email: "ejemplo@gmail.com",
-        birthDate: "05/07/1998",
+        email: "juanchinoavila@gmail.com",
+        birthDate: "05-07-1998",
         address: "Avenida Falsa 124",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -23,8 +23,8 @@ module.exports = {
         // id: uuidv4(),
         name: "Estiven",
         lastName: "Moica",
-        email: "ejemplo3@gmail.com",
-        birthDate: "03/12/2000",
+        email: "estivenmoica2@gmail.com",
+        birthDate: "03-12-2000",
         address: "Avenida Falsa 125",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -37,8 +37,8 @@ module.exports = {
         // id: uuidv4(),
         name: "Didier",
         lastName: "Brange",
-        email: "ejemplo4@gmail.com",
-        birthDate: "11/03/1999",
+        email: "brangedidier@gmail.com",
+        birthDate: "11-03-1999",
         address: "Avenida Falsa 126",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -52,7 +52,7 @@ module.exports = {
         name: "Francisco",
         lastName: "Toti",
         email: "ejemplo5@gmail.com",
-        birthDate: "12/06/1991",
+        birthDate: "12-06-1991",
         address: "Avenida Falsa 127",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -66,7 +66,7 @@ module.exports = {
         name: "Carlos",
         lastName: "Martinez",
         email: "ejemplo6@gmail.com",
-        birthDate: "09/07/1990",
+        birthDate: "09-07-1990",
         address: "Avenida Falsa 128",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -80,7 +80,7 @@ module.exports = {
         name: "Pablo",
         lastName: "Cogno",
         email: "ejemplo7@gmail.com",
-        birthDate: "02/02/1995",
+        birthDate: "02-02-1995",
         address: "Avenida Falsa 129",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -94,7 +94,7 @@ module.exports = {
         name: "Josefina",
         lastName: "Morande",
         email: "ejemplo8@gmail.com",
-        birthDate: "06/09/1989",
+        birthDate: "06-09-1989",
         address: "Avenida Falsa 130",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -108,7 +108,7 @@ module.exports = {
         name: "Virginia",
         lastName: "Gonzalez",
         email: "ejemplo9@gmail.com",
-        birthDate: "04/05/1985",
+        birthDate: "04-05-1985",
         address: "Avenida Falsa 131",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -122,7 +122,7 @@ module.exports = {
         name: "Juliana",
         lastName: "Mora",
         email: "ejemplo10@gmail.com",
-        birthDate: "12/09/1976",
+        birthDate: "12-09-1976",
         address: "Avenida Falsa 132",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -135,7 +135,7 @@ module.exports = {
         name: "Luciana",
         lastName: "Vergara",
         email: "ejemplo11@gmail.com",
-        birthDate: "11/08/1984",
+        birthDate: "11-08-1984",
         address: "Avenida Falsa 134",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -148,7 +148,7 @@ module.exports = {
         name: "Martin",
         lastName: "Gregorio",
         email: "ejemplo12@gmail.com",
-        birthDate: "09/07/1990",
+        birthDate: "09-07-1990",
         address: "Avenida Falsa 135",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -161,7 +161,7 @@ module.exports = {
         name: "Miguel",
         lastName: "Sanchez",
         email: "ejemplo21@gmail.com",
-        birthDate: "12/12/1990",
+        birthDate: "12-12-1990",
         address: "Avenida Falsa 136",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -174,7 +174,7 @@ module.exports = {
         name: "Luciano",
         lastName: "Vero",
         email: "ejemplo13@gmail.com",
-        birthDate: "02/09/1992",
+        birthDate: "02-09-1992",
         address: "Avenida Falsa 137",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -187,10 +187,9 @@ module.exports = {
         name: "Genaro",
         lastName: "Fernandez",
         email: "ejemplo14@gmail.com",
-        birthDate: "08/10/1990",
+        birthDate: "08-10-1990",
         address: "Avenida Falsa 138",
-        image:
-          "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        image: "",
         dni: "36500005",
         tel: "990987449",
         role: "User",
@@ -200,10 +199,9 @@ module.exports = {
         name: "Nicolas",
         lastName: "Berno",
         email: "ejemplo15@gmail.com",
-        birthDate: "10/10/1994",
+        birthDate: "10-10-1994",
         address: "Avenida Falsa 139",
-        image:
-          "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        image: "",
         dni: "36500015",
         tel: "990987600",
         role: "User",
@@ -213,7 +211,7 @@ module.exports = {
         name: "Mario",
         lastName: "Loni",
         email: "ejemplo16@gmail.com",
-        birthDate: "12/02/1993",
+        birthDate: "12-02-1993",
         address: "Avenida Falsa 140",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -226,7 +224,7 @@ module.exports = {
         name: "Pedro",
         lastName: "Meza",
         email: "ejemplo17@gmail.com",
-        birthDate: "02/10/1994",
+        birthDate: "02-10-1994",
         address: "Avenida Falsa 141",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -239,7 +237,7 @@ module.exports = {
         name: "Tomas",
         lastName: "Aldunate",
         email: "ejemplo18@gmail.com",
-        birthDate: "08/09/1990",
+        birthDate: "08-09-1990",
         address: "Avenida Falsa 142",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -252,7 +250,7 @@ module.exports = {
         name: "Matias",
         lastName: "Garces",
         email: "ejemplo19@gmail.com",
-        birthDate: "07/10/1991",
+        birthDate: "07-10-1991",
         address: "Avenida Falsa 143",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -265,7 +263,7 @@ module.exports = {
         name: "Junior",
         lastName: "Vasquez",
         email: "ejemplo20@gmail.com",
-        birthDate: "03/08/1995",
+        birthDate: "03-08-1995",
         address: "Avenida Falsa 144",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
