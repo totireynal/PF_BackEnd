@@ -5,9 +5,15 @@ const softDeleteCompanyHandler = require('../handlers/companyHandlers/softDelete
 const softDeleteCompany = require('../middlewares/companyMiddlewares/validateSoftDeleteCompany');
 const postCompaniesHandler = require('../handlers/companyHandlers/postCompaniesHandler');
 const putCompanyHandler = require('../handlers/companyHandlers/putCompanyHandler');
-const getCompanyCuitHandler = require('../handlers/companyHandlers/getCompanyCuitHandler');
+const getCompanyCuitHandler = require('../handlers/companyHandlers/getCompanyHandler/getCompanyCuitHandler');
+const getCompanyNameHandler = require('../handlers/companyHandlers/getCompanyHandler/getCompanyNameHandler');
+const getCompanyTelHandler = require('../handlers/companyHandlers/getCompanyHandler/getCompanyTelHandler');
+const getCompanyEmailHandler = require('../handlers/companyHandlers/getCompanyHandler/getCompanyEmailHandler');
 
+companiesRouter.get('/', getCompanyEmailHandler);
 companiesRouter.get('/', getCompanyCuitHandler);
+companiesRouter.get('/', getCompanyNameHandler);
+companiesRouter.get('/', getCompanyTelHandler);
 companiesRouter.post('/register', validatePostCompanies, postCompaniesHandler)
 companiesRouter.delete('/:id', softDeleteCompany, softDeleteCompanyHandler);
 companiesRouter.put('/:id', validateCompanyUpdate, putCompanyHandler);
