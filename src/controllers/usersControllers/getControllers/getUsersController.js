@@ -1,79 +1,74 @@
-const { Op } = require('sequelize');
-const Users = require('../../../models').Users;
-const File = require('../../../models').File;
-const Area = require('../../../models').Area;
-const Position = require('../../../models').Position;
-const cleanInfoDb = require('../../../utils/getUsersCleanDb');
+const { Op } = require("sequelize");
+const Users = require("../../../models").Users;
+const File = require("../../../models").File;
+const Area = require("../../../models").Area;
+const Position = require("../../../models").Position;
+const cleanInfoDb = require("../../../utils/getUsersCleanDb");
 
-const getUsersController = async( name, role ,area, position, sort) => {
+const getUsersController = async (name, role, area, position, sort) => {
+  let usersFilterConditions = {};
 
-        let usersFilterConditions = {};
+  if (name) {
+    usersFilterConditions["name"] = {
+      [Op.iLike]: `%${name}%`,
+    };
+  }
 
+  if (role) {
+    usersFilterConditions["role"] = {
+      [Op.eq]: role,
+    };
+  }
+  let positionFilterConditions = {};
 
-        if(name) {
-            usersFilterConditions['name'] = {
-                [Op.iLike]: `%${name}%`,
-            };
-        }
+  if (position) {
+    positionFilterConditions["position"] = {
+      [Op.eq]: position,
+    };
+  }
 
-        if (role) {
-            usersFilterConditions['role'] = {
-                [Op.eq] : role,
-            }
-        }
-        let positionFilterConditions = {};
+  let areaFilterConditions = {};
 
-        if(position) {
-            positionFilterConditions['position'] = {
-                [Op.eq]: position,
-            };
-            
-        }
+  if (area) {
+    areaFilterConditions["area"] = {
+      [Op.eq]: area,
+    };
+  }
 
-        let areaFilterConditions = {};
+  const sortConditionsUsers = [Users, "name"];
 
-         if(area)  {
-            areaFilterConditions['area'] = {
-                [Op.eq] : area,
-            }
-        }
+  if (sort) {
+    if (sort === "AtZ") sortConditionsUsers.push("ASC");
+    if (sort === "ZtA") sortConditionsUsers.push("DESC");
+  }
 
-        const sortConditionsUsers = [Users, 'name']
-        
-        if (sort) {
-            if(sort === 'AtZ') sortConditionsUsers.push('ASC');
-            if(sort === 'ZtA') sortConditionsUsers.push('DESC');
-        }
+  console.log(sortConditionsUsers);
+  const results = await File.findAll({
+    include: [
+      {
+        model: Users,
+        attributes: ["name", "lastName", "role", "image", "email"],
+        where: usersFilterConditions,
+      },
+      {
+        model: Position,
+        attributes: ["position"],
+        where: positionFilterConditions,
+      },
+      {
+        model: Area,
+        attributes: ["area"],
+        where: areaFilterConditions,
+      },
+    ],
+    order: [sortConditionsUsers],
+  });
 
-        console.log(sortConditionsUsers)
-            const results = await File.findAll({
-                include:[ {
-                    model: Users,
-                    attributes: ['name','lastName', 'role', 'image', 'email'],
-                    where: usersFilterConditions,
-                },{
-                    model: Position ,
-                    attributes: ['position'],
-                    where: positionFilterConditions,
-                },{
-                    model: Area, 
-                    attributes :['area'],
-                    where : areaFilterConditions
-                }
-            ],
-                order: [sortConditionsUsers]
-                
-                
-                
-            })
+  if (results.length === 0)
+    throw new Error("The user does not exist, please realize another search.");
+  const cleanResults = cleanInfoDb(results);
 
-            if (results.length===0) throw new Error ('The user does not exist, please realize another search.')
-            const cleanResults = cleanInfoDb(results)
-
-            return cleanResults;
-
-       
-    
+  return cleanResults;
 };
 
 module.exports = getUsersController;
