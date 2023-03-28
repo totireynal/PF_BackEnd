@@ -24,7 +24,7 @@ module.exports = {
   // id: uuidv4(),
   name: 'Estiven',
   lastName: 'Moica',
-  email: 'ejemplo3@gmail.com',
+  email: 'estivenmoica2@gmail.com',
   birthDate: '03-12-2000',
   address: 'Avenida Falsa 125',
   image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
