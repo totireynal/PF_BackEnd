@@ -5,7 +5,6 @@ const getCompanyController = async (name, cuit, tel, email) => {
     const results = await Company.findOne({
       where: { name: name },
     });
-    console.log(results, 'name');
     if (results) {
       return {
         message: "This name already exists",
@@ -18,7 +17,6 @@ const getCompanyController = async (name, cuit, tel, email) => {
     const results = await Company.findOne({
       where: { cuit: cuit },
     });
-    console.log(results, 'cuit');
     if (results) {
       return {
         message: "This cuit already exists",
@@ -31,10 +29,9 @@ const getCompanyController = async (name, cuit, tel, email) => {
     const results = await Company.findOne({
       where: { tel: tel },
     });
-    console.log(results, 'tel');
     if (results) {
       return {
-        message: "This tel already exists",
+        message: "This phone already exists",
       };
     } else {
       return null;
@@ -44,7 +41,6 @@ const getCompanyController = async (name, cuit, tel, email) => {
     const results = await Company.findOne({
       where: { email: email },
     });
-    console.log(results, 'email');
     if (results) {
       return {
         message: "This email already exists",
