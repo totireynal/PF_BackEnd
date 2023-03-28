@@ -9,9 +9,14 @@ const getCompanyCuitController = async (cuit) => {
         }
     })
 
-    if (results) (`${cuit}`)
-
-    return 'Company able to be registered.';
+    
+    if (results) {
+        return {
+            mensaje: 'Ya existe una empresa con este CUIT'
+        };
+    } else {
+        return null;
+    }
 }
 
 module.exports = getCompanyCuitController;
