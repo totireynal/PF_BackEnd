@@ -9,7 +9,7 @@ const validatePostUsers = (req, res, next) => {
     if (!image) return res.status(400).json({error: 'Missing image'});
     if (!AreaId) return res.status(400).json({error: 'Missing Area'});
     if (!PositionId) return res.status(400).json({error: 'Missing Position'});
-    // if (!CompanyId) return res.status(400).json({error: 'Missing Company'}); //deberia venir con el jwt?
+    if (!CompanyId) return res.status(400).json({error: 'Missing Company'}); 
     if (!dni) return res.status(400).json({error: 'Missing dni'});
     if (!tel) return res.status(400).json({error: 'Missing tel'});
     if (!role) return res.status(400).json({error: 'Missing role'});

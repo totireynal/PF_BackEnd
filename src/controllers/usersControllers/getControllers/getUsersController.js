@@ -49,7 +49,7 @@ const getUsersController = async( name, role ,area, position, sort) => {
             const results = await File.findAll({
                 include:[ {
                     model: Users,
-                    attributes: ['name','lastName', 'role', 'image', 'email'],
+                    attributes: ['name','lastName', 'role', 'image', 'email', 'CompanyId'],
                     where: usersFilterConditions,
                 },{
                     model: Position ,

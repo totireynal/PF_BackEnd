@@ -67,8 +67,7 @@ module.exports = {
         // type: Sequelize.UUID,
         // defaultValue: Sequelize.UUIDV4,
         type: Sequelize.INTEGER,
-        defaultValue:1,
-        allowNull: true,
+        allowNull: false,
         references:{
           model: 'Companies',
           key: 'id'
