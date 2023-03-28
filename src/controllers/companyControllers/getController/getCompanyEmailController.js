@@ -1,19 +1,18 @@
 const Company = require("../../../models").Company;
 
-const getCompanyCuitController = async (cuit) => {
+const getCompanyEmailController = async (email) => {
   const results = await Company.findOne({
     where: {
-      cuit: cuit,
+      email: email,
     },
   });
-
   if (results) {
     return {
-      message: "This cuit already exists",
+      message: "This email already exists",
     };
   } else {
     return null;
   }
 };
 
-module.exports = getCompanyCuitController;
+module.exports = getCompanyEmailController;

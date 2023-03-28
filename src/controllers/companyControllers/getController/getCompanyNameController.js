@@ -1,19 +1,18 @@
 const Company = require("../../../models").Company;
 
-const getCompanyCuitController = async (cuit) => {
+const getCompanyNameController = async (name) => {
   const results = await Company.findOne({
     where: {
-      cuit: cuit,
+      name: name,
     },
   });
-
   if (results) {
     return {
-      message: "This cuit already exists",
+      message: "This name already exists",
     };
   } else {
     return null;
   }
 };
 
-module.exports = getCompanyCuitController;
+module.exports = getCompanyNameController;
