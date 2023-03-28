@@ -34,7 +34,7 @@ const getCompanyController = async (name, cuit, tel, email) => {
     console.log(results, 'tel');
     if (results) {
       return {
-        message: "This tel already exists",
+        message: "This phone already exists",
       };
     } else {
       return null;
