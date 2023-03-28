@@ -11,9 +11,11 @@ const getDetailHandler = require('../handlers/usersHandlers/getDetailHandler');
 const authenticationToken = require('../middlewares/authMiddlewares/authenticationToken');
 const verifyJWT = require('../middlewares/authMiddlewares/verifyJWT');
 const checkAuthorization = require('../middlewares/authMiddlewares/checkAutorization');
+const getBirthdayHandler = require('../handlers/usersHandlers/getBirthayHandler');
 
 
 // usersRouter.use(verifyJWT)
+usersRouter.get('/birthDate', getBirthdayHandler)
 usersRouter.get('/', getUsersHandler);
 // usersRouter.post('/', validatePostUsers, postUsersHandler);
 usersRouter.post('/', validatePostUsers, validatePostUsersByCuilAndCbu, postUsersHandler);
