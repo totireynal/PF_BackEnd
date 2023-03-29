@@ -10,7 +10,8 @@ const getUserCleanDb = (array) => {
             role: info.User.role,
             CompanyId: info.User.CompanyId,
             position: info.Position.position,
-            area: info.Area.area
+            area: info.Area.area,
+            CompanyId: info.User.CompanyId
         }
     });
     return cleanDb;

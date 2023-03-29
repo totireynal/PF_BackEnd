@@ -42,33 +42,35 @@ const getUsersController = async (name, role, area, position, sort) => {
     if (sort === "ZtA") sortConditionsUsers.push("DESC");
   }
 
-  console.log(sortConditionsUsers);
-  const results = await File.findAll({
-    include: [
-      {
-        model: Users,
-        attributes: ["name", "lastName", "role", "image", "email"],
-        where: usersFilterConditions,
-      },
-      {
-        model: Position,
-        attributes: ["position"],
-        where: positionFilterConditions,
-      },
-      {
-        model: Area,
-        attributes: ["area"],
-        where: areaFilterConditions,
-      },
-    ],
-    order: [sortConditionsUsers],
-  });
+        console.log(sortConditionsUsers)
+            const results = await File.findAll({
+                include:[ {
+                    model: Users,
+                    attributes: ['name','lastName', 'role', 'image', 'email', 'CompanyId'],
+                    where: usersFilterConditions,
+                },{
+                    model: Position ,
+                    attributes: ['position'],
+                    where: positionFilterConditions,
+                },{
+                    model: Area, 
+                    attributes :['area'],
+                    where : areaFilterConditions
+                }
+            ],
+                order: [sortConditionsUsers]
+                
+                
+                
+            })
 
-  if (results.length === 0)
-    throw new Error("The user does not exist, please realize another search.");
-  const cleanResults = cleanInfoDb(results);
+            if (results.length===0) throw new Error ('The user does not exist, please realize another search.')
+            const cleanResults = cleanInfoDb(results)
 
-  return cleanResults;
+            return cleanResults;
+
+       
+    
 };
 
 module.exports = getUsersController;

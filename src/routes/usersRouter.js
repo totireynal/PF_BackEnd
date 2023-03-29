@@ -7,11 +7,7 @@ const putUserHandler = require('../handlers/usersHandlers/putUsersHandler');
 const postUsersHandler = require('../handlers/usersHandlers/postUsersHandler');
 const validatePostUsersByCuilAndCbu = require('../middlewares/userMiddlewares/validatePostUsersbyCuilAndCbu');
 const getDetailHandler = require('../handlers/usersHandlers/getDetailHandler');
-const getUsersHandler = require('../handlers/usersHandlers/getUsersHandler');
-const getBirthdayHandler = require('../handlers/usersHandlers/getBirthayHandler');
-const authenticationToken = require('../middlewares/authMiddlewares/authenticationToken');
-const verifyJWT = require('../middlewares/authMiddlewares/verifyJWT');
-const checkAuthorization = require('../middlewares/authMiddlewares/checkAutorization');
+
 
 
 // usersRouter.use(verifyJWT)
