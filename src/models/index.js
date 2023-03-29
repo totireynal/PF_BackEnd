@@ -7,9 +7,10 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '../../config/config.js')[env];
 const db = {};
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME} = process.env
 
 console.log(config)
-let sequelize=  new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`);
+let sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`);
 
 
 // if (config.use_env_variable) {
