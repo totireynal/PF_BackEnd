@@ -8,7 +8,7 @@ module.exports = {
     database: process.env.DB_NAME,
     host: process.env.DB_HOST || "127.0.0.1",
     dialect: "postgres",
-    deploy: process.env.DATABASE_URL
+    deploy: process.env.DB_DEPLOY
   },
   test: {
     username: process.env.DB_USER,
@@ -23,6 +23,6 @@ module.exports = {
     database: process.env.DB_NAME,
     host: process.env.DB_HOST || "127.0.0.1",
     dialect: "postgres",
-    deploy: process.env.DATABASE_URL
+    deploy: process.env.DB_DEPLOY
   },
 };
