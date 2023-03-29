@@ -1,5 +1,5 @@
 const validatePostUsers = (req, res, next) => {
-    const {  name, lastName, email, birthDate, address, image, dni, tel, role, dateOfAdmission, cuil, cbu,AreaId, PositionId,
+    const {  name, lastName, email, birthDate, address, image, dni, tel, role, dateOfAdmission, cuil, cbu,AreaId, PositionId,CompanyId
     } = req.body;
     if (!name) return res.status(400).json({error: 'Missing name'});
     if (!lastName) return res.status(400).json({error: 'Missing lastname'});
