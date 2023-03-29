@@ -10,6 +10,7 @@ const cleanInfoDb = (array) => {
             role: info.User.role,
             position: info.Position.position,
             area: info.Area.area,
+            CompanyId: info.User.CompanyId
         }
     });
     return cleanDb;
