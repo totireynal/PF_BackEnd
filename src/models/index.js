@@ -10,16 +10,12 @@ require('dotenv').config()
 const db = {};
 console.log(process.env.DB_DEPLOY)
 
-let sequelize = new Sequelize(process.env.DB_DEPLOY, {
-  logging: false,
-  native: false,
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false,
-    },
-  },
-})
+let sequelize;
+if (config.use_env_variable) {
+  sequelize = new Sequelize(process.env[config.use_env_variable], config);
+} else {
+  sequelize = new Sequelize(config.database, config.username, config.password, config);
+}
 
 // if (config.use_env_variable) {
 //   sequelize = new Sequelize(process.env.DB_DEPLOY);
