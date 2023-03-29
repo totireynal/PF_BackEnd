@@ -9,7 +9,7 @@ const config = require(__dirname + '../../config/config.js')[env];
 const db = {};
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME} = process.env
 
-console.log(config)
+
 let sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`);
 
 
