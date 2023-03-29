@@ -10,7 +10,7 @@ require('dotenv').config()
 const db = {};
 console.log(process.env.DB_DEPLOY)
 
-let sequelize = new Sequelize(process.env.DB_DEPLOY)
+let sequelize = new Sequelize(process.env.DATABASE_URL)
 
 // if (config.use_env_variable) {
 //   sequelize = new Sequelize(process.env.DB_DEPLOY);
