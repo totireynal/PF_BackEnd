@@ -5,8 +5,10 @@ const softDeleteCompanyHandler = require('../handlers/companyHandlers/softDelete
 const softDeleteCompany = require('../middlewares/companyMiddlewares/validateSoftDeleteCompany');
 const postCompaniesHandler = require('../handlers/companyHandlers/postCompaniesHandler');
 const putCompanyHandler = require('../handlers/companyHandlers/putCompanyHandler');
+const getCompanyValidateHandler = require('../handlers/companyHandlers/getCompanyValidateHandler');
 const getCompanyHandler = require('../handlers/companyHandlers/getCompanyHandler');
 
+companiesRouter.get('/validate', getCompanyValidateHandler);
 companiesRouter.get('/', getCompanyHandler);
 companiesRouter.post('/register', validatePostCompanies, postCompaniesHandler)
 companiesRouter.delete('/:id', softDeleteCompany, softDeleteCompanyHandler);

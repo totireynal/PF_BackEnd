@@ -8,8 +8,9 @@ const getUserCleanDb = (array) => {
             email: info.User.email,
             image: info.User.image,
             role: info.User.role,
+            CompanyId: info.User.CompanyId,
             position: info.Position.position,
-            area: info.Area.area,
+            area: info.Area.area
         }
     });
     return cleanDb;
