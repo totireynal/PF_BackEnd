@@ -15,9 +15,10 @@ let sequelize = new Sequelize(process.env.DB_DEPLOY, {
   native: false,
   dialectOptions: {
     ssl: {
-      require: true
-    }
-  }
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
 })
 
 // if (config.use_env_variable) {
