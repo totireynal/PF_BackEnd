@@ -5,14 +5,20 @@ const Area = require("../../../models").Area;
 const Position = require("../../../models").Position;
 const cleanInfoDb = require("../../../utils/getUsersCleanDb");
 
-const getUsersController = async (name, role, area, position, sort) => {
-  let usersFilterConditions = {};
+const getUsersController = async( name, role ,area, position, sort, CompanyId) => {
 
-  if (name) {
-    usersFilterConditions["name"] = {
-      [Op.iLike]: `%${name}%`,
-    };
-  }
+        let usersFilterConditions = {};
+
+        if(CompanyId) {
+            usersFilterConditions['CompanyId'] = {
+                [Op.eq]: CompanyId,
+            };
+        }
+        if(name) {
+            usersFilterConditions['name'] = {
+                [Op.iLike]: `%${name}%`,
+            };
+        }
 
   if (role) {
     usersFilterConditions["role"] = {

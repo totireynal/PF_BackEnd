@@ -2,20 +2,24 @@ const getUsersController = require("../../controllers/usersControllers/getContro
 const getUsersUnsorted = require("../../controllers/usersControllers/getControllers/getUsersUnsorted.js");
 
 const getUsersHandler = async (req, res) => {
-  const { name, role, area, position, sort } = req.query;
-
+  const { name, role, area, position, sort} = req.query;
+  const {CompanyId} = req.params;
+  // console.log(req.params)
+  // console.log(req.query)
+  
   try {
-    if (name || role || area || position || sort) {
+    if (CompanyId  && (name || role || area || position || sort)) {
       const resultsUsers = await getUsersController(
         name,
         role,
         area,
         position,
-        sort
+        sort,
+        CompanyId
       );
       return res.status(201).json(resultsUsers);
     } else {
-      const resultUsers = await getUsersUnsorted();
+      const resultUsers = await getUsersUnsorted(CompanyId);
       return res.status(200).json(resultUsers);
     }
   } catch (error) {

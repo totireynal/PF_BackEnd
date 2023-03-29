@@ -12,13 +12,17 @@ const getUsersHandler = require('../handlers/usersHandlers/getUsersHandler');
 
 
 // usersRouter.use(verifyJWT)
-usersRouter.get('/birthDate', getBirthdayHandler)
-usersRouter.get('/', getUsersHandler);
+
+usersRouter.get('/:CompanyId', getUsersHandler);  // trae todos y agrega queries para filtrar
+usersRouter.get('/:CompanyId/:id', getDetailHandler); // trae detail del empleado
+
 // usersRouter.post('/', validatePostUsers, postUsersHandler);
+
+
 usersRouter.post('/', validatePostUsers, validatePostUsersByCuilAndCbu, postUsersHandler);
 usersRouter.put('/:id',validatePutUsers, putUserHandler);
 usersRouter.delete('/:id', softDeleteUsers, softDeleteHandler);
-usersRouter.get('/:id', getDetailHandler);
+
 
 
 
