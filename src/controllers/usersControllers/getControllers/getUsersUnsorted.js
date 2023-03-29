@@ -5,13 +5,18 @@ const Area = require('../../../models').Area;
 const Position = require('../../../models').Position;
 const cleanInfoDb = require('../../../utils/getUsersCleanDb');
 
-const getUsersUnsorted = async() => {
+const getUsersUnsorted = async(CompanyId) => {
 
 
         const dataBaseUsers = await File.findAll({
             include:[ {
                 model: Users,
                 attributes: ['name', 'lastName', 'image', 'role' , 'email', 'CompanyId'],
+                where: {
+                    CompanyId: {
+                        [Op.eq] : CompanyId
+                    }
+                }
             }, {
                 model: Area,
                 attributes: ['area'] ,          
