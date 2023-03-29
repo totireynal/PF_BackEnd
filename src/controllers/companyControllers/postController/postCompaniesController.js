@@ -11,7 +11,6 @@ const postCompaniesController = async (name, cuit, industry, location, numberEmp
         tel,
         email,
         InformationId,
-        
     })
 
     return `The company ${name} has been created correctly.`
