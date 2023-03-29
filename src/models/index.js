@@ -7,6 +7,12 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '../../config/config.js')[env];
 const db = {};
+// require('dotenv').config();
+// const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME} = process.env
+
+
+// let sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`);
+
 
 let sequelize;
 if (config.use_env_variable) {
@@ -38,6 +44,7 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
 
 
 module.exports = db;

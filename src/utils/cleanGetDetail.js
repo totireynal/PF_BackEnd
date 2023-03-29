@@ -18,7 +18,8 @@ const cleanGetDetail = (user) => {
             area: user.Area.area,
             areaId: user.Area.id,
             cuil: user.cuil,
-            cbu: user.cbu
+            cbu: user.cbu,
+            CompanyId: user.User.CompanyId
         
     }
 
