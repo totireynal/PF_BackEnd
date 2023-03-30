@@ -2,8 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
-const verifyJWT = require('../../PF_BackEnd/src/middlewares/authMiddlewares/verifyJWT')
-
+const verifyJWT= require('./middlewares/authMiddlewares/verifyJWT');
 const usersRouter = require('./routes/usersRouter');
 const informationRouter = require('./routes/informationRouter');
 const companiesRouter = require('./routes/companiesRouter');

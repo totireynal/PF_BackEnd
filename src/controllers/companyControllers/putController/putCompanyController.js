@@ -10,7 +10,7 @@ const putCompanyController = async ( id, name, cuit, industry, location, email, 
 
     if (!findCompanyById) throw new Error('Company not found');
 
-    await Company.Update({
+    await Company.update({
      name, cuit, industry, location, email,numberEmployees, tel, authorized, paymentDay},
      {
       where: {
