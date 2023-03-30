@@ -11,7 +11,7 @@ const getDetailHandler = require('../handlers/usersHandlers/getDetailHandler');
 
 
 // usersRouter.use(verifyJWT)
-usersRouter.get('/birthDate', getBirthdayHandler)
+// usersRouter.get('/birthDate', getBirthdayHandler)
 usersRouter.get('/:CompanyId', getUsersHandler);
 usersRouter.get('/:CompanyId/:id', getDetailHandler);
 usersRouter.post('/', validatePostUsers, validatePostUsersByCuilAndCbu, postUsersHandler);
