@@ -3,7 +3,8 @@ const getAreasHandler = require('../handlers/areasHandlers/getAreasHandler');
 const { getArea, deleteArea, putArea,  postArea,} = require ('../controllers/areasControllers/areaCrudControllers/areaCrudController')
 
 
-areasRouter.get('/',  getAreasHandler)
+
+areasRouter.get('/', getAreasHandler)
 
 areasRouter.get('/ars' , async (req, res) =>{
    
