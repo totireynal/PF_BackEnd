@@ -1,9 +1,10 @@
 const getDetailController = require('../../controllers/usersControllers/getControllers/getDetailController');
 
 const getDetailHandler = async(req, res) => {
-    const { id } = req.params;
+    const { CompanyId, id } = req.params;
+    console.log(req.params)
     try {
-        const fileId = await getDetailController(id);
+        const fileId = await getDetailController(CompanyId, id);
         return res.status(201).json(fileId);
         
     } catch (error) {
