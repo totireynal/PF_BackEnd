@@ -3,7 +3,6 @@ const getAreasHandler = require('../handlers/areasHandlers/getAreasHandler');
 const { getArea, deleteArea, putArea,  postArea,} = require ('../controllers/areasControllers/areaCrudControllers/areaCrudController')
 
 
-areasRouter.get('/:CompanyId',  getAreasHandler)
 
 areasRouter.get('/ars' , async (req, res) =>{
    
@@ -14,6 +13,10 @@ areasRouter.get('/ars' , async (req, res) =>{
           res.status(400).json(error);
      }
 })
+
+areasRouter.get('/:CompanyId', getAreasHandler)
+
+
 
 areasRouter.post('/',  async (req , res) =>{
  const { area } = req.body;
@@ -61,4 +64,4 @@ areasRouter.delete('/:id', async (req, res) => {
 })
 
 
-module.exports = areasRouter;
+ module.exports = areasRouter;

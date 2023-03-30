@@ -7,6 +7,7 @@ const postCompaniesHandler = require('../handlers/companyHandlers/postCompaniesH
 const putCompanyHandler = require('../handlers/companyHandlers/putCompanyHandler');
 const getCompanyHandler = require('../handlers/companyHandlers/getCompanyHandler');
 
+
 companiesRouter.get('/', getCompanyHandler);
 companiesRouter.post('/register', validatePostCompanies, postCompaniesHandler)
 companiesRouter.delete('/:id', softDeleteCompany, softDeleteCompanyHandler);
