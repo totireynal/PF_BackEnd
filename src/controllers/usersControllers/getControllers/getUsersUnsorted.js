@@ -31,7 +31,6 @@ const getUsersUnsorted = async(CompanyId) => {
         if(infoClean.length === 0) throw new Error(`The database has failed, please try again later!`)
         
         return infoClean;
-        // return dataBaseUsers;
 
 }
 
