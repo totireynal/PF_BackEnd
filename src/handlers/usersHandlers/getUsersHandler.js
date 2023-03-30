@@ -4,8 +4,8 @@ const getUsersUnsorted = require("../../controllers/usersControllers/getControll
 const getUsersHandler = async (req, res) => {
   const { name, role, area, position, sort} = req.query;
   const {CompanyId} = req.params;
-  // console.log(req.params)
-  // console.log(req.query)
+  console.log(req.params)
+  console.log(req.query)
   
   try {
     if (CompanyId  && (name || role || area || position || sort)) {
