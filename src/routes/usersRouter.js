@@ -13,8 +13,8 @@ const getDeletedHandler = require('../handlers/usersHandlers/getDeletedHandler')
 
 
 // usersRouter.use(verifyJWT)
-usersRouter.get('/:CompanyId', getUsersHandler);
 usersRouter.get('/deleted', getDeletedHandler);
+usersRouter.get('/:CompanyId', getUsersHandler);
 usersRouter.get('/:id', getDetailHandler);
 usersRouter.get('/:CompanyId/:id', getDetailHandler);
 usersRouter.post('/', validatePostUsers, validatePostUsersByCuilAndCbu, postUsersHandler);
