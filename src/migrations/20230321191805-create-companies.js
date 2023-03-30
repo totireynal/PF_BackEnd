@@ -43,11 +43,14 @@ module.exports = {
         allowNull: false,
         unique: true
       },
+      image: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       authorized: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
         defaultValue: true,
-
       },
       paymentDay: {
         allowNull: false,
