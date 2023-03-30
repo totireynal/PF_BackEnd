@@ -1,7 +1,7 @@
 const Company = require('../../../models').Company;
 
 
-const postCompaniesController = async (name, cuit, industry, location, numberEmployees, tel, email, InformationId) => {
+const postCompaniesController = async (name, cuit, industry, location, numberEmployees, tel, email, image, InformationId) => {
      const results = await Company.create({
         name,
         cuit,
@@ -10,6 +10,7 @@ const postCompaniesController = async (name, cuit, industry, location, numberEmp
         numberEmployees,
         tel,
         email,
+        image,
         InformationId,
     })
 
