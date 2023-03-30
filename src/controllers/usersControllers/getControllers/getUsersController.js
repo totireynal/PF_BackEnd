@@ -5,11 +5,15 @@ const Area = require('../../../models').Area;
 const Position = require('../../../models').Position;
 const cleanInfoDb = require('../../../utils/getUsersCleanDb');
 
-const getUsersController = async( name, role ,area, position, sort) => {
+const getUsersController = async( name, role ,area, position, sort, CompanyId) => {
 
         let usersFilterConditions = {};
 
-
+        if(CompanyId) {
+            usersFilterConditions['CompanyId'] = {
+                [Op.eq]: CompanyId,
+            };
+        }
         if(name) {
             usersFilterConditions['name'] = {
                 [Op.iLike]: `%${name}%`,
@@ -49,7 +53,7 @@ const getUsersController = async( name, role ,area, position, sort) => {
             const results = await File.findAll({
                 include:[ {
                     model: Users,
-                    attributes: ['name','lastName', 'role', 'image', 'email'],
+                    attributes: ['name','lastName', 'role', 'image', 'email', 'CompanyId'],
                     where: usersFilterConditions,
                 },{
                     model: Position ,
