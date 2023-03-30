@@ -3,7 +3,7 @@ const getPositionsHandler = require('../handlers/positionsHandlers/getPositionsH
 const { deletePosition, putPosition, postPosition, getPosition } = require('../controllers/positionsControllers/positionCrudController/positionCrudController')
 
 
-positionsRouter.get('/', getPositionsHandler)
+positionsRouter.get('/:CompanyId', getPositionsHandler)
 
 positionsRouter.get('/raw' , async (req, res) =>{
 
