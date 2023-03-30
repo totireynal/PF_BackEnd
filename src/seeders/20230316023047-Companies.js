@@ -16,6 +16,7 @@ module.exports = {
         industry: 'Alimentacion',
         location: 'Buenos Aires',
         numberEmployees: 10,
+        image: 'https://graffica.info/wp-content/uploads/2023/02/cocacola-logo.jpeg',
         tel: '990987123',
         email: 'empresa@gmail.com',
         authorized: true,

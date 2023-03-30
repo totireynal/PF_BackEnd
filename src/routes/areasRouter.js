@@ -7,8 +7,6 @@ const {
   postArea,
 } = require("../controllers/areasControllers/areaCrudControllers/areaCrudController");
 
-areasRouter.get("/", getAreasHandler);
-
 areasRouter.get("/ars", async (req, res) => {
   try {
     const result = await getArea();
@@ -17,6 +15,8 @@ areasRouter.get("/ars", async (req, res) => {
     res.status(400).json(error);
   }
 });
+
+areasRouter.get("/:CompanyId", getAreasHandler);
 
 areasRouter.post("/", async (req, res) => {
   const { area } = req.body;

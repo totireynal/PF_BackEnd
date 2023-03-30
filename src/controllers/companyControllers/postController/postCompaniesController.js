@@ -1,8 +1,8 @@
 const Company = require('../../../models').Company;
 
 
-const postCompaniesController = async (name, cuit, industry, location, numberEmployees, tel, email, InformationId) => {
-     await Company.create({
+const postCompaniesController = async (name, cuit, industry, location, numberEmployees, tel, email, image, InformationId) => {
+     const results = await Company.create({
         name,
         cuit,
         industry,
@@ -10,11 +10,12 @@ const postCompaniesController = async (name, cuit, industry, location, numberEmp
         numberEmployees,
         tel,
         email,
+        image,
         InformationId,
         
     })
 
-    return `The company ${name} has been created correctly.`
+    return {'CompanyId': results.id}
 }
 
 module.exports = postCompaniesController;
