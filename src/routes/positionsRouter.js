@@ -4,9 +4,8 @@ const { deletePosition, putPosition, postPosition, getPosition } = require('../c
 
 
 
-
 positionsRouter.get('/raw' , async (req, res) =>{
-
+     
      try {
           const positions = await getPosition();
           res.status(200).json(positions);
@@ -14,7 +13,6 @@ positionsRouter.get('/raw' , async (req, res) =>{
           res.status(400).json(error);
      }
 })
-
 positionsRouter.get('/:CompanyId', getPositionsHandler)
 
 positionsRouter.put('/:id', async (req, res) => {

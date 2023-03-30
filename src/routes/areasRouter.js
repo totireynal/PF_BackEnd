@@ -5,7 +5,7 @@ const { getArea, deleteArea, putArea,  postArea,} = require ('../controllers/are
 
 
 areasRouter.get('/ars' , async (req, res) =>{
-   
+     
      try {
           const result = await getArea();
           res.status(200).json(result);
@@ -14,9 +14,7 @@ areasRouter.get('/ars' , async (req, res) =>{
      }
 })
 
-areasRouter.get('/:CompanyId', getAreasHandler)
-
-
+areasRouter.get('/:CompanyId',  getAreasHandler)
 
 areasRouter.post('/',  async (req , res) =>{
  const { area } = req.body;
