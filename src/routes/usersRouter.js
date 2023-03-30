@@ -8,16 +8,20 @@ const putUserHandler = require('../handlers/usersHandlers/putUsersHandler');
 const postUsersHandler = require('../handlers/usersHandlers/postUsersHandler');
 const validatePostUsersByCuilAndCbu = require('../middlewares/userMiddlewares/validatePostUsersbyCuilAndCbu');
 const getDetailHandler = require('../handlers/usersHandlers/getDetailHandler');
+const restoreUserHandler = require('../handlers/usersHandlers/restoreUserHandler');
+const getDeletedHandler = require('../handlers/usersHandlers/getDeletedHandler');
 
 
 
 // usersRouter.use(verifyJWT)
 usersRouter.get('/', getUsersHandler);
+usersRouter.get('/deleted', getDeletedHandler);
+usersRouter.get('/:id', getDetailHandler);
 // usersRouter.post('/', validatePostUsers, postUsersHandler);
 usersRouter.post('/', validatePostUsers, validatePostUsersByCuilAndCbu, postUsersHandler);
+usersRouter.put('/restore/:id', restoreUserHandler);
 usersRouter.put('/:id',validatePutUsers, putUserHandler);
 usersRouter.delete('/:id', softDeleteUsers, softDeleteHandler);
-usersRouter.get('/:id', getDetailHandler);
 
 
 
