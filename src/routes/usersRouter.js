@@ -8,23 +8,19 @@ const putUserHandler = require('../handlers/usersHandlers/putUsersHandler');
 const postUsersHandler = require('../handlers/usersHandlers/postUsersHandler');
 const validatePostUsersByCuilAndCbu = require('../middlewares/userMiddlewares/validatePostUsersbyCuilAndCbu');
 const getDetailHandler = require('../handlers/usersHandlers/getDetailHandler');
-
+const getFilteredUsersHandler = require('../handlers/usersHandlers/getFilteredUsersHandler');
 
 
 // usersRouter.use(verifyJWT)
-
-usersRouter.get('/:CompanyId', getUsersHandler);  // trae todos y agrega queries para filtrar
-usersRouter.get('/:CompanyId/:id', getDetailHandler); // trae detail del empleado
-
-// usersRouter.post('/', validatePostUsers, postUsersHandler);
-
-
+usersRouter.get('/:CompanyId', getUsersHandler);
+usersRouter.get('/:CompanyId/filter', getFilteredUsersHandler);
+usersRouter.get('/:CompanyId/:id', getDetailHandler);
 usersRouter.post('/', validatePostUsers, validatePostUsersByCuilAndCbu, postUsersHandler);
 usersRouter.put('/:id',validatePutUsers, putUserHandler);
 usersRouter.delete('/:id', softDeleteUsers, softDeleteHandler);
 
 
-
+// usersRouter.post('/', validatePostUsers, postUsersHandler);
 
 
 module.exports = usersRouter;

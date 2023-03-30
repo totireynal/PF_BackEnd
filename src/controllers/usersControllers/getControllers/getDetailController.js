@@ -9,7 +9,7 @@ const getDetailController = async(CompanyId, id) => {
   
         const fileIdDb = await File.findOne({
             where: {
-                UserId: id,
+                UserId: id
             },
             include:[ {
                 model: Users,
