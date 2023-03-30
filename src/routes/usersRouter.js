@@ -12,18 +12,18 @@ const restoreUserHandler = require('../handlers/usersHandlers/restoreUserHandler
 const getDeletedHandler = require('../handlers/usersHandlers/getDeletedHandler');
 
 
-
 // usersRouter.use(verifyJWT)
-usersRouter.get('/', getUsersHandler);
+usersRouter.get('/:CompanyId', getUsersHandler);
 usersRouter.get('/deleted', getDeletedHandler);
 usersRouter.get('/:id', getDetailHandler);
-// usersRouter.post('/', validatePostUsers, postUsersHandler);
+usersRouter.get('/:CompanyId/:id', getDetailHandler);
 usersRouter.post('/', validatePostUsers, validatePostUsersByCuilAndCbu, postUsersHandler);
 usersRouter.put('/restore/:id', restoreUserHandler);
 usersRouter.put('/:id',validatePutUsers, putUserHandler);
 usersRouter.delete('/:id', softDeleteUsers, softDeleteHandler);
 
 
+// usersRouter.post('/', validatePostUsers, postUsersHandler);
 
 
 module.exports = usersRouter;

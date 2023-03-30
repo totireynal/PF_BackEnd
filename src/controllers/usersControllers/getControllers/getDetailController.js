@@ -5,7 +5,7 @@ const Users = require('../../../models').Users;
 const Area = require('../../../models').Area;
 const Position = require('../../../models').Position;
 
-const getDetailController = async(id) => {
+const getDetailController = async(CompanyId, id) => {
   
         const fileIdDb = await File.findOne({
             where: {
@@ -13,6 +13,9 @@ const getDetailController = async(id) => {
             },
             include:[ {
                 model: Users,
+                where: {
+                    CompanyId: CompanyId
+                }
                
             },{
                 model: Position,

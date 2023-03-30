@@ -50,9 +50,4 @@ const checkAuthorization = async (req, res) => {
 
 }
 
-
-
-
-
 module.exports = checkAuthorization
-
