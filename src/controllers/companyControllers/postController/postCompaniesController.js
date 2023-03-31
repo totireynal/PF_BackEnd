@@ -14,7 +14,7 @@ const postCompaniesController = async (name, cuit, industry, location, numberEmp
         InformationId,
     })
 
-    return {'CompanyId': results.id}
+    return {'CompanyId': results.id} 
 }
 
 module.exports = postCompaniesController;
