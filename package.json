@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "migrate": "npx sequelize-cli db:migrate",
     "start": "node ./index.js",
-    "dev": "nodemon index.js",
-    "db:create": "npx sequelize-cli db:create",
-    "db:migrate": "npx sequelize-cli db:migrate",
+    "dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,8 +37,10 @@
     "pg": "^8.10.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.29.3",
-    "sequelize-cli": "^6.6.0",
     "stripe": "^8.191.0",
     "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.0"
   }
 }
