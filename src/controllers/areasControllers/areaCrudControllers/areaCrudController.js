@@ -5,14 +5,23 @@ const getArea = async () => {
       return area;
 }
 
-const postArea = async (area) =>{
 
+const postArea = async (area) => {
      const newArea = await Area.create({
           area,
-     
      })
-     return newArea;
-};
+
+     return newArea
+}
+
+// const postArea = async (area) =>{
+
+//      const newArea = await Area.create({
+//           area,
+     
+//      })
+//      return newArea;
+// };
 
 
 const putArea = async (id , area) => {

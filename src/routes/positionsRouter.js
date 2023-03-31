@@ -37,12 +37,28 @@ try{
      if(!position) throw new Error ('information needed');
      else{
           const newPosition = await postPosition(position);
-          return res.status(200).json(`${newPosition} created`)
+          return res.status(200).json(newPosition.id)
      }
 } catch (error) {
      return res.status(400).json({error: `${newPosition.position} can't be created`});
  }
 });
+
+
+
+
+// positionsRouter.post('/', async (req , res) => {
+//      const { position } = req.body;
+// try{
+//      if(!position) throw new Error ('information needed');
+//      else{
+//           const newPosition = await postPosition(position);
+//           return res.status(200).json(`${newPosition} created`)
+//      }
+// } catch (error) {
+//      return res.status(400).json({error: `${newPosition.position} can't be created`});
+//  }
+// });
     
 
 positionsRouter.delete('/:id', async (req, res) =>{
