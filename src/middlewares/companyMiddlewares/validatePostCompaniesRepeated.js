@@ -1,4 +1,4 @@
-const Company = require('../../../models').Company;
+const Company = require('../../models').Company;
 
 const validatePostCompaniesRepeated = async (req, res, next) => {
     const { name, tel, email } = req.body;
