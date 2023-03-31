@@ -30,7 +30,7 @@ module.exports = {
   image: 'https://i.postimg.cc/qM50Bdd2/STIVEN-MOICA.jpg',
   dni:'36543338',
   tel:'990987277',
-  role:'User',
+  role:'SuperAdmin',
   CompanyId : 1,
  
 },
@@ -264,6 +264,32 @@ module.exports = {
   role:'User',
   CompanyId: 2
 }, 
+{
+  // id: uuidv4(),
+  name: 'Jeisson',
+  lastName: 'Ninco',
+  email: 'jeissonNincoC@gmail.com',
+  birthDate: '30-03-1998',
+  address: 'Avenida Falsa 124',
+  image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  dni:'3456789',
+  tel:'32144567898',
+  role:'User',
+  CompanyId : 1,
+},
+{
+  // id: uuidv4(),
+  name: 'El pepe',
+  lastName: 'Tilin',
+  email: 'tilin@gmail.com',
+  birthDate: '28-03-1998',
+  address: 'Avenida Falsa 124',
+  image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  dni:'945678',
+  tel:'9876543234',
+  role:'User',
+  CompanyId : 1,
+}
 
 
 

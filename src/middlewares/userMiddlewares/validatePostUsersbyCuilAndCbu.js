@@ -1,10 +1,8 @@
-const { Op } = require('sequelize');
 const File = require('../../models').File;
-const Users = require('../../models').Users;
 
 const validatePostUsersByCuilAndCbu = async (req, res, next) => {
     const { cuil, cbu} = req.body;
-    
+
     const findByCbu = await File.findOne({
         where: 
          { cbu: cbu}
@@ -14,9 +12,8 @@ const validatePostUsersByCuilAndCbu = async (req, res, next) => {
          { cuil: cuil}
     }) 
     
-    if (findByCuil ) return res.status(400).json({error: `Cuil: ${cuil} already exists in system. Please try another one.`});
     if (findByCbu) return res.status(400).json({error: `Cbu: ${cbu} already exists in system. Please try another one.`});
- 
+    if (findByCuil ) return res.status(400).json({error: `Cuil: ${cuil} already exists in system. Please try another one.`});
         
     next();
 }

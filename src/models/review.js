@@ -13,7 +13,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   Review.init(
     {
-      
       score: DataTypes.INTEGER,
       comment: DataTypes.TEXT,
     },
