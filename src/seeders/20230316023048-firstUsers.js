@@ -101,7 +101,7 @@ module.exports = {
   image: 'https://i.postimg.cc/KcHtpP39/Dise-o-sin-t-tulo.png',
   dni:'36548888',
   tel:'990987222',
-  role:'User',
+  role:'SuperAdmin',
   CompanyId : 1,
 
 },
