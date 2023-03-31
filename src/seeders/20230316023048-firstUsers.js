@@ -30,7 +30,7 @@ module.exports = {
   image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   dni:'36543338',
   tel:'990987277',
-  role:'User',
+  role:'SuperAdmin',
   CompanyId : 1,
  
 },

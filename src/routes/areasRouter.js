@@ -14,7 +14,7 @@ areasRouter.get('/ars' , async (req, res) =>{
      }
 })
 
-areasRouter.get('/:CompanyId',  getAreasHandler)
+areasRouter.get('/:CompanyId',  getAreasHandler);
 
 areasRouter.post('/',  async (req , res) =>{
  const { area } = req.body;
