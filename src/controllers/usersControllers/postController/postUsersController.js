@@ -18,17 +18,6 @@ const postUsersController = async (
   cuil,
   cbu
 ) => {
-  if ((email, dni, tel)) {
-    const results = await Users.findAll({
-      where: {
-        email: email,
-        dni: dni,
-        tel: tel,
-      },
-    });
-    if (results) throw new Error `The parameters already exist, please try other ones`;
-}
-
     let newUser = await Users.create({
       name,
       lastName,
