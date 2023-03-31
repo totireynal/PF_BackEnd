@@ -1,9 +1,9 @@
-const { Op } = require('sequelize');
-const Users = require('../../../models').Users;
-const File = require('../../../models').File;
-const Area = require('../../../models').Area;
-const Position = require('../../../models').Position;
-const cleanInfoDb = require('../../../utils/getUsersCleanDb');
+const { Op } = require("sequelize");
+const Users = require("../../../models").Users;
+const File = require("../../../models").File;
+const Area = require("../../../models").Area;
+const Position = require("../../../models").Position;
+const cleanInfoDb = require("../../../utils/getUsersCleanDb");
 
 const getUsersController = async( name, role ,area, position, sort, CompanyId) => {
 
@@ -20,34 +20,33 @@ const getUsersController = async( name, role ,area, position, sort, CompanyId) =
             };
         }
 
-        if (role) {
-            usersFilterConditions['role'] = {
-                [Op.eq] : role,
-            }
-        }
-        let positionFilterConditions = {};
+  if (role) {
+    usersFilterConditions["role"] = {
+      [Op.eq]: role,
+    };
+  }
+  let positionFilterConditions = {};
 
-        if(position) {
-            positionFilterConditions['position'] = {
-                [Op.eq]: position,
-            };
-            
-        }
+  if (position) {
+    positionFilterConditions["position"] = {
+      [Op.eq]: position,
+    };
+  }
 
-        let areaFilterConditions = {};
+  let areaFilterConditions = {};
 
-         if(area)  {
-            areaFilterConditions['area'] = {
-                [Op.eq] : area,
-            }
-        }
+  if (area) {
+    areaFilterConditions["area"] = {
+      [Op.eq]: area,
+    };
+  }
 
-        const sortConditionsUsers = [Users, 'name']
-        
-        if (sort) {
-            if(sort === 'AtZ') sortConditionsUsers.push('ASC');
-            if(sort === 'ZtA') sortConditionsUsers.push('DESC');
-        }
+  const sortConditionsUsers = [Users, "name"];
+
+  if (sort) {
+    if (sort === "AtZ") sortConditionsUsers.push("ASC");
+    if (sort === "ZtA") sortConditionsUsers.push("DESC");
+  }
 
         console.log(sortConditionsUsers)
             const results = await File.findAll({
