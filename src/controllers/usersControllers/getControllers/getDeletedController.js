@@ -5,7 +5,7 @@ const Area = require ('../../../models').Area;
 const { Op } = require('sequelize');
 const cleanInfoDb = require('../../../utils/getUsersCleanDb');
 
-const getDeleted = async () => {
+const getDeleted = async (CompanyId) => {
  
 
      const deletedUsers =  await File.findAll({
@@ -19,7 +19,8 @@ const getDeleted = async () => {
           where: {
                deletedAt : {
                     [Op.ne]: null,
-               }
+               },
+               CompanyId: CompanyId
           }, paranoid: false,
      },{
           model: Position ,

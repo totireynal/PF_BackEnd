@@ -2,10 +2,10 @@ const getDeleted = require("../../controllers/usersControllers/getControllers/ge
 
 
 const getDeletedHandler = async (req , res) => {
-       
+       const { CompanyId } = req.params;
 
      try {
-          const deleted = await getDeleted();
+          const deleted = await getDeleted(CompanyId);
           return res.status(200).json(deleted);  
      } catch (error) {
           return res.status(400).json({error: error.message});
