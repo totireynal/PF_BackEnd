@@ -9,7 +9,7 @@ const validatePostUsersByCuilAndCbu = async (req, res, next) => {
     }) 
     const findByCuil = await File.findOne({
         where: 
-         { cuil:cuil}
+         { cuil: cuil}
     }) 
     
     if (findByCbu) return res.status(400).json({error: `Cbu: ${cbu} already exists in system. Please try another one.`});
