@@ -12,8 +12,8 @@ module.exports = {
     lastName: 'Avila',
     email: 'juanchinoavila@gmail.com',
     birthDate: '05-07-1998',
-    address: 'Avenida Falsa 124',
-    image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    address: 'Av False 124',
+    image: 'https://i.postimg.cc/BZxG4jD8/avtar.jpg',
     dni:'36545332',
     tel:'990987267',
     role:'User',
@@ -27,7 +27,7 @@ module.exports = {
   email: 'estivenmoica2@gmail.com',
   birthDate: '03-12-2000',
   address: 'Avenida Falsa 125',
-  image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  image: 'https://i.postimg.cc/qM50Bdd2/STIVEN-MOICA.jpg',
   dni:'36543338',
   tel:'990987277',
   role:'User',
@@ -42,7 +42,7 @@ module.exports = {
   email: 'brangedidier@gmail.com',
   birthDate: '11-03-1999',
   address: 'Avenida Falsa 126',
-  image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  image: 'https://i.postimg.cc/2S5pQTtv/yo.jpg',
   dni:'36544444',
   tel:'990987288',
   role:'User',
@@ -53,7 +53,7 @@ module.exports = {
   // id: uuidv4(),
   name: 'Francisco',
   lastName: 'Toti',
-  email: 'ejemplo5@gmail.com',
+  email: 'totemstu@gmail.com',
   birthDate: '12-06-1991',
   address: 'Avenida Falsa 127',
   image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -70,7 +70,7 @@ module.exports = {
   email: 'ejemplo6@gmail.com',
   birthDate: '09-07-1990',
   address: 'Avenida Falsa 128',
-  image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  image: 'https://i.postimg.cc/LXDKrcTY/Perfil-Carlos.jpg',
   dni:'36546666',
   tel:'990987200',
   role:'User',
@@ -81,10 +81,10 @@ module.exports = {
   // id: uuidv4(),
   name: 'Pablo',
   lastName: 'Cogno',
-  email: 'ejemplo7@gmail.com',
+  email: 'pablocogno.5@gmail.com',
   birthDate: '02-02-1995',
   address: 'Avenida Falsa 129',
-  image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  image: 'https://i.postimg.cc/4yk2SfPn/20220907-172830.jpg',
   dni:'36547777',
   tel:'990987111',
   role:'User',
@@ -93,12 +93,12 @@ module.exports = {
 },
 {
   // id: uuidv4(),
-  name: 'Josefina',
-  lastName: 'Morande',
-  email: 'ejemplo8@gmail.com',
-  birthDate: '06-09-1989',
+  name: 'Sofia',
+  lastName: 'Reynal',
+  email: 'sofiareynalm@gmail.com',
+  birthDate: '01-12-1991',
   address: 'Avenida Falsa 130',
-  image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  image: 'https://i.postimg.cc/KcHtpP39/Dise-o-sin-t-tulo.png',
   dni:'36548888',
   tel:'990987222',
   role:'User',
@@ -187,7 +187,7 @@ module.exports = {
   email: 'ejemplo14@gmail.com',
   birthDate: '08-10-1990',
   address: 'Avenida Falsa 138',
-  image: '',
+  image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   dni:'36500005',
   tel:'990987449',
   role:'User',
@@ -199,7 +199,7 @@ module.exports = {
   email: 'ejemplo15@gmail.com',
   birthDate: '10-10-1994',
   address: 'Avenida Falsa 139',
-  image: '',
+  image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   dni:'36500015',
   tel:'990987600',
   role:'User',
@@ -215,7 +215,7 @@ module.exports = {
   dni:'36500006',
   tel:'990987450',
   role:'User',
-  CompanyId: 1
+  CompanyId: 2
 }, 
 {
   name: 'Pedro',
@@ -227,7 +227,7 @@ module.exports = {
   dni:'36500007',
   tel:'990987451',
   role:'User',
-  CompanyId: 1
+  CompanyId: 2
 }, 
 {
   name: 'Tomas',
@@ -239,7 +239,7 @@ module.exports = {
   dni:'36500008',
   tel:'990987452',
   role:'User',
-  CompanyId: 1
+  CompanyId: 2
 }, 
 {
   name: 'Matias',
@@ -251,7 +251,7 @@ module.exports = {
   dni:'36500009',
   tel:'990987453',
   role:'User',
-  CompanyId: 1
+  CompanyId: 2
 }, {
   name: 'Junior',
   lastName: 'Vasquez',
@@ -262,7 +262,7 @@ module.exports = {
   dni:'36500010',
   tel:'990987454',
   role:'User',
-  CompanyId: 1
+  CompanyId: 2
 }, 
 
 
