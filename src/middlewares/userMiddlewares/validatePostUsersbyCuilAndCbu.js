@@ -1,15 +1,19 @@
 const File = require('../../models').File;
 
 const validatePostUsersByCuilAndCbu = async (req, res, next) => {
-    const { cuil, cbu} = req.body;
+    const { cuil, cbu, CompanyId } = req.body;
 
     const findByCbu = await File.findOne({
-        where: 
-         { cbu: cbu}
+        where: { 
+            cbu: cbu,
+            CompanyId: CompanyId
+        }
     }) 
     const findByCuil = await File.findOne({
-        where: 
-         { cuil:cuil}
+        where: { 
+            cuil:cuil,
+            CompanyId: CompanyId
+        }
     }) 
     
     if (findByCbu) return res.status(400).json({error: `Cbu: ${cbu} already exists in system. Please try another one.`});
