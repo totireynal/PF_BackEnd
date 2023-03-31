@@ -13,7 +13,7 @@ const validatePostCompaniesRepeated = async (req, res, next) => {
     
     const findByEmail = await Company.findOne({
         where: { email: email }
-    })
+    });
 
     if(findByName) return res.status(404).json({ error: `The name: ${name} already exists in system. Please try another one.` });
     if(findByTel) return res.status(404).json({ error: `The phone: ${tel} already exists in system. Please try another one.` });
