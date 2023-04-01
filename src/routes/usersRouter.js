@@ -12,8 +12,8 @@ const getDeletedHandler = require('../handlers/usersHandlers/getDeletedHandler')
 const getValidateUserHandler = require('../handlers/usersHandlers/getValidateUserHandler');
 
 
-usersRouter.get('/validate', getValidateUserHandler);
 usersRouter.get('/:CompanyId', getUsersHandler);
+usersRouter.get('/:CompanyId/validate', getValidateUserHandler);
 usersRouter.get('/:CompanyId/deleted', getDeletedHandler);
 usersRouter.get('/:id', getDetailHandler);
 usersRouter.get('/:CompanyId/:id', getDetailHandler);
