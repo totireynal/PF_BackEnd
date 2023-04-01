@@ -26,7 +26,7 @@ areasRouter.post('/',  async (req , res) =>{
           return res.status(200).json(`${newArea.area} created`)
      }
  } catch (error) {
-     return res.status(400).json({error: `${newArea.area} can't be created`});
+     return res.status(400).json({error: `${area} can't be created`});
  }
 });
 

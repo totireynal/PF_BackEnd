@@ -40,7 +40,7 @@ try{
           return res.status(200).json(`${newPosition} created`)
      }
 } catch (error) {
-     return res.status(400).json({error: `${newPosition.position} can't be created`});
+     return res.status(400).json({error: `${position} can't be created`});
  }
 });
     
