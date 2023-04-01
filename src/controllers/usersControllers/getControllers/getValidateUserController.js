@@ -11,7 +11,7 @@ const getValidateUserController = async (email, dni, tel, cuil, cbu) => {
     });
     if (findByEmail) {
       return {
-        message: 'The email already exists in system.',
+        message: 'Email already exists.',
       };
     } else {
       return null;
@@ -26,7 +26,7 @@ const getValidateUserController = async (email, dni, tel, cuil, cbu) => {
     });
     if (findByDni) {
       return {
-        message: 'The dni already exists in system.',
+        message: 'Dni already exists',
       };
     } else {
       return null;
@@ -41,7 +41,7 @@ const getValidateUserController = async (email, dni, tel, cuil, cbu) => {
     });
     if (findByTel) {
       return {
-        message: 'The phone already exists in system.',
+        message: 'Phone already exists',
       };
     } else {
       return null;
@@ -56,7 +56,7 @@ const getValidateUserController = async (email, dni, tel, cuil, cbu) => {
     });
     if (findByCbu) {
       return {
-        message: 'The cbu already exists in system.',
+        message: 'Cbu already exists',
       };
     } else {
       return null;
@@ -71,7 +71,7 @@ const getValidateUserController = async (email, dni, tel, cuil, cbu) => {
     });
     if (findByCuil) {
       return {
-        message: 'The cuil already exists in system.',
+        message: 'Cuil already exists',
       };
     } else {
       return null;
