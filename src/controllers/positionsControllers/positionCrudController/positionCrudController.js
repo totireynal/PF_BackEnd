@@ -5,10 +5,13 @@ const getPosition = async () =>{
      return getPositions;
 }
 
-const postPosition = async (position) =>{
+const postPosition = async (position, CompanyId) =>{
 
-     const newPosition = await Position.create({
-          position
+     const newPosition = await Position.findOrCreate({
+         where:{
+          position,
+          CompanyId
+         }
      })
      return newPosition
 };
