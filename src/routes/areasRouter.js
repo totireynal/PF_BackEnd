@@ -18,15 +18,15 @@ areasRouter.get('/:CompanyId',  getAreasHandler)
 
 areasRouter.post('/',  async (req , res) =>{
  const { area } = req.body;
-
+ console.log("Area en el back: ", area)
  try {
      if(!area) throw new Error ('information needed');
      else{
           const newArea = await postArea(area);
-          return res.status(200).json(newArea.id)
+          return res.status(200).json(newArea)
      }
  } catch (error) {
-     return res.status(400).json({error: `${newArea.area} can't be created`});
+     return res.status(400).json({error: `${area} can't be created`});
  }
 });
 
