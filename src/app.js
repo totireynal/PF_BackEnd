@@ -12,6 +12,7 @@ const areasRouter = require("./routes/areasRouter");
 const rolesRouter = require("./routes/rolesRouter");
 const protectedRouter = require("./routes/protectedRouter");
 const sendGridRouter = require("./routes/sendGridRouter");
+const eventsRouter = require("./routes/eventsRouter");
 
 const server = express();
 
@@ -32,6 +33,7 @@ server.use("/positions", positionsRouter);
 server.use("/areas", areasRouter);
 server.use("/users", usersRouter);
 server.use("/reviews", reviewsRouter);
+server.use("/events", eventsRouter);
 
 server.use("/protected", verifyJWT, protectedRouter);
 //////////////////////////////////////
