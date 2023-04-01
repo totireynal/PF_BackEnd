@@ -14,6 +14,8 @@ module.exports = (sequelize, DataTypes) => {
       models.Review.belongsTo(Company);
       Company.hasMany(models.Users);
       models.Users.belongsTo(Company);
+      Company.hasMany(models.calendar);
+      models.calendar.belongsTo(Company);
       
     }
   }
