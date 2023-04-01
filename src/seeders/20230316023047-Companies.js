@@ -58,6 +58,20 @@ module.exports = {
         InformationId: 1,
       
 
+      },
+      {
+        name: 'Pepsi',
+        cuit: '87654321',
+        industry: 'Bebidas',
+        location: 'Buenos Aires',
+        numberEmployees: 10,
+        image: 'https://graffica.info/wp-content/uploads/2023/02/cocacola-logo.jpeg',
+        tel: '47495862',
+        email: 'empresa2@gmail.com',
+        authorized: true,
+        paymentDay:'12-03-94',
+        InformationId: 1,
+      
       }
     ])
     /**
