@@ -1,5 +1,5 @@
-const Users = require("../../models").Users;
-const File = require("../../models").File;
+const Users = require("../../../models").Users;
+const File = require("../../../models").File;
 
 const getValidateUserController = async (email, dni, tel, cuil, cbu) => {
   const { CompanyId } = req.body;
