@@ -35,6 +35,62 @@ module.exports = {
  
 },
 {
+  // id: uuidv4(),
+  name: 'Luna',
+  lastName: 'Gonzalez',
+  email: 'lunag2@gmail.com',
+  birthDate: '04-04-2000',
+  address: 'Avenida Falsa 125',
+  image: 'https://i.postimg.cc/qM50Bdd2/STIVEN-MOICA.jpg',
+  dni:'2345234',
+  tel:'123412',
+  role:'SuperAdmin',
+  CompanyId : 1,
+ 
+},
+{
+  // id: uuidv4(),
+  name: 'Juan Pablo',
+  lastName: 'Martinez',
+  email: 'juanm@gmail.com',
+  birthDate: '04-04-2000',
+  address: 'Avenida Falsa 125',
+  image: 'https://i.postimg.cc/qM50Bdd2/STIVEN-MOICA.jpg',
+  dni:'1234124',
+  tel:'4564345',
+  role:'SuperAdmin',
+  CompanyId : 1,
+ 
+},
+{
+  // id: uuidv4(),
+  name: 'Daniel',
+  lastName: 'Ferreira',
+  email: 'danielferrari@gmail.com',
+  birthDate: '05-04-2000',
+  address: 'Avenida Falsa 125',
+  image: 'https://i.postimg.cc/qM50Bdd2/STIVEN-MOICA.jpg',
+  dni:'678765635',
+  tel:'5687567843',
+  role:'SuperAdmin',
+  CompanyId : 1,
+ 
+},
+{
+  // id: uuidv4(),
+  name: 'Johana',
+  lastName: 'Ferreira',
+  email: 'johanabanana@gmail.com',
+  birthDate: '04-06-2000',
+  address: 'Avenida Falsa 125',
+  image: 'https://i.postimg.cc/qM50Bdd2/STIVEN-MOICA.jpg',
+  dni:'234543565367',
+  tel:'56787564534',
+  role:'SuperAdmin',
+  CompanyId : 1,
+ 
+},
+{
   
   // id: uuidv4(),
   name: 'Didier',

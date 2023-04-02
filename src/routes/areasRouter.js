@@ -23,7 +23,7 @@ areasRouter.post('/',  async (req , res) =>{
      if(!area) throw new Error ('information needed');
      else{
           const newArea = await postArea(area);
-          return res.status(200).json(`${newArea.area} created`)
+          return res.status(200).json(newArea)
      }
  } catch (error) {
      return res.status(400).json({error: `${area} can't be created`});
