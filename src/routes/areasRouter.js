@@ -1,62 +1,14 @@
 const areasRouter = require("express").Router();
+const deleteAreasHandler = require("../handlers/areasHandlers/areasCrudHandler.js/deleteAreasHandler");
+const getAllAreasHandler = require("../handlers/areasHandlers/areasCrudHandler.js/getAllAreasHandler");
+const postAreasHandler = require("../handlers/areasHandlers/areasCrudHandler.js/postAreasHandler");
+const putAreasHandler = require("../handlers/areasHandlers/areasCrudHandler.js/putAreasHandler");
 const getAreasHandler = require("../handlers/areasHandlers/getAreasHandler");
-const {
-  getArea,
-  deleteArea,
-  putArea,
-  postArea,
-} = require("../controllers/areasControllers/areaCrudControllers/areaCrudController");
 
-areasRouter.get("/ars", async (req, res) => {
-  try {
-    const result = await getArea();
-    res.status(200).json(result);
-  } catch (error) {
-    res.status(400).json(error);
-  }
-});
-
+areasRouter.get("/ars/:CompanyId", getAllAreasHandler);
 areasRouter.get("/:CompanyId", getAreasHandler);
-
-areasRouter.post("/", async (req, res) => {
-  const { area, CompanyId } = req.body;
-
-  try {
-    if (!area) throw new Error("information needed");
-    else {
-      const newArea = await postArea(area, CompanyId);
-      return res.status(200).json(newArea);
-    }
-  } catch (error) {
-    return res.status(400).json({ error: error.message });
-  }
-});
-
-areasRouter.put("/:id", async (req, res) => {
-  const { area } = req.body;
-  const { id } = req.params;
-
-  try {
-    if (id && area) {
-      const areaUpdated = await putArea(id, area);
-      res.status(200).json(areaUpdated);
-    }
-  } catch (error) {
-    return res
-      .status(400)
-      .json({ error: `update is not possible: ${error.message}` });
-  }
-});
-
-areasRouter.delete("/:id", async (req, res) => {
-  const { id } = req.params;
-
-  try {
-    const deleted = await deleteArea(id);
-    res.status(200).json(deleted);
-  } catch (error) {
-    return res.status(404).json({ error: error.message });
-  }
-});
+areasRouter.post("/", postAreasHandler);
+areasRouter.put("/:id", putAreasHandler);
+areasRouter.delete("/:id", deleteAreasHandler);
 
 module.exports = areasRouter;

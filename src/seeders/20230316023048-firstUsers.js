@@ -93,7 +93,7 @@ module.exports = {
         image: "https://i.postimg.cc/KcHtpP39/Dise-o-sin-t-tulo.png",
         dni: "36548888",
         tel: "990987222",
-        role: "User",
+        role: "SuperAdmin",
         CompanyId: 1,
       },
       {
@@ -101,7 +101,7 @@ module.exports = {
         name: "Virginia",
         lastName: "Gonzalez",
         email: "ejemplo9@gmail.com",
-        birthDate: "04-05-1985",
+        birthDate: "04-04-1985",
         address: "Avenida Falsa 131",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -115,7 +115,7 @@ module.exports = {
         name: "Juliana",
         lastName: "Mora",
         email: "ejemplo10@gmail.com",
-        birthDate: "12-09-1976",
+        birthDate: "03-04-1976",
         address: "Avenida Falsa 132",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -128,7 +128,7 @@ module.exports = {
         name: "Luciana",
         lastName: "Vergara",
         email: "ejemplo11@gmail.com",
-        birthDate: "11-08-1984",
+        birthDate: "04-03-1984",
         address: "Avenida Falsa 134",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -141,7 +141,7 @@ module.exports = {
         name: "Martin",
         lastName: "Gregorio",
         email: "ejemplo12@gmail.com",
-        birthDate: "09-07-1990",
+        birthDate: "05-04-1990",
         address: "Avenida Falsa 135",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -167,7 +167,7 @@ module.exports = {
         name: "Luciano",
         lastName: "Vero",
         email: "ejemplo13@gmail.com",
-        birthDate: "02-09-1992",
+        birthDate: "04-06-1992",
         address: "Avenida Falsa 137",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -180,7 +180,7 @@ module.exports = {
         name: "Genaro",
         lastName: "Fernandez",
         email: "ejemplo14@gmail.com",
-        birthDate: "08-10-1990",
+        birthDate: "06-04-1990",
         address: "Avenida Falsa 138",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -206,20 +206,20 @@ module.exports = {
         name: "Mario",
         lastName: "Loni",
         email: "ejemplo16@gmail.com",
-        birthDate: "12-02-1993",
+        birthDate: "04-03-1993",
         address: "Avenida Falsa 140",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         dni: "36500006",
         tel: "990987450",
-        role: "User",
+        role: "SuperAdmin",
         CompanyId: 2,
       },
       {
         name: "Pedro",
         lastName: "Meza",
         email: "ejemplo17@gmail.com",
-        birthDate: "02-10-1994",
+        birthDate: "04-02-1994",
         address: "Avenida Falsa 141",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -232,7 +232,7 @@ module.exports = {
         name: "Tomas",
         lastName: "Aldunate",
         email: "ejemplo18@gmail.com",
-        birthDate: "08-09-1990",
+        birthDate: "05-04-1990",
         address: "Avenida Falsa 142",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -245,7 +245,7 @@ module.exports = {
         name: "Matias",
         lastName: "Garces",
         email: "ejemplo19@gmail.com",
-        birthDate: "07-10-1991",
+        birthDate: "02-04-1991",
         address: "Avenida Falsa 143",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -258,7 +258,7 @@ module.exports = {
         name: "Junior",
         lastName: "Vasquez",
         email: "ejemplo20@gmail.com",
-        birthDate: "03-08-1995",
+        birthDate: "02-04-1995",
         address: "Avenida Falsa 144",
         image:
           "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -266,34 +266,6 @@ module.exports = {
         tel: "990987454",
         role: "User",
         CompanyId: 2,
-      },
-      {
-        // id: uuidv4(),
-        name: "Jeisson",
-        lastName: "Ninco",
-        email: "jeissonNincoC@gmail.com",
-        birthDate: "10-03-1998",
-        address: "Avenida Falsa 124",
-        image:
-          "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        dni: "3456789",
-        tel: "32144567898",
-        role: "User",
-        CompanyId: 1,
-      },
-      {
-        // id: uuidv4(),
-        name: "El pepe",
-        lastName: "Tilin",
-        email: "tilin@gmail.com",
-        birthDate: "12-03-1998",
-        address: "Avenida Falsa 124",
-        image:
-          "https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        dni: "945678",
-        tel: "9876543234",
-        role: "User",
-        CompanyId: 1,
       },
     ]);
     /**
