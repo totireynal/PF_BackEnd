@@ -6,8 +6,8 @@ const putAreasHandler = require('../handlers/areasHandlers/areasCrudHandler.js/p
 const getAreasHandler = require('../handlers/areasHandlers/getAreasHandler');
 
 
+areasRouter.get('/ars/:CompanyId' ,getAllAreasHandler);
 areasRouter.get('/:CompanyId',  getAreasHandler);
-areasRouter.get('/ars' ,getAllAreasHandler);
 areasRouter.post('/',postAreasHandler);
 areasRouter.put('/:id',putAreasHandler);
 areasRouter.delete('/:id',deleteAreasHandler);

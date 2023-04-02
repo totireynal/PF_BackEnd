@@ -8,8 +8,8 @@ const putPositionsHandler = require('../handlers/positionsHandlers/positionCrudH
 
 
 
+positionsRouter.get('/raw/:CompanyId' ,getAllPositionsHandler);
 positionsRouter.get('/:CompanyId', getPositionsHandler);
-positionsRouter.get('/raw' ,getAllPositionsHandler);
 positionsRouter.post('/', postPositionsHandler);
 positionsRouter.put('/:id',putPositionsHandler);
 positionsRouter.delete('/:id', deletePositionsHandler);
