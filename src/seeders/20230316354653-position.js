@@ -15,24 +15,37 @@ module.exports = {
    await queryInterface.bulkInsert('Positions', [
     {
       position: 'Developer',
+    CompanyId:1
+
     },
     {
       position: 'Data Entry',
+    CompanyId:2
+
     },
     {
       position: 'Lawyer',
+    CompanyId:3
+
     },
     {
       position: 'Salesman',
+    CompanyId:2
+
     },
     {
       position: 'People Specialist',
+    CompanyId:1
+
     },
     {
       position: 'Engineer',
+    CompanyId:1
     },
     {
       position: 'Scrum Master',
+    CompanyId:1
+
     },
    
    ])
