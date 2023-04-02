@@ -2,22 +2,29 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Areas', {
+    await queryInterface.createTable('calendars', {
       id: {
-        type : Sequelize.INTEGER,
-        autoIncrement : true,
         allowNull: false,
         primaryKey: true,
-        // type: Sequelize.UUID, 
-        // defaultValue: Sequelize.UUIDV4,
+        type: Sequelize.INTEGER
       },
-      area: {
+      title: {
         type: Sequelize.STRING,
-    
+        allowNull: true,
       },
-      CompanyId:{
-        // type: Sequelize.UUID,
-        // defaultValue: Sequelize.UUIDV4,
+      description: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      label: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      day: {
+        type: Sequelize.DATE,
+       defaultValue: Date.now(),
+      },
+      CompanyId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references:{
@@ -28,22 +35,18 @@ module.exports = {
         onDelete: 'SET NULL'
       },
       createdAt: {
-        type: Sequelize.DATE,
         allowNull: false,
-        defaultValue: Date.now(),
+        type: Sequelize.DATE,
+        defaultValue :Date.now()
       },
       updatedAt: {
-        type: Sequelize.DATE,
         allowNull: false,
-        defaultValue: Date.now(),
-      },
-      deletedAt:{
         type: Sequelize.DATE,
-        allowNull: true
+        defaultValue :Date.now()
       }
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Areas');
+    await queryInterface.dropTable('calendars');
   }
 };
