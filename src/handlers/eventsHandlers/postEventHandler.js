@@ -1,10 +1,10 @@
 const postEvents = require ('../../controllers/eventsControllers/postEventController');
 
 const postEventsHandler = async (req , res) => {
-     const { title, description, label, day , eventId, CompanyId } =req.body;
+     const { title, description, label, day , id, CompanyId } =req.body;
 
 try {
-     const postEvent = await postEvents(title, description, label, day , eventId, CompanyId);
+     const postEvent = await postEvents(title, description, label, day , id, CompanyId);
      return res.status(200).json(postEvent);
      
 } catch (error) {

@@ -1,6 +1,5 @@
 const { sequelize } = require("../../../models");
 const Users = require("../../../models").Users;
-// const { Op } = require('sequelize');
 const { Op } = require('sequelize');
 
 const getBirthdayController = async () => {
