@@ -2,11 +2,12 @@ const getPosition = require("../../../controllers/positionsControllers/positionC
 
 
 const getAllPositionsHandler = async (req, res) => {
+     const { CompanyId } = req.params; 
      try {
-          const positions = await getPosition();
+          const positions = await getPosition(CompanyId);
           res.status(200).json(positions);
      } catch (error) {
-          res.status(400).json(error);
+          res.status(400).json({error: error.message});
      }
 }
 

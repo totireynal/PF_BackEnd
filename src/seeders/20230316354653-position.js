@@ -20,22 +20,22 @@ module.exports = {
     },
     {
       position: 'Data Entry',
-    CompanyId:2
+    CompanyId:1
 
     },
     {
       position: 'Lawyer',
-    CompanyId:3
+    CompanyId:1
 
     },
     {
       position: 'Salesman',
-    CompanyId:2
+    CompanyId:1
 
     },
     {
       position: 'People Specialist',
-    CompanyId:1
+    CompanyId:2
 
     },
     {
@@ -45,6 +45,16 @@ module.exports = {
     {
       position: 'Scrum Master',
     CompanyId:1
+
+    },
+    {
+      position: 'Developer',
+    CompanyId:2
+
+    },
+    {
+      position: 'Data Entry',
+    CompanyId:2
 
     },
    
