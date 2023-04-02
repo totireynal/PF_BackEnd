@@ -19,17 +19,29 @@ module.exports = {
    },
    {
     area: 'Operations',
-    CompanyId:2
+    CompanyId:1
 
    },
    {
      area: 'Legals',
-    CompanyId:3
+    CompanyId:1
    },
    {
      area: 'HHRR',
-    CompanyId:3
-   }
+    CompanyId:2
+   },
+   {
+    area: 'Data Science',
+   CompanyId:1
+  },
+  {
+    area: 'Engineering',
+    CompanyId:2
+   },
+   {
+    area: 'Data Science',
+   CompanyId:2
+  },
   ])
   },
 
