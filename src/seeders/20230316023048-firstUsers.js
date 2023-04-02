@@ -265,19 +265,19 @@ module.exports = {
   name: 'Mario',
   lastName: 'Loni',
   email: 'ejemplo16@gmail.com',
-  birthDate: '12-02-1993',
+  birthDate: '04-03-1993',
   address: 'Avenida Falsa 140',
   image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   dni:'36500006',
   tel:'990987450',
-  role:'User',
+  role:'SuperAdmin',
   CompanyId: 2
 }, 
 {
   name: 'Pedro',
   lastName: 'Meza',
   email: 'ejemplo17@gmail.com',
-  birthDate: '02-10-1994',
+  birthDate: '04-02-1994',
   address: 'Avenida Falsa 141',
   image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   dni:'36500007',
@@ -289,7 +289,7 @@ module.exports = {
   name: 'Tomas',
   lastName: 'Aldunate',
   email: 'ejemplo18@gmail.com',
-  birthDate: '08-09-1990',
+  birthDate: '05-04-1990',
   address: 'Avenida Falsa 142',
   image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   dni:'36500008',
@@ -301,7 +301,7 @@ module.exports = {
   name: 'Matias',
   lastName: 'Garces',
   email: 'ejemplo19@gmail.com',
-  birthDate: '07-10-1991',
+  birthDate: '02-04-1991',
   address: 'Avenida Falsa 143',
   image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   dni:'36500009',
@@ -312,7 +312,7 @@ module.exports = {
   name: 'Junior',
   lastName: 'Vasquez',
   email: 'ejemplo20@gmail.com',
-  birthDate: '03-08-1995',
+  birthDate: '02-04-1995',
   address: 'Avenida Falsa 144',
   image: 'https://images.pexels.com/photos/3207442/pexels-photo-3207442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   dni:'36500010',
@@ -320,6 +320,7 @@ module.exports = {
   role:'User',
   CompanyId: 2
 }, 
+
 
 
   ])
