@@ -12,11 +12,6 @@ const getDeletedHandler = require('../handlers/usersHandlers/getDeletedHandler')
 const getValidateUserHandler = require('../handlers/usersHandlers/getValidateUserHandler');
 
 
-<<<<<<< HEAD
-// usersRouter.use(verifyJWT)
-// usersRouter.get('/birthDate', getBirthdayHandler)
-=======
->>>>>>> ba9df253b553030e2a5a9bee702e5073e9712411
 usersRouter.get('/:CompanyId', getUsersHandler);
 usersRouter.get('/:CompanyId/validate', getValidateUserHandler);
 usersRouter.get('/:CompanyId/deleted', getDeletedHandler);

@@ -20,7 +20,6 @@ areasRouter.get('/:CompanyId',  getAreasHandler);
 areasRouter.post('/',  async (req , res) =>{
  const { area, CompanyId } = req.body;
  
-
  try {
      if(!area) throw new Error ('information needed');
      else{
