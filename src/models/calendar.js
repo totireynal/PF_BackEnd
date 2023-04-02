@@ -19,7 +19,6 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     label: DataTypes.STRING,
     day: DataTypes.DATE,
-    eventId: DataTypes.INTEGER,
   
   }, {
     sequelize,
