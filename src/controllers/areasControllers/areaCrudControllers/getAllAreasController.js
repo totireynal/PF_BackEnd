@@ -7,7 +7,7 @@ const getArea = async (CompanyId) => {
                CompanyId: CompanyId
           }
      });
-     if (area.length === 0) throw new Error (`The company doesn't have this area.`)
+     if (area.length === 0) throw new Error (`Company or area doesn't exist.`)
      const areaClean = cleanAreas(area)
      return areaClean;
 }
