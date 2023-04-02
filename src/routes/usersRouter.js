@@ -10,9 +10,11 @@ const getDetailHandler = require('../handlers/usersHandlers/getDetailHandler');
 const restoreUserHandler = require('../handlers/usersHandlers/restoreUserHandler');
 const getDeletedHandler = require('../handlers/usersHandlers/getDeletedHandler');
 const getValidateUserHandler = require('../handlers/usersHandlers/getValidateUserHandler');
+const getBirthdayHandler = require("../handlers/usersHandlers/getBirthayHandler")
 
 
 usersRouter.get('/:CompanyId', getUsersHandler);
+usersRouter.get('/:CompanyId/birthday', getBirthdayHandler);
 usersRouter.get('/:CompanyId/validate', getValidateUserHandler);
 usersRouter.get('/:CompanyId/deleted', getDeletedHandler);
 usersRouter.get('/:id', getDetailHandler);
