@@ -7,7 +7,8 @@ const getCompanyCleanDb = (object) => {
             location: object.location,
             numberEmployees: object.numberEmployees,
             tel: object.tel,
-            email: object.email
+            email: object.email,
+            paymentDay: object.paymentDay
         }
     };
 
