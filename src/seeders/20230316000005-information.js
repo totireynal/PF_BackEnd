@@ -7,35 +7,10 @@ module.exports = {
     await queryInterface.bulkInsert('Information', [
       {
         // id: uuidv4(),
-        name: 'StaffSasdasd',
-        tel: '9908833315',
+        name: 'StaffSphere',
+        tel: '9908833320',
         address: 'Avenida Siempreviva 345',
         email: 'hola@staffsphere.com',
-      },
-       {
-        // id: uuidv4(),
-        name: 'Staff2',
-        tel: '990880115',
-        address: 'Avenida Siempreviva 334',
-        email: 'chau@staffsphere.com',
-      }, {
-        // id: uuidv4(),
-        name: 'Staff3',
-        tel: '9900115',
-        address: 'Avenida Siempreviva 3435',
-        email: 'aurevoir@staffsphere.com',
-      }, {
-        // id: uuidv4(),
-        name: 'Staff4',
-        tel: '9903230115',
-        address: 'Avenida Siempreviva 32',
-        email: 'hello@staffsphere.com',
-      }, {
-        // id: uuidv4(),
-        name: 'Staff5',
-        tel: '9902320115',
-        address: 'Avenida Siempreviva 23',
-        email: 'info@staffsphere.com',
       }
     ])
     /**

@@ -1,28 +1,24 @@
 const Area = require('../../../models').Area;
 
+
+
 const getArea = async () => {
       const area = await Area.findAll();
       return area;
 }
 
+const postArea = async (area, CompanyId) =>{
 
-const postArea = async (area) => {
-     const newArea = await Area.create({
-          area,
-     })
-
-     return newArea
-}
-
-// const postArea = async (area) =>{
-
-//      const newArea = await Area.create({
-//           area,
+     const newArea = await Area.findOrCreate({
+          where: {
+               area,
+               CompanyId
+          }
+          
      
-//      })
-//      return newArea;
-// };
-
+     })
+     return newArea;
+}
 
 const putArea = async (id , area) => {
     

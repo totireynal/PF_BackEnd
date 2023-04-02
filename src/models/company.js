@@ -14,6 +14,11 @@ module.exports = (sequelize, DataTypes) => {
       models.Review.belongsTo(Company);
       Company.hasMany(models.Users);
       models.Users.belongsTo(Company);
+      Company.hasMany(models.calendar);
+      models.calendar.belongsTo(Company);
+      Company.belongsToMany(models.Position, {through: 'CompanyPositions'}) 
+      Company.belongsToMany(models.Area, {through: 'AreaCompanies'}) 
+
       
     }
   }

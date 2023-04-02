@@ -14,6 +14,18 @@ module.exports = {
       position: {
         type: Sequelize.STRING
       },
+      CompanyId:{
+        // type: Sequelize.UUID,
+        // defaultValue: Sequelize.UUIDV4,
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references:{
+          model: 'Companies',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL'
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

@@ -12,6 +12,7 @@ const areasRouter = require('./routes/areasRouter');
 const rolesRouter = require('./routes/rolesRouter');
 const protectedRouter = require('./routes/protectedRouter');
 const sendGridRouter = require('./routes/sendGridRouter');
+const eventsRouter = require('./routes/eventsRouter');
 
 
 
@@ -26,17 +27,14 @@ server.use('/info', informationRouter);
 server.use('/companies', companiesRouter);
 server.use('/roles', rolesRouter)
 server.use('/notifications', sendGridRouter);
-
-
 server.use('/positions', positionsRouter);
 server.use('/areas', areasRouter);
-server.use('/roles', rolesRouter);
-server.use('/notifications', sendGridRouter);
 server.use('/users', usersRouter);
 server.use('/reviews', reviewsRouter);
+server.use('/events', eventsRouter);
 
 server.use('/protected',verifyJWT, protectedRouter);
-//////////////////////////////////////
+
 const { resolve } = require("path");
 const env = require("dotenv").config({ path: '../.env' });
 
