@@ -1,14 +1,14 @@
 const calendar = require ('../../models').calendar;
 
 
-const postEvents = async ( title, description, label, day , eventId, CompanyId) => {
+const postEvents = async ( title, description, label, day , id, CompanyId) => {
       
      const events = await calendar.create({
           title,
           description,
           label,
           day,
-          eventId,
+          id,
           CompanyId,
      })
 

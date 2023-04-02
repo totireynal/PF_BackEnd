@@ -18,7 +18,7 @@ module.exports = {
         label : "blue",
         description: "comprar torta",
         day: "10-10-2023",
-        eventId: 1,
+        id: 1,
         CompanyId: 1,
       },
       {
@@ -26,7 +26,7 @@ module.exports = {
         label : "green",
         description: "NO comprar torta",
         day: "11-11-2023",
-        eventId: 2,
+        id: 2,
         CompanyId: 2,
       }, 
       ])

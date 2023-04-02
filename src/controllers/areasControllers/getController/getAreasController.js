@@ -1,6 +1,5 @@
 const getUsersController = require('../../usersControllers/getControllers/getUsersController');
 
-// const File = require('../../../models').File;
 
 
 const getAreasController = async (name, role, area, position, sort, CompanyId) => {
