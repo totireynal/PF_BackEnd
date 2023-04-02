@@ -12,7 +12,20 @@ module.exports = {
         // defaultValue: Sequelize.UUIDV4,
       },
       area: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+    
+      },
+      CompanyId:{
+        // type: Sequelize.UUID,
+        // defaultValue: Sequelize.UUIDV4,
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references:{
+          model: 'Companies',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL'
       },
       createdAt: {
         type: Sequelize.DATE,
