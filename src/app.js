@@ -14,6 +14,8 @@ const protectedRouter = require('./routes/protectedRouter');
 const sendGridRouter = require('./routes/sendGridRouter');
 const eventsRouter = require('./routes/eventsRouter');
 
+
+
 const server = express();
 
 server.use(express.json());
@@ -63,7 +65,6 @@ server.get("/", (req, res) => {
         automatic_payment_methods: { enabled: true },
       });
   
-      // Send publishable key and PaymentIntent details to client
       res.send({
         clientSecret: paymentIntent.client_secret,
       });

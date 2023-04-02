@@ -11,6 +11,7 @@ const restoreUserHandler = require('../handlers/usersHandlers/restoreUserHandler
 const getDeletedHandler = require('../handlers/usersHandlers/getDeletedHandler');
 const getBirthdayHandler = require('../handlers/usersHandlers/getBirthayHandler');
 const getValidateUserHandler = require('../handlers/usersHandlers/getValidateUserHandler');
+const getBirthdayHandler = require("../handlers/usersHandlers/getBirthayHandler")
 
 
 usersRouter.get('/:CompanyId', getUsersHandler);
