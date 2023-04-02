@@ -14,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
       Position.hasMany(models.File);
       models.File.belongsTo(Position);
       Position.belongsToMany(models.Area, {through: 'AreaPosition' })
+      Position.belongsTo(models.Company)
+      models.Company.hasMany(Position); 
+
     }
   }
   Position.init({

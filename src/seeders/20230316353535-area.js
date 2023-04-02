@@ -15,15 +15,20 @@ module.exports = {
    await queryInterface.bulkInsert('Areas', [
     {
     area: 'Engineering',
+    CompanyId:1
    },
    {
     area: 'Operations',
+    CompanyId:2
+
    },
    {
-    area: 'Legals'
+     area: 'Legals',
+    CompanyId:3
    },
    {
-    area: 'HHRR'
+     area: 'HHRR',
+    CompanyId:3
    }
   ])
   },
