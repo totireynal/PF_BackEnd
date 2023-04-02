@@ -35,15 +35,15 @@ positionsRouter.put("/:id", async (req, res) => {
 });
 
 positionsRouter.post("/", async (req, res) => {
-  const { position } = req.body;
+  const { position, CompanyId } = req.body;
   try {
     if (!position) throw new Error("information needed");
     else {
-      const newPosition = await postPosition(position);
-      return res.status(200).json(`Created`);
+      const newPosition = await postPosition(position, CompanyId);
+      return res.status(200).json(newPosition);
     }
   } catch (error) {
-    return res.status(400).json({ error: `Can't be created` });
+    return res.status(400).json({ error: `${newPosition} can't be created` });
   }
 });
 

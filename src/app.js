@@ -36,7 +36,7 @@ server.use("/reviews", reviewsRouter);
 server.use("/events", eventsRouter);
 
 server.use("/protected", verifyJWT, protectedRouter);
-//////////////////////////////////////
+
 const { resolve } = require("path");
 const env = require("dotenv").config({ path: "../.env" });
 

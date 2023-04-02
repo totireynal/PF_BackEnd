@@ -19,16 +19,16 @@ areasRouter.get("/ars", async (req, res) => {
 areasRouter.get("/:CompanyId", getAreasHandler);
 
 areasRouter.post("/", async (req, res) => {
-  const { area } = req.body;
+  const { area, CompanyId } = req.body;
 
   try {
     if (!area) throw new Error("information needed");
     else {
-      const newArea = await postArea(area);
-      return res.status(200).json(`Created`);
+      const newArea = await postArea(area, CompanyId);
+      return res.status(200).json(newArea);
     }
   } catch (error) {
-    return res.status(400).json({ error: `Can't be created` });
+    return res.status(400).json({ error: error.message });
   }
 });
 

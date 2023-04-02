@@ -5,7 +5,6 @@ module.exports = {
     await queryInterface.createTable('calendars', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
@@ -24,9 +23,6 @@ module.exports = {
       day: {
         type: Sequelize.DATE,
        defaultValue: Date.now(),
-      },
-      eventId:{
-        type: Sequelize.INTEGER
       },
       CompanyId: {
         type: Sequelize.INTEGER,
