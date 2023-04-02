@@ -71,7 +71,7 @@ module.exports = {
         cuil: '12280234251',
         cbu: '5742046602340087867',
         UserId:7,
-        AreaId:2,
+        AreaId:1,
         PositionId:7,
       },{
         
@@ -80,7 +80,7 @@ module.exports = {
         cuil: '1228023433451',
         cbu: '5742046603430087867',
         UserId:8,
-        AreaId:2,
+        AreaId:5,
         PositionId:2,
       },{
         
@@ -153,8 +153,8 @@ module.exports = {
         cuil: '122802342341',
         cbu: '57420466123123087867',
         UserId:16,
-        AreaId:1,
-        PositionId:1,
+        AreaId:4,
+        PositionId:5,
       },{
         
 
@@ -162,8 +162,8 @@ module.exports = {
         cuil: '1228023423441',
         cbu: '5742046600123127867',
         UserId:17,
-        AreaId:4,
-        PositionId:5,
+        AreaId:6,
+        PositionId:8,
       },{
         
 
@@ -171,8 +171,8 @@ module.exports = {
         cuil: '12282342341',
         cbu: '57420466001231230087867',
         UserId:18,
-        AreaId:4,
-        PositionId:5,
+        AreaId:6,
+        PositionId:8,
       },{
         
 
@@ -180,8 +180,8 @@ module.exports = {
         cuil: '1228032342341',
         cbu: '5742041231230087867',
         UserId:19,
-        AreaId:2,
-        PositionId:2,
+        AreaId:7,
+        PositionId:9,
       },
       {
         
@@ -190,8 +190,8 @@ module.exports = {
         cuil: '1128032342341',
         cbu: '5741041231230087867',
         UserId:20,
-        AreaId:2,
-        PositionId:2,
+        AreaId:7,
+        PositionId:9,
       },
         
       
