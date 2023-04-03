@@ -11,6 +11,7 @@ const restoreUserHandler = require("../handlers/usersHandlers/restoreUserHandler
 const getDeletedHandler = require("../handlers/usersHandlers/getDeletedHandler");
 const getBirthdayHandler = require("../handlers/usersHandlers/getBirthayHandler");
 const getValidateUserHandler = require("../handlers/usersHandlers/getValidateUserHandler");
+const validatePostUsersByCuilAndCbu = require("../middlewares/userMiddlewares/validatePostUsersbyCuilAndCbu");
 
 usersRouter.get("/:CompanyId", getUsersHandler);
 usersRouter.get("/:CompanyId/birthday", getBirthdayHandler);
@@ -18,7 +19,12 @@ usersRouter.get("/:CompanyId/validate", getValidateUserHandler);
 usersRouter.get("/:CompanyId/deleted", getDeletedHandler);
 usersRouter.get("/:id", getDetailHandler);
 usersRouter.get("/:CompanyId/:id", getDetailHandler);
-usersRouter.post("/", validatePostUsers, postUsersHandler);
+usersRouter.post(
+  "/",
+  validatePostUsers,
+  validatePostUsersByCuilAndCbu,
+  postUsersHandler
+);
 usersRouter.put("/restore/:id", restoreUserHandler);
 usersRouter.put("/:id", validatePutUsers, putUserHandler);
 usersRouter.delete("/:id", softDeleteUsers, softDeleteHandler);

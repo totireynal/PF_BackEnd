@@ -6,13 +6,11 @@ const validatePostUsersByCuilAndCbu = async (req, res, next) => {
     const findByCbu = await File.findOne({
         where: { 
             cbu: cbu,
-            CompanyId: CompanyId
         }
     }) 
     const findByCuil = await File.findOne({
         where: { 
-            cuil:cuil,
-            CompanyId: CompanyId
+            cuil: cuil,
         }
     }) 
     
