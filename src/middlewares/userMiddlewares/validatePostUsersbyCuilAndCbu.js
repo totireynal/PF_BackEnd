@@ -1,7 +1,7 @@
 const File = require('../../models').File;
 
 const validatePostUsersByCuilAndCbu = async (req, res, next) => {
-    const { cuil, cbu } = req.body;
+    const { cuil, cbu} = req.body;
 
     const findByCbu = await File.findOne({
         where: { 
