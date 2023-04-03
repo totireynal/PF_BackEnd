@@ -3,7 +3,7 @@ const { Op } = require('sequelize');
 const Users = require('../../../models').Users;
 const Area = require('../../../models').Area;
 const File = require('../../../models').File;
-const Companies = require('../../../models').Companies;
+const Company = require('../../../models').Company;
 
 
 
