@@ -4,9 +4,12 @@ const getAllAreasHandler = require('../handlers/areasHandlers/areasCrudHandler.j
 const postAreasHandler = require('../handlers/areasHandlers/areasCrudHandler.js/postAreasHandler');
 const putAreasHandler = require('../handlers/areasHandlers/areasCrudHandler.js/putAreasHandler');
 const getAreasHandler = require('../handlers/areasHandlers/getAreasHandler');
+const getIndexAreaHandler = require("../handlers/areasHandlers/getIndexAreaHandlers")
 
 areasRouter.get('/ars' ,getAllAreasHandler);
+
 areasRouter.get('/:CompanyId',  getAreasHandler);
+areasRouter.get("/:CompanyId/index", getIndexAreaHandler)
 areasRouter.post('/',postAreasHandler);
 areasRouter.put('/:id',putAreasHandler);
 areasRouter.delete('/:id',deleteAreasHandler);
