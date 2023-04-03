@@ -51,9 +51,6 @@ const getRetentionIndexByArea = async (companyId) => {
     }],
   });
 
-  const retentionIndex =
-    ((employeesAtEnd - joinedDuringPeriod) / employeesAtStart) * 100;
-
   const areas = await Area.findAll({
     where: {
       CompanyId: companyId,
@@ -73,8 +70,50 @@ const getRetentionIndexByArea = async (companyId) => {
         }],
       });
 
+      const employeesAtStartInArea = await File.count({
+        where: {
+          dateOfAdmission: {
+            [Op.lte]: startOfPeriod,
+          },
+          AreaId: area.id,
+          '$User.CompanyId$': companyId,
+        },
+        include: [{
+          model: Users,
+          required: true,
+        }],
+      });
+
+      const employeesAtEndInArea = await File.count({
+        where: {
+          dateOfAdmission: {
+            [Op.lte]: endOfPeriod,
+          },
+          AreaId: area.id,
+          '$User.CompanyId$': companyId,
+        },
+        include: [{
+          model: Users,
+          required: true,
+        }],
+      });
+
+      const joinedDuringPeriodInArea = await File.count({
+        where: {
+          dateOfAdmission: {
+            [Op.between]: [startOfPeriod, endOfPeriod],
+          },
+          AreaId: area.id,
+          '$User.CompanyId$': companyId,
+        },
+        include: [{
+          model: Users,
+          required: true,
+        }],
+      });
+
       const retentionIndexInArea =
-        (employeesInArea === 0) ? 0 : Number((((employeesAtEnd - joinedDuringPeriod - employeesInArea) / (employeesAtStart - employeesInArea)) * 100).toFixed(1));
+        ((employeesAtEndInArea - joinedDuringPeriodInArea) / employeesAtStartInArea) * 100;
 
       return {
         area: area.area,
