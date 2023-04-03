@@ -5,12 +5,12 @@ const validatePostUsersByCuilAndCbu = async (req, res, next) => {
 
     const findByCbu = await File.findOne({
         where: { 
-            cbu: cbu
+            cbu: cbu,
         }
     }) 
     const findByCuil = await File.findOne({
         where: { 
-            cuil:cuil
+            cuil: cuil,
         }
     }) 
     

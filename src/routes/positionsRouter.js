@@ -14,4 +14,5 @@ positionsRouter.post('/', postPositionsHandler);
 positionsRouter.put('/:id',putPositionsHandler);
 positionsRouter.delete('/:id', deletePositionsHandler);
 
+
 module.exports = positionsRouter;
