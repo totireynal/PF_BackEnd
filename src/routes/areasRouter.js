@@ -6,8 +6,13 @@ const putAreasHandler = require('../handlers/areasHandlers/areasCrudHandler.js/p
 const getAreasHandler = require('../handlers/areasHandlers/getAreasHandler');
 const getIndexAreaHandler = require("../handlers/areasHandlers/getIndexAreaHandlers")
 
+<<<<<<< HEAD
 areasRouter.get('/ars' ,getAllAreasHandler);
 
+=======
+
+areasRouter.get('/ars/:CompanyId' ,getAllAreasHandler);
+>>>>>>> develop
 areasRouter.get('/:CompanyId',  getAreasHandler);
 areasRouter.get("/:CompanyId/index", getIndexAreaHandler)
 areasRouter.post('/',postAreasHandler);

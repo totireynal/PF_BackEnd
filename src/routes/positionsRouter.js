@@ -7,9 +7,9 @@ const postPositionsHandler = require('../handlers/positionsHandlers/positionCrud
 const putPositionsHandler = require('../handlers/positionsHandlers/positionCrudHandlers/putPositionHandler');
 
 
-positionsRouter.get('/raw' ,getAllPositionsHandler);
-positionsRouter.get('/:CompanyId', getPositionsHandler);
 
+positionsRouter.get('/raw/:CompanyId' ,getAllPositionsHandler);
+positionsRouter.get('/:CompanyId', getPositionsHandler);
 positionsRouter.post('/', postPositionsHandler);
 positionsRouter.put('/:id',putPositionsHandler);
 positionsRouter.delete('/:id', deletePositionsHandler);

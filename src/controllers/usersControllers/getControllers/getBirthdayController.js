@@ -1,6 +1,5 @@
 const { sequelize } = require("../../../models");
 const Users = require("../../../models").Users;
-// const { Op } = require('sequelize');
 const { Op } = require('sequelize');
 
 
@@ -22,6 +21,7 @@ const getBirthdayController = async (CompanyId) => {
     attributes: [
       "name",
       "lastName",
+      "image",
       [
         sequelize.fn("date_part", "day", sequelize.col("birthDate")),
         "birthDay",
