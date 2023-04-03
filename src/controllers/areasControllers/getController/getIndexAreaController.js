@@ -74,11 +74,11 @@ const getRetentionIndexByArea = async (companyId) => {
       });
 
       const retentionIndexInArea =
-        (employeesAtStart - employeesInArea) === 0 ? 100 : ((employeesAtEnd - joinedDuringPeriod - employeesInArea) / (employeesAtStart - employeesInArea)) * 100;
+        (employeesInArea === 0) ? 0 : Number((((employeesAtEnd - joinedDuringPeriod - employeesInArea) / (employeesAtStart - employeesInArea)) * 100).toFixed(1));
 
       return {
         area: area.area,
-        retentionIndex: retentionIndexInArea.toFixed(1),
+        retentionIndex: retentionIndexInArea,
       };
     })
   );
