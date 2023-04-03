@@ -13,7 +13,6 @@ const getBirthdayHandler = require('../handlers/usersHandlers/getBirthayHandler'
 const getValidateUserHandler = require('../handlers/usersHandlers/getValidateUserHandler');
 const validatePostUsersByCuilAndCbu = require('../middlewares/userMiddlewares/validatePostUsersbyCuilAndCbu');
 
-
 usersRouter.get('/:CompanyId', getUsersHandler);
 usersRouter.get('/:CompanyId/birthday', getBirthdayHandler);
 usersRouter.get('/:CompanyId/validate', getValidateUserHandler);
