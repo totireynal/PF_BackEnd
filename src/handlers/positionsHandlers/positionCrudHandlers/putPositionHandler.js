@@ -12,7 +12,7 @@ const putPositionsHandler = async (req, res ) => {
           }
           
      } catch (error) {
-     return res.status(400).json({error: `update is not possible: ${error.message}`});
+     return res.status(400).json({error: error.message});
           
      }
 }

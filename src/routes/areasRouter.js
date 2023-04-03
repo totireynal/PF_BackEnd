@@ -13,4 +13,4 @@ areasRouter.put('/:id',putAreasHandler);
 areasRouter.delete('/:id',deleteAreasHandler);
 
 
-module.exports = areasRouter;
+ module.exports = areasRouter;
