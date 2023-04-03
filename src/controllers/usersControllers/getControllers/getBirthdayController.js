@@ -19,6 +19,7 @@ const getBirthdayController = async (CompanyId) => {
 
   const users = await Users.findAll({
     attributes: [
+      "id",
       "name",
       "lastName",
       "image",
@@ -99,6 +100,7 @@ const getBirthdayController = async (CompanyId) => {
   return !users.length ? "There are no upcoming birthdays" : users;
   
 };
+
 
 
 
