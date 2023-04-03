@@ -19,6 +19,7 @@ const getBirthdayController = async (CompanyId) => {
 
   const users = await Users.findAll({
     attributes: [
+      "id",
       "name",
       "lastName",
       "image",
