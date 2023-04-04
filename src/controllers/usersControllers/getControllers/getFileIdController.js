@@ -15,7 +15,7 @@ const getFileIdController = async(id) => {
             }
         });
 
-        if(!fileIdDb) throw new Error(`The user with id: '${id}' not exist` )
+        if(!fileIdDb) throw new Error(`The user does not exist` )
 
         return cleanGetDetail(fileIdDb);
 

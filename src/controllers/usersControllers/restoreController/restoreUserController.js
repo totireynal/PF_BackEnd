@@ -14,7 +14,7 @@ const  restoreUser = async (id) =>{
                 })
             }]
         })
-    return `The user ${id} has been restored`;
+    return `The user has been restored`;
 
 }
 
