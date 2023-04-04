@@ -7,6 +7,7 @@ const getAreasHandler = require('../handlers/areasHandlers/getAreasHandler');
 const getIndexAreaHandler = require('../handlers/areasHandlers/getIndexAreaHandlers');
 
 
+areasRouter.get('/:CompanyId/index', getIndexAreaHandler);
 areasRouter.get('/ars/:CompanyId' ,getAllAreasHandler);
 areasRouter.get('/:CompanyId',  getAreasHandler);
 areasRouter.get('/:CompanyId/index', getIndexAreaHandler)
