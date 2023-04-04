@@ -13,9 +13,11 @@ const getBirthdayHandler = require("../handlers/usersHandlers/getBirthayHandler"
 const getValidateUserHandler = require("../handlers/usersHandlers/getValidateUserHandler");
 const validatePostUsersByCuilAndCbu = require("../middlewares/userMiddlewares/validatePostUsersbyCuilAndCbu");
 const getAllUsersHandler = require("../handlers/usersHandlers/getAllUsersHandler");
+const getCountDeletedHandler = require("../handlers/usersHandlers/getCountDeletedHandler");
 
 usersRouter.get("/", getAllUsersHandler);
 usersRouter.get("/:CompanyId", getUsersHandler);
+usersRouter.get("/:CompanyId/count", getCountDeletedHandler);
 usersRouter.get("/:CompanyId/birthday", getBirthdayHandler);
 usersRouter.get("/:CompanyId/validate", getValidateUserHandler);
 usersRouter.get("/:CompanyId/deleted", getDeletedHandler);
