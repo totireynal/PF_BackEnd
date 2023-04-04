@@ -15,9 +15,10 @@ const getRetentionIndexByArea = async (companyId) => {
   const employeesAtStart = await File.count({
     where: {
       dateOfAdmission: {
-        [Op.lte]: startOfPeriod, // fecha de admisión anterior o igual al comienzo del periodo
+        [Op.lte]: startOfPeriod,
       },
       '$User.CompanyId$': companyId,
+      deletedAt: null, // Excluir empleados eliminados
     },
     include: [{
       model: Users,
@@ -28,9 +29,10 @@ const getRetentionIndexByArea = async (companyId) => {
   const employeesAtEnd = await File.count({
     where: {
       dateOfAdmission: {
-        [Op.lte]: endOfPeriod, // fecha de admisión anterior o igual al final del periodo
+        [Op.lte]: endOfPeriod,
       },
       '$User.CompanyId$': companyId,
+      deletedAt: null, // Excluir empleados eliminados
     },
     include: [{
       model: Users,
@@ -41,9 +43,10 @@ const getRetentionIndexByArea = async (companyId) => {
   const joinedDuringPeriod = await File.count({
     where: {
       dateOfAdmission: {
-        [Op.between]: [startOfPeriod, endOfPeriod], // fecha de admisión dentro del periodo
+        [Op.between]: [startOfPeriod, endOfPeriod],
       },
       '$User.CompanyId$': companyId,
+      deletedAt: null, // Excluir empleados eliminados
     },
     include: [{
       model: Users,
@@ -63,6 +66,7 @@ const getRetentionIndexByArea = async (companyId) => {
         where: {
           AreaId: area.id,
           '$User.CompanyId$': companyId,
+          deletedAt: null, // Excluir empleados eliminados
         },
         include: [{
           model: Users,
@@ -77,6 +81,7 @@ const getRetentionIndexByArea = async (companyId) => {
           },
           AreaId: area.id,
           '$User.CompanyId$': companyId,
+          deletedAt: null, // Excluir empleados eliminados
         },
         include: [{
           model: Users,
@@ -91,6 +96,7 @@ const getRetentionIndexByArea = async (companyId) => {
           },
           AreaId: area.id,
           '$User.CompanyId$': companyId,
+          deletedAt: null, // Excluir empleados eliminados
         },
         include: [{
           model: Users,
@@ -105,6 +111,7 @@ const getRetentionIndexByArea = async (companyId) => {
           },
           AreaId: area.id,
           '$User.CompanyId$': companyId,
+          deletedAt: null, // Excluir empleados eliminados
         },
         include: [{
           model: Users,
@@ -124,6 +131,143 @@ const getRetentionIndexByArea = async (companyId) => {
 
   return retentionIndexByArea;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const getRetentionIndexByArea = async (companyId) => {
+//   const startOfPeriod = new Date(new Date().getFullYear(), 0, 1); // primer día del año actual
+//   const endOfPeriod = new Date(); // fecha actual
+
+//   const employeesAtStart = await File.count({
+//     where: {
+//       dateOfAdmission: {
+//         [Op.lte]: startOfPeriod, // fecha de admisión anterior o igual al comienzo del periodo
+//       },
+//       '$User.CompanyId$': companyId,
+//     },
+//     include: [{
+//       model: Users,
+//       required: true,
+//     }],
+//   });
+
+//   const employeesAtEnd = await File.count({
+//     where: {
+//       dateOfAdmission: {
+//         [Op.lte]: endOfPeriod, // fecha de admisión anterior o igual al final del periodo
+//       },
+//       '$User.CompanyId$': companyId,
+//     },
+//     include: [{
+//       model: Users,
+//       required: true,
+//     }],
+//   });
+
+//   const joinedDuringPeriod = await File.count({
+//     where: {
+//       dateOfAdmission: {
+//         [Op.between]: [startOfPeriod, endOfPeriod], // fecha de admisión dentro del periodo
+//       },
+//       '$User.CompanyId$': companyId,
+//     },
+//     include: [{
+//       model: Users,
+//       required: true,
+//     }],
+//   });
+
+//   const areas = await Area.findAll({
+//     where: {
+//       CompanyId: companyId,
+//     },
+//   });
+
+//   const retentionIndexByArea = await Promise.all(
+//     areas.map(async (area) => {
+//       const employeesInArea = await File.count({
+//         where: {
+//           AreaId: area.id,
+//           '$User.CompanyId$': companyId,
+//         },
+//         include: [{
+//           model: Users,
+//           required: true,
+//         }],
+//       });
+
+//       const employeesAtStartInArea = await File.count({
+//         where: {
+//           dateOfAdmission: {
+//             [Op.lte]: startOfPeriod,
+//           },
+//           AreaId: area.id,
+//           '$User.CompanyId$': companyId,
+//         },
+//         include: [{
+//           model: Users,
+//           required: true,
+//         }],
+//       });
+
+//       const employeesAtEndInArea = await File.count({
+//         where: {
+//           dateOfAdmission: {
+//             [Op.lte]: endOfPeriod,
+//           },
+//           AreaId: area.id,
+//           '$User.CompanyId$': companyId,
+//         },
+//         include: [{
+//           model: Users,
+//           required: true,
+//         }],
+//       });
+
+//       const joinedDuringPeriodInArea = await File.count({
+//         where: {
+//           dateOfAdmission: {
+//             [Op.between]: [startOfPeriod, endOfPeriod],
+//           },
+//           AreaId: area.id,
+//           '$User.CompanyId$': companyId,
+//         },
+//         include: [{
+//           model: Users,
+//           required: true,
+//         }],
+//       });
+
+//       const retentionIndexInArea =
+//         ((employeesAtEndInArea - joinedDuringPeriodInArea) / employeesAtStartInArea) * 100;
+
+//       return {
+//         area: area.area,
+//         retentionIndex: retentionIndexInArea,
+//       };
+//     })
+//   );
+
+//   return retentionIndexByArea;
+// };
 
 
 
