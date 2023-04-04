@@ -9,7 +9,8 @@ const getCompanyCleanDb = (object) => {
             numberEmployees: object.numberEmployees,
             tel: object.tel,
             email: object.email,
-            paymentDay: object.paymentDay
+      paymentDay: object.paymentDay,
+            image: object.image
         }
     };
 
