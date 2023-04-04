@@ -5,6 +5,7 @@ const postAreasHandler = require('../handlers/areasHandlers/areasCrudHandler.js/
 const putAreasHandler = require('../handlers/areasHandlers/areasCrudHandler.js/putAreasHandler');
 const getAreasHandler = require('../handlers/areasHandlers/getAreasHandler');
 
+
 areasRouter.get('/ars/:CompanyId' ,getAllAreasHandler);
 areasRouter.get('/:CompanyId',  getAreasHandler);
 areasRouter.post('/',postAreasHandler);
