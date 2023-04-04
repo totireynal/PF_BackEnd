@@ -14,7 +14,7 @@ const getUserIdController = async (id) => {
     const infoTotal = await getUserCleanDb([userIdDb]);
     return infoTotal;
   } catch (error) {
-    throw new Error(`The User with id: '${id}' not exist!`);
+    throw new Error(`The user does not exist!`);
   }
 };
 
