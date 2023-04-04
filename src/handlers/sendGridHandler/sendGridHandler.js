@@ -14,15 +14,13 @@ const sendGridHandler = async (req, res) => {
   await sgMail
     .send(msg)
     .then(() => {
-      return res.status(201).send("El correo ha sido enviado correctamente!!");
+      return res.status(201).send("The mail has been sent correctly!!");
     })
     .catch((error) => {
       return res
         .status(402)
-        .json({ error: "El correo no ha sido enviado correctamente!!" });
+        .json({ error: "The mail has not been sent correctly!!" });
     });
 };
-
-module.exports = sendGridHandler;
 
 module.exports = sendGridHandler;

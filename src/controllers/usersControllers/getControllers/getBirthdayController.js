@@ -2,7 +2,9 @@ const { sequelize } = require("../../../models");
 const Users = require("../../../models").Users;
 const { Op } = require('sequelize');
 
-const getBirthdayController = async () => {
+
+const getBirthdayController = async (CompanyId) => {
+
   const today = new Date();
   const nextTenDays = [];
   for (let i = 0; i <= 9; i++) {
@@ -16,9 +18,24 @@ const getBirthdayController = async () => {
   const todayBirthday = `${todayMonth}-${todayDay}`;
 
   const users = await Users.findAll({
-    attributes: ["name", "lastName", "birthDate"],
+    attributes: [
+      "id",
+      "name",
+      "lastName",
+      "image",
+      "email",
+      [
+        sequelize.fn("date_part", "day", sequelize.col("birthDate")),
+        "birthDay",
+      ],
+      [
+        sequelize.fn("date_part", "month", sequelize.col("birthDate")),
+        "birthMonth",
+      ],
+    ],
     where: {
       [Op.and]: [
+        { CompanyId: CompanyId },
         { birthDate: { [Op.not]: null } },
         {
           [Op.or]: [
@@ -27,12 +44,20 @@ const getBirthdayController = async () => {
                 birthDate: {
                   [Op.and]: [
                     sequelize.where(
-                      sequelize.fn("date_part", "month", sequelize.col("birthDate")),
+                      sequelize.fn(
+                        "date_part",
+                        "month",
+                        sequelize.col("birthDate")
+                      ),
                       "=",
                       date.split("-")[0]
                     ),
                     sequelize.where(
-                      sequelize.fn("date_part", "day", sequelize.col("birthDate")),
+                      sequelize.fn(
+                        "date_part",
+                        "day",
+                        sequelize.col("birthDate")
+                      ),
                       "=",
                       date.split("-")[1]
                     ),
@@ -44,12 +69,20 @@ const getBirthdayController = async () => {
               birthDate: {
                 [Op.and]: [
                   sequelize.where(
-                    sequelize.fn("date_part", "month", sequelize.col("birthDate")),
+                    sequelize.fn(
+                      "date_part",
+                      "month",
+                      sequelize.col("birthDate")
+                    ),
                     "=",
                     todayMonth
                   ),
                   sequelize.where(
-                    sequelize.fn("date_part", "day", sequelize.col("birthDate")),
+                    sequelize.fn(
+                      "date_part",
+                      "day",
+                      sequelize.col("birthDate")
+                    ),
                     "=",
                     todayDay
                   ),
@@ -66,8 +99,7 @@ const getBirthdayController = async () => {
     ],
   });
   return !users.length ? "There are no upcoming birthdays" : users;
+  
 };
-
-
 
 module.exports = getBirthdayController;
