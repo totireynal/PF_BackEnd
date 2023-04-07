@@ -15,6 +15,7 @@ const validatePostUsersByCuilAndCbu = require('../middlewares/userMiddlewares/va
 const getAllUsersHandler = require('../handlers/usersHandlers/getAllUsersHandler');
 const getCountDeletedHandler = require('../handlers/usersHandlers/getCountDeletedHandler');
 
+
 usersRouter.get('/', getAllUsersHandler);
 usersRouter.get('/:CompanyId', getUsersHandler);
 usersRouter.get('/:CompanyId/count', getCountDeletedHandler);

@@ -34,7 +34,7 @@ const getCountDeletedController = async (CompanyId) => {
         }]
       });
       
-  return !deletedUsers.length ? 'No data to validate' : deletedUsers.length;
+  return !deletedUsers.length ? 'No data to validate' : deletedUsers;
 };
 
 module.exports = getCountDeletedController;
