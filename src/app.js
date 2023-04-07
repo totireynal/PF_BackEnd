@@ -35,6 +35,8 @@ server.use('/events', eventsRouter);
 
 server.use('/protected',verifyJWT, protectedRouter);
 
+
+///STRIPE
 const { resolve } = require("path");
 const env = require("dotenv").config({ path: '../.env' });
 

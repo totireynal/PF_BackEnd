@@ -23,6 +23,7 @@ const getBirthdayController = async (CompanyId) => {
       "name",
       "lastName",
       "image",
+      "email",
       [
         sequelize.fn("date_part", "day", sequelize.col("birthDate")),
         "birthDay",
