@@ -4,12 +4,7 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Reviews', [
-      {
-        // id: uuidv4(),
-        score: 5,
-        comment: 'StaffSphere is great. It has helped me a lot managing my employees.',
-        CompanyId: 1,
-      },
+ 
       {
         // id: uuidv4(),
         score: 5,
